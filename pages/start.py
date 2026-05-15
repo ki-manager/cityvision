@@ -5,7 +5,7 @@ from PIL import Image
 def show():
     st.title("Startseite")
 
-    logo = Image.open("c:/Users/User/OneDrive/Dokumente/GitHub/educx-python/cityvision/logo.png")
+    logo = Image.open("assets/images/logo.png")
     st.image(logo, width=600)
 
     card(
