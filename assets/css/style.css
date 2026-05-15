@@ -1,0 +1,31 @@
+.main {
+    background-color: #F1F5F9;
+}
+
+.card {
+    background: white;
+    padding: 1.25rem;
+    border-radius: 14px;
+    border-left: 5px solid #14B8A6;
+    margin-bottom: 1rem;
+}
+
+.stat {
+    background: #0B1F3A;
+    color: white;
+    padding: 1rem;
+    border-radius: 14px;
+    text-align: center;
+}
+
+.num {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #38BDF8;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 2rem;
+    color: #64748B;
+}
