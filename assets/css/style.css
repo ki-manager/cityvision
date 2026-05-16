@@ -29,3 +29,45 @@
     margin-top: 2rem;
     color: #64748B;
 }
+
+div.stButton > button {
+    width: 180px;
+    background: linear-gradient(
+        180deg,
+        #002D72 0%,
+        #003C8F 100%
+    );
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 3px 12px;
+    margin-bottom: 3px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+}
+
+div.stButton > button:hover {
+    background: linear-gradient(
+        180deg,
+        #002D72 0%,
+        #003C8F 100%
+    );
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+div.stButton > button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+div.stButton > button[kind="primary"] {
+    background: linear-gradient(
+        135deg,
+        #11B7C9,
+        #0097A7
+    );
+
+    border: 1px solid white;
+}

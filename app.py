@@ -1,7 +1,7 @@
 import streamlit as st
 from pathlib import Path
 
-from pages import (
+from seiten import (
     start,
     kernidee,
     datenquellen,
@@ -39,12 +39,14 @@ menu = {
 
 st.sidebar.title("CityVision")
 
-selection = st.sidebar.radio(
-    "Navigation",
-    list(menu.keys())
-)
+if "page" not in st.session_state:
+    st.session_state.page = "Start"
 
-menu[selection]()
+for page in menu.keys():
+    if st.sidebar.button(page):
+        st.session_state.page = page
+
+menu[st.session_state.page]()
 
 st.markdown(
     "<div class='footer'>© 2026 CityVision – Thorsten Höke</div>",
