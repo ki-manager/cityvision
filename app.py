@@ -2,13 +2,12 @@ import streamlit as st
 from pathlib import Path
 
 from seiten import (
+    funktionen,
+    grundidee,
     start,
-    kernidee,
     datenquellen,
-    zielsetzung,
     visualisierung,
     zusammenhaenge,
-    plattform,
     dashboard,
     fazit,
 )
@@ -27,12 +26,11 @@ with open(css_file, "r", encoding="utf-8") as f:
 
 menu = {
     "Start": start.show,
-    "Kernidee": kernidee.show,
+    "Grundidee": grundidee.show,
     "Datenquellen": datenquellen.show,
-    "Zielsetzung": zielsetzung.show,
+    "Funktionen": funktionen.show,
     "Visualisierung": visualisierung.show,
     "Zusammenhänge": zusammenhaenge.show,
-    "Plattform": plattform.show,
     "Live-Dashboard": dashboard.show,
     "Fazit": fazit.show,
 }

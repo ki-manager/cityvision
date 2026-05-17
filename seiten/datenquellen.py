@@ -4,6 +4,12 @@ from utils.components import card
 def show():
     st.title("Datenquellen")
 
+    card(
+            "Datenbeschaffung",
+            "Die Plattform nutzt unterschiedliche öffentliche und frei verfügbare Datenquellen. "
+            "Die Daten werden automatisiert eingelesen, verarbeitet und in eine einheitliche Struktur überführt. Dadurch können Informationen kombiniert und gemeinsamanalysiert werden."
+        )
+
     quellen = [
         ("🌦️ Wetterdaten", "Temperatur, Niederschlag, Wind, Luftdruck"),
         ("🚦 Verkehrsanalysen", "Verkehrsaufkommen, Staus, Fließgeschwindigkeit"),
