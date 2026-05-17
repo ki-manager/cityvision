@@ -1,26 +1,64 @@
 import streamlit as st
 import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+from pathlib import Path
+import json
+
+
+def load_json_data():
+
+    # Pfad zum JSON-Verzeichnis
+    data_path = Path("data/json")
+
+    json_files = list(data_path.glob("*.json"))
+
+    if not json_files:
+        st.error("Keine JSON-Dateien im Verzeichnis data/json gefunden.")
+        return pd.DataFrame()
+
+    all_data = []
+
+    # Alle JSON-Dateien einlesen
+    for file in json_files:
+
+        with open(file, "r", encoding="utf-8") as f:
+            data = json.load(f)
+
+            # Falls Liste von Datensätzen
+            if isinstance(data, list):
+                all_data.extend(data)
+
+            # Falls einzelnes Objekt
+            elif isinstance(data, dict):
+                all_data.append(data)
+
+    # DataFrame erzeugen
+    df = pd.DataFrame(all_data)
+
+    return df
+
 
 def show():
+
     st.title("Visualisierung")
     st.caption("Beispielhafte Diagramme moderner Dashboards")
 
-    days = pd.date_range("2025-05-01", periods=30)
+    # ---------- JSON-Daten laden ----------
+    df = load_json_data()
 
-    df = pd.DataFrame({
-        "Datum": days,
-        "Temperatur (°C)": 15 + 8*np.sin(np.linspace(0, 3, 30)) + np.random.randn(30),
-        "Feinstaub (µg/m³)": 18 + 6*np.cos(np.linspace(0, 4, 30)) + np.random.randn(30)*2,
-        "Verkehr (Fz/h)": 800 + 200*np.sin(np.linspace(0, 6, 30)) + np.random.randn(30)*40,
-        "Energie (MWh)": 120 + 25*np.cos(np.linspace(0, 5, 30)) + np.random.randn(30)*5,
-    })
+    # Falls keine Daten vorhanden
+    if df.empty:
+        return
+
+    # ---------- Datumsformat ----------
+    df["Datum"] = pd.to_datetime(df["Datum"])
 
     c1, c2 = st.columns(2)
 
-    # ---------- Wetter ----------
+    # ====================================================
+    # Wetter
+    # ====================================================
     with c1:
 
         fig, ax = plt.subplots(figsize=(8, 4))
@@ -39,7 +77,9 @@ def show():
 
         st.pyplot(fig)
 
-        # ---------- Verkehr ----------
+        # ------------------------------------------------
+        # Verkehr
+        # ------------------------------------------------
         fig, ax = plt.subplots(figsize=(8, 4))
 
         sns.barplot(
@@ -56,7 +96,9 @@ def show():
 
         st.pyplot(fig)
 
-    # ---------- Luftqualität ----------
+    # ====================================================
+    # Luftqualität
+    # ====================================================
     with c2:
 
         fig, ax = plt.subplots(figsize=(8, 4))
@@ -79,7 +121,9 @@ def show():
 
         st.pyplot(fig)
 
-        # ---------- Energie ----------
+        # ------------------------------------------------
+        # Energie
+        # ------------------------------------------------
         fig, ax = plt.subplots(figsize=(8, 4))
 
         sns.lineplot(
@@ -94,3 +138,9 @@ def show():
         plt.xticks(rotation=45)
 
         st.pyplot(fig)
+
+    # ====================================================
+    # Rohdaten anzeigen
+    # ====================================================
+    with st.expander("JSON-Rohdaten anzeigen"):
+        st.dataframe(df, width="stretch")
