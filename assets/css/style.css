@@ -35,7 +35,7 @@ div.stButton > button {
     width: 180px;
     background: linear-gradient(
         180deg,
-        #002D72 0%,
+        #012c56 0%,
         #003C8F 100%
     );
     color: white;
@@ -51,8 +51,8 @@ div.stButton > button {
 div.stButton > button:hover {
     background: linear-gradient(
         180deg,
-        #002D72 0%,
-        #003C8F 100%
+        #012c56 0%,
+        #018ba3 100%
     );
     transform: scale(1.02);
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
