@@ -1,4 +1,4 @@
-# 🌆 CityVision
+# CityVision
 
 CityVision ist eine interaktive Smart-City- und Umweltdatenplattform mit Python und Streamlit.
 
@@ -11,7 +11,7 @@ Die Anwendung visualisiert:
 
 ---
 
-# 🚀 Features
+# Features
 
 - Moderne Dashboards
 - Interaktive Diagramme
@@ -23,7 +23,7 @@ Die Anwendung visualisiert:
 
 ---
 
-# 🛠 Verwendete Technologien
+# Verwendete Technologien
 
 - Python
 - Streamlit
@@ -35,21 +35,21 @@ Die Anwendung visualisiert:
 
 ---
 
-# 📂 Projektstruktur
+# Projektstruktur
 
 ```text
 cityvision/
 │
 ├── app.py
 ├── data/json/
-├── pages/
+├── seiten/
 ├── utils/
 └── assets/
 ```
 
 ---
 
-# ▶️ Anwendung starten
+# Anwendung starten
 
 ## Installation
 
@@ -71,7 +71,7 @@ http://localhost:8501
 
 ---
 
-# 📊 Beispiel: JSON-Daten laden
+# Beispiel: JSON-Daten laden
 
 ```python
 import json
@@ -82,7 +82,7 @@ with open("data/json/wetter.json", "r") as f:
 
 ---
 
-# 📈 Beispiel: Diagramm erzeugen
+# Beispiel: Diagramm erzeugen
 
 ```python
 fig, ax = plt.subplots()
@@ -99,7 +99,7 @@ st.pyplot(fig)
 
 ---
 
-# 🧩 Interaktive Funktionen
+# Interaktive Funktionen
 
 ## Sidebar-Navigation
 
@@ -132,7 +132,7 @@ quelle = st.multiselect(
 
 ---
 
-# 📁 JSON-Dateien automatisch laden
+# JSON-Dateien automatisch laden
 
 ```python
 from pathlib import Path
@@ -144,7 +144,7 @@ json_files = list(data_path.glob("*.json"))
 
 ---
 
-# 🎨 CSS-Styling
+# CSS-Styling
 
 ```python
 st.markdown(
@@ -162,7 +162,7 @@ st.markdown(
 
 ---
 
-# 🔮 Geplante Erweiterungen
+# Geplante Erweiterungen
 
 - Echtzeitdaten
 - Wetter-APIs
@@ -173,12 +173,12 @@ st.markdown(
 
 ---
 
-# 👨‍💻 Autor
+# Autor
 
-Thorsten Höke
+Dipl.-Inf. Thorsten Höke
 
 ---
 
-# 📄 Lizenz
+# Lizenz
 
 Dieses Projekt dient Lern- und Demonstrationszwecken.
