@@ -9,7 +9,6 @@ Die Anwendung visualisiert:
 - Energieverbrauch
 - Statistische Zusammenhänge
 
----
 
 # Features
 
@@ -21,7 +20,6 @@ Die Anwendung visualisiert:
 - Modulare Seitenstruktur
 - Sidebar-Navigation
 
----
 
 # Verwendete Technologien
 
@@ -33,7 +31,6 @@ Die Anwendung visualisiert:
 - Seaborn
 - Pillow
 
----
 
 # Projektstruktur
 
@@ -47,7 +44,6 @@ cityvision/
 └── assets/
 ```
 
----
 
 # Anwendung starten
 
@@ -69,7 +65,6 @@ Die Anwendung startet anschließend unter:
 http://localhost:8501
 ```
 
----
 
 # Beispiel: JSON-Daten laden
 
@@ -80,7 +75,6 @@ with open("data/json/wetter.json", "r") as f:
     data = json.load(f)
 ```
 
----
 
 # Beispiel: Diagramm erzeugen
 
@@ -97,7 +91,6 @@ sns.lineplot(
 st.pyplot(fig)
 ```
 
----
 
 # Interaktive Funktionen
 
@@ -130,7 +123,6 @@ quelle = st.multiselect(
 )
 ```
 
----
 
 # JSON-Dateien automatisch laden
 
@@ -142,7 +134,6 @@ data_path = Path("data/json")
 json_files = list(data_path.glob("*.json"))
 ```
 
----
 
 # CSS-Styling
 
@@ -160,7 +151,6 @@ st.markdown(
 )
 ```
 
----
 
 # Geplante Erweiterungen
 
@@ -171,13 +161,11 @@ st.markdown(
 - Kartenintegration
 - Datenbankanbindung
 
----
 
 # Autor
 
 Dipl.-Inf. Thorsten Höke
 
----
 
 # Lizenz
 
