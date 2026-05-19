@@ -1,68 +1,222 @@
+# pages/dashboard.py
+
 import streamlit as st
 import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+from pathlib import Path
 
 from utils.components import stat
 
-def show():
-    st.title("Live-Dashboard")
-    st.caption("Interaktive Demo mit simulierten Smart-City-Daten.")
 
-    quelle = st.multiselect(
-        "Datenquellen wählen",
-        ["Temperatur", "Feinstaub", "Verkehr", "Energie"],
-        default=["Temperatur", "Feinstaub", "Verkehr"],
+# =====================================================
+# CSV-DATEN LADEN
+# =====================================================
+def load_measurements():
+
+    # -------------------------------------------------
+    # Projektpfad
+    # -------------------------------------------------
+    current_dir = Path(__file__).resolve().parent
+
+    # pages -> Hauptprojektordner
+    project_root = current_dir.parent
+
+    # -------------------------------------------------
+    # CSV-Datei
+    # -------------------------------------------------
+    csv_path = project_root / "data" / "csv" / "messwerte.csv"
+
+    # -------------------------------------------------
+    # Debug-Ausgabe
+    # -------------------------------------------------
+    st.write("CSV-Datei:", csv_path)
+
+    # -------------------------------------------------
+    # Existiert Datei?
+    # -------------------------------------------------
+    if not csv_path.exists():
+
+        st.error(
+            f"CSV-Datei nicht gefunden:\n{csv_path}"
+        )
+
+        return pd.DataFrame()
+
+    # -------------------------------------------------
+    # CSV laden
+    # -------------------------------------------------
+    try:
+
+        df = pd.read_csv(
+            csv_path,
+            sep=";"
+        )
+
+        return df
+
+    except Exception as e:
+
+        st.error(
+            f"Fehler beim Laden der CSV-Datei: {e}"
+        )
+
+        return pd.DataFrame()
+
+
+# =====================================================
+# DASHBOARD
+# =====================================================
+def show():
+
+    st.title("📊 Live-Dashboard")
+
+    st.caption(
+        "Analyse von Umwelt- und Smart-City-Messwerten"
     )
 
-    tage = st.slider("Zeitraum (Tage)", 7, 90, 30)
+    # -------------------------------------------------
+    # Daten laden
+    # -------------------------------------------------
+    df = load_measurements()
 
-    days = pd.date_range(end=pd.Timestamp.today(), periods=tage)
+    # -------------------------------------------------
+    # Falls keine Daten
+    # -------------------------------------------------
+    if df.empty:
+        return
 
-    np.random.seed(42)
+    # -------------------------------------------------
+    # Statistik-Karten
+    # -------------------------------------------------
+    st.subheader("Messwerte Übersicht")
 
-    df = pd.DataFrame({
-        "Datum": days,
-        "Temperatur": 15 + 8*np.sin(np.linspace(0, 4, tage)) + np.random.randn(tage),
-        "Feinstaub": 18 + 6*np.cos(np.linspace(0, 5, tage)) + np.random.randn(tage)*2,
-        "Verkehr": 800 + 200*np.sin(np.linspace(0, 6, tage)) + np.random.randn(tage)*40,
-        "Energie": 120 + 25*np.cos(np.linspace(0, 5, tage)) + np.random.randn(tage)*5,
-    })
-
-    c1, c2, c3, c4 = st.columns(4)
+    c1, c2, c3 = st.columns(3)
 
     with c1:
-        stat(f"{df['Temperatur'].mean():.1f}°C", "Ø Temperatur")
+
+        stat(
+            f"{df['Feinstaub (PM10)'].mean():.1f}",
+            "Ø Feinstaub"
+        )
 
     with c2:
-        stat(f"{df['Feinstaub'].mean():.1f}", "Ø Feinstaub")
+
+        stat(
+            f"{df['Stickstoffdioxid'].mean():.1f}",
+            "Ø Stickstoffdioxid"
+        )
 
     with c3:
-        stat(f"{df['Verkehr'].mean():.0f}", "Ø Verkehr")
+
+        stat(
+            f"{df['Kohlenmonoxid'].mean():.2f}",
+            "Ø Kohlenmonoxid"
+        )
+
+    c4, c5, c6 = st.columns(3)
 
     with c4:
-        stat(f"{df['Energie'].mean():.0f}", "Ø Energie")
 
+        stat(
+            f"{df['Temperatur'].mean():.1f} °C",
+            "Ø Temperatur"
+        )
+
+    with c5:
+
+        stat(
+            f"{df['Luftdruck'].mean():.0f} hPa",
+            "Ø Luftdruck"
+        )
+
+    with c6:
+
+        stat(
+            f"{df['Regendauer'].mean():.1f} h",
+            "Ø Regendauer"
+        )
+
+    # -------------------------------------------------
+    # Datenauswahl
+    # -------------------------------------------------
+    st.subheader("Diagramm-Auswahl")
+
+    quelle = st.multiselect(
+        "Messwerte auswählen",
+        [
+            "Feinstaub (PM10)",
+            "Stickstoffdioxid",
+            "Kohlenmonoxid",
+            "Temperatur",
+            "Luftdruck",
+            "Regendauer"
+        ],
+        default=[
+            "Temperatur",
+            "Feinstaub (PM10)"
+        ]
+    )
+
+    # -------------------------------------------------
+    # Diagramm
+    # -------------------------------------------------
     if quelle:
 
-        fig, ax = plt.subplots(figsize=(12, 5))
+        fig, ax = plt.subplots(
+            figsize=(12, 5)
+        )
 
         for q in quelle:
+
             sns.lineplot(
                 data=df,
-                x="Datum",
                 y=q,
                 label=q,
                 ax=ax
             )
 
-        ax.set_title("Zeitreihe")
-        ax.set_xlabel("Datum")
+        ax.set_title(
+            "Umwelt- und Smart-City-Messwerte"
+        )
+
+        ax.set_xlabel("Messpunkte")
+
+        ax.set_ylabel("Werte")
 
         plt.xticks(rotation=45)
 
         st.pyplot(fig)
 
-    with st.expander("Rohdaten anzeigen"):
-        st.dataframe(df, width='stretch')
+    # -------------------------------------------------
+    # Korrelationsmatrix
+    # -------------------------------------------------
+    st.subheader("Korrelationsmatrix")
+
+    fig, ax = plt.subplots(
+        figsize=(8, 6)
+    )
+
+    sns.heatmap(
+        df.corr(numeric_only=True),
+        annot=True,
+        cmap="crest",
+        linewidths=0.5,
+        ax=ax
+    )
+
+    ax.set_title(
+        "Zusammenhänge der Messwerte"
+    )
+
+    st.pyplot(fig)
+
+    # -------------------------------------------------
+    # Rohdaten
+    # -------------------------------------------------
+    with st.expander("Messwerte anzeigen"):
+
+        st.dataframe(
+            df,
+            width="stretch"
+        )

@@ -1,0 +1,4 @@
+Hier können Sie sich 1-Stundenwerte bzw. Tageswerte der letzten 90 Tage als Datei im csv-Format herunterladen.
+Bitte beachten Sie, dass es sich hierbei um noch nicht endgültig geprüfte Daten handelt!
+Die Zeitangaben beziehen sich auf die Mitteleuropäische Zeit (MEZ).
+https://www.umwelt.niedersachsen.de/luft/LUEN/aktuelle_messwerte/archiv/download/
