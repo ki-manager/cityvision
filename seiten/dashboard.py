@@ -13,7 +13,7 @@ def load_measurements():
     project_root = current_dir.parent
     print(project_root)
 
-    csv_path = project_root / "assets" / "data" / "csv" / "messwerte.csv"
+    csv_path = project_root / "data" / "csv" / "messwerte.csv"
 
     st.write("CSV-Datei:", csv_path)
 
