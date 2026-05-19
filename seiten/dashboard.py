@@ -11,8 +11,9 @@ def load_measurements():
 
     current_dir = Path(__file__).resolve().parent
     project_root = current_dir.parent
+    print(project_root)
 
-    csv_path = project_root / "data" / "csv" / "messwerte.csv"
+    csv_path = project_root / "assets" / "data" / "csv" / "messwerte.csv"
 
     st.write("CSV-Datei:", csv_path)
 
@@ -40,13 +41,9 @@ def load_measurements():
         df.columns = [
             "Datum",
             "Feinstaub (PM10)",
-            "PM10 Status",
             "Temperatur",
-            "Temperatur Status",
             "Luftdruck",
-            "Luftdruck Status",
-            "Regendauer",
-            "Regendauer Status"
+            "Regendauer"
         ]
 
         df = df[
@@ -89,10 +86,14 @@ def load_measurements():
 
 def show():
 
-    st.title("📊 Live-Dashboard")
+    st.title("Live-Dashboard")
 
-    st.caption(
-        "Analyse von Umweltmesswerten"
+    st.text(
+        "Analyse von Umweltmesswerten aus Braunschweig"
+    )
+
+    st.text(
+        "Quelle: https://www.umwelt.niedersachsen.de/luft/LUEN/aktuelle_messwerte/archiv/download/"
     )
 
     df = load_measurements()
@@ -115,7 +116,7 @@ def show():
 
         stat(
             f"{df['Feinstaub (PM10)'].mean():.1f}",
-            "Ø PM10"
+            "Ø Feinstaub (PM10)"
         )
 
     with c2:
@@ -151,7 +152,9 @@ def show():
         ],
         default=[
             "Feinstaub (PM10)",
-            "Temperatur"
+            "Temperatur",
+            "Luftdruck",
+            "Regendauer"
         ]
     )
 
@@ -182,19 +185,3 @@ def show():
         plt.xticks(rotation=45)
 
         st.pyplot(fig)
-
-    st.subheader("Korrelationsmatrix")
-
-    fig, ax = plt.subplots(
-        figsize=(8, 6)
-    )
-
-    sns.heatmap(
-        df.corr(numeric_only=True),
-        annot=True,
-        cmap="crest",
-        linewidths=0.5,
-        ax=ax
-    )
-
-    st.pyplot(fig)

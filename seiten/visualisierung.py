@@ -6,7 +6,7 @@ import seaborn as sns
 
 def show():
     st.title("Visualisierung")
-    st.caption("Beispielhafte Diagramme moderner Dashboards")
+    st.text("Beispielhafte Diagramme moderner Dashboards")
 
     days = pd.date_range("2025-05-01", periods=30)
 

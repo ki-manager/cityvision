@@ -38,6 +38,8 @@ def show():
         "Feinstaub": pm
     })
 
+    st.divider()
+
     st.subheader("Korrelationsmatrix")
 
     fig, ax = plt.subplots(figsize=(8, 6))
