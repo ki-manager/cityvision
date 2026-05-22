@@ -29,7 +29,6 @@ Die Anwendung visualisiert:
 - NumPy
 - Matplotlib
 - Seaborn
-- Pillow
 
 
 # Projektstruktur
@@ -50,7 +49,7 @@ cityvision/
 ## Installation
 
 ```bash
-pip install streamlit pandas numpy matplotlib seaborn pillow
+pip install streamlit pandas numpy matplotlib seaborn
 ```
 
 ## Start
