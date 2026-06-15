@@ -1,25 +1,171 @@
+
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-from pathlib import Path
+import requests
 
-from utils.components import stat
+from pathlib import Path
+from bs4 import BeautifulSoup
+from urllib.parse import urljoin
+from datetime import datetime, timedelta
+
+
+BASE_URL = "https://www.umwelt.niedersachsen.de/luft/LUEN/aktuelle_messwerte/archiv/download/"
+CACHE_MAX_AGE_HOURS = 24
+
+
+def get_csv_url():
+
+    try:
+
+        response = requests.get(BASE_URL, timeout=20)
+
+        soup = BeautifulSoup(
+            response.text,
+            "html.parser"
+        )
+
+        csv_links = []
+
+        for a in soup.find_all("a", href=True):
+
+            href = a["href"]
+
+            if ".csv" in href.lower():
+
+                full_url = urljoin(
+                    BASE_URL,
+                    href
+                )
+
+                csv_links.append(full_url)
+
+        if not csv_links:
+
+            st.error(
+                "Keine CSV-Downloadlinks gefunden."
+            )
+
+            return None
+
+        # Erste CSV verwenden
+        return csv_links[0]
+
+    except Exception as e:
+
+        st.error(
+            f"Fehler beim Ermitteln der CSV-URL:\n{e}"
+        )
+
+        return None
+
+
+def is_cache_valid(csv_path):
+
+    if not csv_path.exists():
+        return False
+
+    modified = datetime.fromtimestamp(
+        csv_path.stat().st_mtime
+    )
+
+    age = datetime.now() - modified
+
+    return age < timedelta(
+        hours=CACHE_MAX_AGE_HOURS
+    )
+
+
+def download_csv(csv_url, csv_path):
+
+    try:
+
+        response = requests.get(
+            csv_url,
+            timeout=30
+        )
+
+        response.raise_for_status()
+
+        csv_path.parent.mkdir(
+            parents=True,
+            exist_ok=True
+        )
+
+        with open(csv_path, "wb") as f:
+            f.write(response.content)
+
+        st.success(
+            "CSV-Datei aktualisiert."
+        )
+
+    except Exception as e:
+
+        st.error(
+            f"Fehler beim Download:\n{e}"
+        )
 
 
 def load_measurements():
 
     current_dir = Path(__file__).resolve().parent
     project_root = current_dir.parent
-    print(project_root)
 
-    csv_path = project_root / "data" / "csv" / "messwerte.csv"
+    csv_path = (
+        project_root
+        / "data"
+        / "csv"
+        / "messwerte.csv"
+    )
 
     st.write("CSV-Datei:", csv_path)
 
+    # -----------------------------------
+    # Schritt 1:
+    # CSV-URL automatisch ermitteln
+    # -----------------------------------
+
+    csv_url = get_csv_url()
+
+    if not csv_url:
+        return pd.DataFrame()
+
+    st.write("Gefundene CSV-URL:", csv_url)
+
+    # -----------------------------------
+    # Schritt 2:
+    # Cache prüfen
+    # -----------------------------------
+
+    if not is_cache_valid(csv_path):
+
+        st.info(
+            "Cache abgelaufen oder Datei fehlt. "
+            "CSV wird neu geladen..."
+        )
+
+        # -----------------------------------
+        # Schritt 3:
+        # CSV herunterladen
+        # -----------------------------------
+
+        download_csv(
+            csv_url,
+            csv_path
+        )
+
+    else:
+
+        st.success(
+            "Lokale Cache-Datei wird verwendet."
+        )
+
     if not csv_path.exists():
 
-        st.error(f"Datei nicht gefunden:\n{csv_path}")
+        st.error(
+            f"Datei nicht gefunden:\n{csv_path}"
+        )
 
         return pd.DataFrame()
 
@@ -79,7 +225,9 @@ def load_measurements():
 
     except Exception as e:
 
-        st.error(f"Fehler beim Laden:\n{e}")
+        st.error(
+            f"Fehler beim Laden:\n{e}"
+        )
 
         return pd.DataFrame()
 
