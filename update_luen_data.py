@@ -2,15 +2,18 @@ import os
 import json
 import pandas as pd
 import requests
+from datetime import datetime
 
 
 # =====================================================
-# Einstellungen
+# Konfiguration
 # =====================================================
 
 URL = "https://www.luen-ni.de/json30m.txt"
 
-OUTPUT_DIR = "cityvision/data/stations"
+OUTPUT_DIR = "data/stations"
+
+LOG_FILE = "data/import.log"
 
 
 # =====================================================
@@ -22,12 +25,123 @@ os.makedirs(
     exist_ok=True
 )
 
+os.makedirs(
+    "data",
+    exist_ok=True
+)
+
 
 # =====================================================
-# Daten laden
+# Logging
 # =====================================================
 
-print("Lade Daten...")
+def log(message):
+
+    timestamp = datetime.now().strftime(
+        "%Y-%m-%d %H:%M:%S"
+    )
+
+    text = f"[{timestamp}] {message}"
+
+    print(text)
+
+    with open(
+        LOG_FILE,
+        "a",
+        encoding="utf-8"
+    ) as file:
+
+        file.write(text + "\n")
+
+
+# =====================================================
+# Datenbereinigung
+# =====================================================
+
+def clean_value(value):
+
+    try:
+
+        # =============================================
+        # In String umwandeln
+        # =============================================
+
+        value = str(value)
+
+
+        # =============================================
+        # Sonderzeichen entfernen
+        # =============================================
+
+        value = value.replace(",", ".")
+        value = value.replace("<", "")
+        value = value.replace(">", "")
+        value = value.replace(" ", "")
+
+
+        # =============================================
+        # Leere Werte
+        # =============================================
+
+        if value == "":
+            return None
+
+
+        # =============================================
+        # Umwandlung
+        # =============================================
+
+        value = float(value)
+
+
+        # =============================================
+        # Unrealistische Werte filtern
+        # =============================================
+
+        if value < -999:
+            return None
+
+        if value > 999999:
+            return None
+
+
+        return value
+
+    except:
+
+        return None
+
+
+# =====================================================
+# Ausreißer erkennen
+# =====================================================
+
+def remove_outliers(df):
+
+    if len(df) < 5:
+        return df
+
+    mean = df["Messwert"].mean()
+
+    std = df["Messwert"].std()
+
+    lower = mean - 3 * std
+    upper = mean + 3 * std
+
+    df = df[
+        (df["Messwert"] >= lower)
+        &
+        (df["Messwert"] <= upper)
+    ]
+
+    return df
+
+
+# =====================================================
+# Daten herunterladen
+# =====================================================
+
+log("Starte Datenimport")
 
 response = requests.get(
     URL,
@@ -36,7 +150,7 @@ response = requests.get(
 
 data = response.json()
 
-print("Daten erfolgreich geladen")
+log("Daten erfolgreich geladen")
 
 
 # =====================================================
@@ -45,16 +159,22 @@ print("Daten erfolgreich geladen")
 
 if "messwerte" not in data:
 
-    print("Fehler:")
-    print("Keine 'messwerte' gefunden")
+    log("FEHLER: Keine Messwerte gefunden")
 
     exit()
 
 
-print(
-    f"Anzahl Stationen: "
+log(
+    f"Stationen gefunden: "
     f"{len(data['messwerte'])}"
 )
+
+
+# =====================================================
+# Metadaten sammeln
+# =====================================================
+
+metadata_rows = []
 
 
 # =====================================================
@@ -74,8 +194,8 @@ for station in data["messwerte"]:
             "UNKNOWN"
         )
 
-        print(
-            f"\nVerarbeite Station: "
+        log(
+            f"Verarbeite Station: "
             f"{station_code}"
         )
 
@@ -96,7 +216,7 @@ for station in data["messwerte"]:
 
 
         # =============================================
-        # JSON speichern
+        # Rohdaten speichern
         # =============================================
 
         json_path = os.path.join(
@@ -125,14 +245,8 @@ for station in data["messwerte"]:
             )
 
 
-        print(
-            f"JSON gespeichert:"
-            f" {json_path}"
-        )
-
-
         # =============================================
-        # Messstellen prüfen
+        # Messstellen
         # =============================================
 
         messstellen = station.get(
@@ -140,14 +254,14 @@ for station in data["messwerte"]:
             []
         )
 
-        print(
-            f"Messstellen:"
-            f" {len(messstellen)}"
+        log(
+            f"Messstellen: "
+            f"{len(messstellen)}"
         )
 
 
         # =============================================
-        # Komponenten verarbeiten
+        # Komponenten
         # =============================================
 
         for messstelle in messstellen:
@@ -157,19 +271,14 @@ for station in data["messwerte"]:
                 "UNKNOWN"
             )
 
-            print(
-                f"  Komponente:"
-                f" {component}"
-            )
-
-
-            # =========================================
-            # Werte laden
-            # =========================================
-
             values = messstelle.get(
                 "verlauf_stundenwerte",
                 []
+            )
+
+            log(
+                f"Komponente: "
+                f"{component}"
             )
 
 
@@ -181,22 +290,7 @@ for station in data["messwerte"]:
 
             for index, value in enumerate(values):
 
-                try:
-
-                    clean_value = (
-                        str(value)
-                        .replace(",", ".")
-                        .replace("<", "")
-                    )
-
-                    clean_value = float(
-                        clean_value
-                    )
-
-                except:
-
-                    clean_value = None
-
+                clean = clean_value(value)
 
                 rows.append({
 
@@ -210,23 +304,9 @@ for station in data["messwerte"]:
                         component,
 
                     "Messwert":
-                        clean_value
+                        clean
 
                 })
-
-
-            # =========================================
-            # Prüfen ob Daten existieren
-            # =========================================
-
-            if len(rows) == 0:
-
-                print(
-                    f"  Keine Werte "
-                    f"für {component}"
-                )
-
-                continue
 
 
             # =========================================
@@ -234,6 +314,54 @@ for station in data["messwerte"]:
             # =========================================
 
             df = pd.DataFrame(rows)
+
+
+            # =========================================
+            # Bereinigung
+            # =========================================
+
+            before_count = len(df)
+
+            # Nullwerte entfernen
+            df = df.dropna(
+                subset=["Messwert"]
+            )
+
+            # Doppelte entfernen
+            df = df.drop_duplicates()
+
+            # Ausreißer entfernen
+            df = remove_outliers(df)
+
+            after_count = len(df)
+
+
+            # =========================================
+            # Statistik
+            # =========================================
+
+            removed = (
+                before_count - after_count
+            )
+
+            log(
+                f"Bereinigt: "
+                f"{removed} Werte entfernt"
+            )
+
+
+            # =========================================
+            # Prüfen ob Daten vorhanden
+            # =========================================
+
+            if df.empty:
+
+                log(
+                    f"Keine gültigen Daten "
+                    f"für {component}"
+                )
+
+                continue
 
 
             # =========================================
@@ -258,23 +386,108 @@ for station in data["messwerte"]:
 
             )
 
-
-            print(
-                f"  CSV gespeichert:"
-                f" {csv_path}"
+            log(
+                f"CSV gespeichert: "
+                f"{csv_path}"
             )
+
+
+            # =========================================
+            # Metadaten
+            # =========================================
+
+            metadata_rows.append({
+
+                "Station":
+                    station_code,
+
+                "Komponente":
+                    component,
+
+                "Datensätze":
+                    len(df),
+
+                "Minimum":
+                    round(
+                        df["Messwert"].min(),
+                        2
+                    ),
+
+                "Maximum":
+                    round(
+                        df["Messwert"].max(),
+                        2
+                    ),
+
+                "Mittelwert":
+                    round(
+                        df["Messwert"].mean(),
+                        2
+                    )
+
+            })
 
 
     except Exception as error:
 
-        print(
-            f"Fehler bei Station:"
-            f" {error}"
+        log(
+            f"FEHLER bei Station "
+            f"{station_code}: "
+            f"{error}"
         )
+
+
+# =====================================================
+# Metadaten speichern
+# =====================================================
+
+metadata_df = pd.DataFrame(
+    metadata_rows
+)
+
+metadata_path = os.path.join(
+    OUTPUT_DIR,
+    "metadata.csv"
+)
+
+metadata_df.to_csv(
+
+    metadata_path,
+
+    index=False,
+
+    encoding="utf-8"
+
+)
+
+log(
+    f"Metadaten gespeichert: "
+    f"{metadata_path}"
+)
+
+
+# =====================================================
+# Letztes Update speichern
+# =====================================================
+
+with open(
+
+    "data/latest_update.txt",
+
+    "w",
+    encoding="utf-8"
+
+) as file:
+
+    file.write(
+        datetime.now().strftime(
+            "%Y-%m-%d %H:%M:%S"
+        )
+    )
 
 
 # =====================================================
 # Fertig
 # =====================================================
 
-print("\nImport abgeschlossen")
+log("Import abgeschlossen")
