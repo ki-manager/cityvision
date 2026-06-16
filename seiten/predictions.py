@@ -30,16 +30,11 @@ st.subheader(
 # Daten laden
 # =====================================================
 
-try:
-    api = LuenAPI()
+api = LuenAPI()
 
-    data = api.download_data()
+data = api.download_data()
 
-    df = api.create_dataframe(data)
-
-except Exception as e:
-    st.error(f"Fehler beim Laden der Daten: {str(e)}")
-    st.stop()
+df = api.create_dataframe(data)
 
 
 # =====================================================
@@ -49,10 +44,6 @@ except Exception as e:
 regions = sorted(
     df["Region"].unique()
 )
-
-if not regions:
-    st.error("Keine Regionen in den Daten gefunden.")
-    st.stop()
 
 selected_region = st.selectbox(
 
@@ -80,10 +71,6 @@ region_df = df[
 stations = sorted(
     region_df["Station"].unique()
 )
-
-if not stations:
-    st.error(f"Keine Stationen für die Region '{selected_region}' gefunden.")
-    st.stop()
 
 selected_station = st.selectbox(
 
@@ -113,10 +100,6 @@ station_df = region_df[
 components = sorted(
     station_df["Komponente"].unique()
 )
-
-if not components:
-    st.error(f"Keine Messkomponenten für die Station '{selected_station}' gefunden.")
-    st.stop()
 
 selected_component = st.selectbox(
 

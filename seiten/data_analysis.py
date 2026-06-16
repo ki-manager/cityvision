@@ -45,13 +45,13 @@ DATA_DIR = "data/stations"
 
 
 # =====================================================
-# Prüfen ob Datenordner existiert
+# Prüfen ob Ordner existiert
 # =====================================================
 
 if not os.path.exists(DATA_DIR):
 
     st.error(
-        "Ordner data/stations nicht gefunden"
+        "Ordner data/stations existiert nicht."
     )
 
     st.stop()
@@ -84,18 +84,17 @@ stations = sorted([
 if len(stations) == 0:
 
     st.warning(
-        "Keine Stationen gefunden"
+        "Keine Stationen gefunden."
     )
 
     st.stop()
 
 
 # =====================================================
-# Stationsoptionen
+# Stationsnamen erzeugen
 # =====================================================
 
-station_options = []
-
+station_display = {}
 
 for station in stations:
 
@@ -111,34 +110,29 @@ for station in stations:
 
     )
 
-    label = (
+    display_name = (
 
         f"{mapping['name']} "
-        f"({mapping['typ']}) "
-        f"- {station}"
+        f"({mapping['typ']})"
 
     )
 
-    station_options.append({
-
-        "label": label,
-
-        "value": station
-
-    })
+    station_display[
+        display_name
+    ] = station
 
 
 # =====================================================
 # Station auswählen
 # =====================================================
 
-selected_station_option = st.selectbox(
+selected_display = st.selectbox(
 
     "Station auswählen",
 
-    station_options,
-
-    format_func=lambda x: x["label"]
+    sorted(
+        station_display.keys()
+    )
 
 )
 
@@ -147,9 +141,9 @@ selected_station_option = st.selectbox(
 # Stationscode
 # =====================================================
 
-selected_station = (
-    selected_station_option["value"]
-)
+selected_station = station_display[
+    selected_display
+]
 
 
 # =====================================================
@@ -184,16 +178,13 @@ st.info(
 
     Region:
     {station_info['region']}
-
-    Kürzel:
-    {selected_station}
     """
 
 )
 
 
 # =====================================================
-# Stationspfad
+# Stationsordner
 # =====================================================
 
 station_path = os.path.join(
@@ -233,377 +224,155 @@ csv_files = [
 
 
 # =====================================================
-# Prüfen
+# Prüfen ob CSV-Dateien existieren
 # =====================================================
 
 if len(csv_files) == 0:
 
     st.warning(
-        "Keine CSV-Dateien gefunden"
+        "Keine CSV-Dateien gefunden."
     )
 
     st.stop()
 
 
 # =====================================================
-# Analyse aller Messpunkte
+# Komponenten vorbereiten
 # =====================================================
 
-analysis_rows = []
+component_mapping = {}
 
-component_file_mapping = {}
-
-component_options = []
+component_display = {}
 
 
 for file in csv_files:
 
-    try:
+    filename = os.path.basename(
+        file
+    )
 
-        filename = os.path.basename(
-            file
+    component = (
+        filename
+        .replace(
+            f"{selected_station}_",
+            ""
         )
+        .replace(".csv", "")
+    )
 
-        component = (
-            filename
-            .replace(
-                f"{selected_station}_",
-                ""
-            )
-            .replace(".csv", "")
-        )
+    component_mapping[
+        component
+    ] = file
 
 
-        # =============================================
-        # Dateimapping
-        # =============================================
+    # =================================================
+    # Wettermapping
+    # =================================================
 
-        component_file_mapping[
-            component
-        ] = file
+    mapping = weather_mapping.get(
 
+        component,
 
-        # =============================================
-        # Mapping
-        # =============================================
+        {
+            "name": component,
+            "beschreibung":
+                "Keine Beschreibung",
+            "einheit": "",
+            "kategorie":
+                "Unbekannt"
+        }
 
-        mapping = weather_mapping.get(
+    )
 
-            component,
+    display_name = (
 
-            {
-                "name": component,
-                "einheit": "",
-                "kategorie": "Unbekannt"
-            }
+        f"{mapping['name']} "
+        f"({component})"
 
-        )
+    )
 
-
-        # =============================================
-        # Komponentenoption
-        # =============================================
-
-        component_options.append({
-
-            "label":
-
-                f"{mapping['name']} "
-                f"({component})",
-
-            "value":
-                component
-
-        })
-
-
-        # =============================================
-        # CSV laden
-        # =============================================
-
-        df = pd.read_csv(file)
-
-
-        # =============================================
-        # Prüfen
-        # =============================================
-
-        if "Messwert" not in df.columns:
-
-            continue
-
-
-        # =============================================
-        # Datentypen korrigieren
-        # =============================================
-
-        df["Messwert"] = pd.to_numeric(
-
-            df["Messwert"],
-
-            errors="coerce"
-
-        )
-
-
-        # =============================================
-        # Statistik
-        # =============================================
-
-        original_count = len(df)
-
-        missing_values = int(
-            df["Messwert"]
-            .isna()
-            .sum()
-        )
-
-
-        clean_df = df.dropna(
-            subset=["Messwert"]
-        )
-
-
-        if clean_df.empty:
-
-            continue
-
-
-        mean = clean_df[
-            "Messwert"
-        ].mean()
-
-
-        std = clean_df[
-            "Messwert"
-        ].std()
-
-
-        # =============================================
-        # Ausreißer
-        # =============================================
-
-        outlier_count = 0
-
-
-        if (
-
-            pd.notna(std)
-            and std > 0
-
-        ):
-
-            outliers = clean_df[
-
-                (
-                    clean_df["Messwert"]
-                    < mean - 3 * std
-                )
-
-                |
-
-                (
-                    clean_df["Messwert"]
-                    > mean + 3 * std
-                )
-
-            ]
-
-            outlier_count = len(
-                outliers
-            )
-
-
-        # =============================================
-        # Analyse speichern
-        # =============================================
-
-        analysis_rows.append({
-
-            "Messwert":
-                mapping["name"],
-
-            "Code":
-                component,
-
-            "Kategorie":
-                mapping["kategorie"],
-
-            "Einheit":
-                mapping["einheit"],
-
-            "Datensätze":
-                original_count,
-
-            "Fehlende Werte":
-                missing_values,
-
-            "Ausreißer":
-                outlier_count,
-
-            "Mittelwert":
-                round(mean, 2)
-                if pd.notna(mean)
-                else 0
-
-        })
-
-    except Exception as error:
-
-        st.error(
-            f"Fehler in Datei: {file}"
-        )
-
-        st.text(str(error))
+    component_display[
+        display_name
+    ] = component
 
 
 # =====================================================
-# Analyse DataFrame
+# Prüfen ob Komponenten existieren
 # =====================================================
 
-analysis_df = pd.DataFrame(
-    analysis_rows
-)
-
-
-# =====================================================
-# Prüfen
-# =====================================================
-
-if analysis_df.empty:
+if len(component_display) == 0:
 
     st.warning(
-        "Keine gültigen Daten"
+        "Keine Komponenten gefunden."
     )
 
     st.stop()
 
 
 # =====================================================
-# Übersicht
+# Komponente auswählen
 # =====================================================
 
-st.subheader(
-    "Übersicht aller Messpunkte"
-)
+selected_component_display = st.selectbox(
 
-st.dataframe(
-    analysis_df
-)
+    "Messwert auswählen",
 
-
-# =====================================================
-# Fehlende Werte Diagramm
-# =====================================================
-
-st.subheader(
-    "Fehlende Werte"
-)
-
-
-fig1, ax1 = plt.subplots(
-    figsize=(14, 6)
-)
-
-
-ax1.bar(
-
-    analysis_df["Code"],
-
-    analysis_df[
-        "Fehlende Werte"
-    ]
-
-)
-
-
-ax1.set_title(
-    "Fehlende Werte pro Messpunkt"
-)
-
-ax1.set_xlabel(
-    "Messpunkt"
-)
-
-ax1.set_ylabel(
-    "Anzahl"
-)
-
-ax1.grid(True)
-
-
-st.pyplot(fig1)
-
-
-# =====================================================
-# Ausreißer Diagramm
-# =====================================================
-
-st.subheader(
-    "Ausreißer"
-)
-
-
-fig2, ax2 = plt.subplots(
-    figsize=(14, 6)
-)
-
-
-ax2.bar(
-
-    analysis_df["Code"],
-
-    analysis_df[
-        "Ausreißer"
-    ]
-
-)
-
-
-ax2.set_title(
-    "Ausreißer pro Messpunkt"
-)
-
-ax2.set_xlabel(
-    "Messpunkt"
-)
-
-ax2.set_ylabel(
-    "Anzahl"
-)
-
-ax2.grid(True)
-
-
-st.pyplot(fig2)
-
-
-# =====================================================
-# Detailauswahl
-# =====================================================
-
-st.subheader(
-    "Messpunkt Details"
-)
-
-
-selected_component_option = st.selectbox(
-
-    "Messpunkt auswählen",
-
-    component_options,
-
-    format_func=lambda x: x["label"]
+    sorted(
+        component_display.keys()
+    )
 
 )
 
 
 # =====================================================
-# Komponentencode
+# Komponenten-Code
 # =====================================================
 
-selected_component = (
-    selected_component_option["value"]
+selected_component = component_display[
+    selected_component_display
+]
+
+
+# =====================================================
+# Komponenteninformationen
+# =====================================================
+
+component_info = weather_mapping.get(
+
+    selected_component,
+
+    {
+        "name": selected_component,
+        "beschreibung":
+            "Keine Beschreibung",
+        "einheit": "",
+        "kategorie":
+            "Unbekannt"
+    }
+
+)
+
+
+# =====================================================
+# Komponenteninformationen anzeigen
+# =====================================================
+
+st.info(
+
+    f"""
+    Messwert:
+    {component_info['name']}
+
+    Kategorie:
+    {component_info['kategorie']}
+
+    Beschreibung:
+    {component_info['beschreibung']}
+
+    Einheit:
+    {component_info['einheit']}
+    """
+
 )
 
 
@@ -611,24 +380,9 @@ selected_component = (
 # Datei laden
 # =====================================================
 
-selected_file = (
-    component_file_mapping.get(
-        selected_component
-    )
-)
-
-
-# =====================================================
-# Prüfen
-# =====================================================
-
-if selected_file is None:
-
-    st.warning(
-        "Keine Datei gefunden"
-    )
-
-    st.stop()
+selected_file = component_mapping[
+    selected_component
+]
 
 
 # =====================================================
@@ -644,8 +398,8 @@ try:
 except Exception as error:
 
     st.error(
-        "Fehler beim Laden "
-        "der Detaildaten"
+        f"Fehler beim Laden:"
+        f" {selected_file}"
     )
 
     st.text(str(error))
@@ -654,17 +408,32 @@ except Exception as error:
 
 
 # =====================================================
-# Datentypen korrigieren
+# Prüfen ob Daten vorhanden
 # =====================================================
 
-if "Messwert" not in df.columns:
+if df.empty:
 
-    st.error(
-        "Messwert-Spalte fehlt"
+    st.warning(
+        "Datei enthält keine Daten."
     )
 
     st.stop()
 
+
+# =====================================================
+# Daten bereinigen
+# =====================================================
+
+df = df.dropna(
+    subset=["Messwert"]
+)
+
+df = df.drop_duplicates()
+
+
+# =====================================================
+# Datentypen korrigieren
+# =====================================================
 
 df["Messwert"] = pd.to_numeric(
 
@@ -675,54 +444,90 @@ df["Messwert"] = pd.to_numeric(
 )
 
 
-# =====================================================
-# Fehlende entfernen
-# =====================================================
-
 df = df.dropna(
     subset=["Messwert"]
 )
 
 
 # =====================================================
-# Prüfen
+# Übersicht
 # =====================================================
 
-if df.empty:
-
-    st.warning(
-        "Keine gültigen Daten vorhanden"
-    )
-
-    st.stop()
-
-
-# =====================================================
-# Zeitindex prüfen
-# =====================================================
-
-if "Zeitindex" not in df.columns:
-
-    df["Zeitindex"] = range(
-        len(df)
-    )
-
-
-# =====================================================
-# Detaildiagramm
-# =====================================================
-
-st.subheader(
-    "Messwertverlauf"
+st.success(
+    f"{len(df)} Datensätze geladen"
 )
 
 
-fig3, ax3 = plt.subplots(
+# =====================================================
+# Datenvorschau
+# =====================================================
+
+st.subheader("Datenvorschau")
+
+st.dataframe(
+    df.head(20)
+)
+
+
+# =====================================================
+# Statistik
+# =====================================================
+
+st.subheader("Statistik")
+
+
+col1, col2, col3 = st.columns(3)
+
+
+col1.metric(
+
+    "Mittelwert",
+
+    round(
+        df["Messwert"].mean(),
+        2
+    )
+
+)
+
+
+col2.metric(
+
+    "Minimum",
+
+    round(
+        df["Messwert"].min(),
+        2
+    )
+
+)
+
+
+col3.metric(
+
+    "Maximum",
+
+    round(
+        df["Messwert"].max(),
+        2
+    )
+
+)
+
+
+# =====================================================
+# Diagramm
+# =====================================================
+
+st.subheader("Messwertverlauf")
+
+
+fig, ax = plt.subplots(
     figsize=(14, 6)
 )
 
 
-ax3.plot(
+ax.plot(
 
     df["Zeitindex"],
 
@@ -733,25 +538,58 @@ ax3.plot(
 )
 
 
-ax3.set_title(
+ax.set_title(
 
-    f"{selected_station} - "
-    f"{selected_component}"
+    f"{station_info['name']} - "
+    f"{component_info['name']}"
 
 )
 
-ax3.set_xlabel(
+
+ax.set_xlabel(
     "Zeitindex"
 )
 
-ax3.set_ylabel(
-    "Messwert"
+ax.set_ylabel(
+    component_info["einheit"]
 )
 
-ax3.grid(True)
+ax.grid(True)
 
 
-st.pyplot(fig3)
+st.pyplot(fig)
+
+
+# =====================================================
+# Datenqualität
+# =====================================================
+
+st.subheader("Datenqualität")
+
+
+quality_col1, quality_col2 = st.columns(2)
+
+
+quality_col1.metric(
+
+    "Fehlende Werte",
+
+    int(
+        df["Messwert"]
+        .isna()
+        .sum()
+    )
+
+)
+
+
+quality_col2.metric(
+
+    "Datensätze",
+
+    len(df)
+
+)
 
 
 # =====================================================
@@ -763,3 +601,28 @@ with st.expander(
 ):
 
     st.dataframe(df)
+
+
+# =====================================================
+# CSV Export
+# =====================================================
+
+csv_export = df.to_csv(
+    index=False
+)
+
+
+st.download_button(
+
+    label="CSV herunterladen",
+
+    data=csv_export,
+
+    file_name=(
+        f"{selected_station}_"
+        f"{selected_component}.csv"
+    ),
+
+    mime="text/csv"
+
+)
