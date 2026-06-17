@@ -1,0 +1,2050 @@
+[2026-06-16 13:35:22] Starte Datenimport
+[2026-06-16 13:35:22] Daten erfolgreich geladen
+[2026-06-16 13:35:22] Stationen gefunden: 28
+[2026-06-16 13:35:22] Verarbeite Station: BGSW
+[2026-06-16 13:35:22] Messstellen: 10
+[2026-06-16 13:35:22] Komponente: PM1024
+[2026-06-16 13:35:22] Bereinigt: 9 Werte entfernt
+[2026-06-16 13:35:22] CSV gespeichert: data/stations\BGSW\BGSW_PM1024.csv
+[2026-06-16 13:35:22] Komponente: NO2
+[2026-06-16 13:35:22] Bereinigt: 40 Werte entfernt
+[2026-06-16 13:35:22] CSV gespeichert: data/stations\BGSW\BGSW_NO2.csv
+[2026-06-16 13:35:22] Komponente: O3
+[2026-06-16 13:35:22] Bereinigt: 30 Werte entfernt
+[2026-06-16 13:35:22] CSV gespeichert: data/stations\BGSW\BGSW_O3.csv
+[2026-06-16 13:35:22] Komponente: TT
+[2026-06-16 13:35:22] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:22] CSV gespeichert: data/stations\BGSW\BGSW_TT.csv
+[2026-06-16 13:35:22] Komponente: PPP
+[2026-06-16 13:35:22] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:22] CSV gespeichert: data/stations\BGSW\BGSW_PPP.csv
+[2026-06-16 13:35:22] Komponente: DD
+[2026-06-16 13:35:23] Bereinigt: 1 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\BGSW\BGSW_DD.csv
+[2026-06-16 13:35:23] Komponente: FF
+[2026-06-16 13:35:23] Bereinigt: 8 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\BGSW\BGSW_FF.csv
+[2026-06-16 13:35:23] Komponente: TF
+[2026-06-16 13:35:23] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\BGSW\BGSW_TF.csv
+[2026-06-16 13:35:23] Komponente: RD
+[2026-06-16 13:35:23] Bereinigt: 19 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\BGSW\BGSW_RD.csv
+[2026-06-16 13:35:23] Komponente: G
+[2026-06-16 13:35:23] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\BGSW\BGSW_G.csv
+[2026-06-16 13:35:23] Verarbeite Station: BGVT
+[2026-06-16 13:35:23] Messstellen: 7
+[2026-06-16 13:35:23] Komponente: PM1024
+[2026-06-16 13:35:23] Bereinigt: 11 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\BGVT\BGVT_PM1024.csv
+[2026-06-16 13:35:23] Komponente: NO2
+[2026-06-16 13:35:23] Bereinigt: 35 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\BGVT\BGVT_NO2.csv
+[2026-06-16 13:35:23] Komponente: CO
+[2026-06-16 13:35:23] Bereinigt: 19 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\BGVT\BGVT_CO.csv
+[2026-06-16 13:35:23] Komponente: TT
+[2026-06-16 13:35:23] Bereinigt: 1 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\BGVT\BGVT_TT.csv
+[2026-06-16 13:35:23] Komponente: PPP
+[2026-06-16 13:35:23] Bereinigt: 1 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\BGVT\BGVT_PPP.csv
+[2026-06-16 13:35:23] Komponente: TF
+[2026-06-16 13:35:23] Bereinigt: 1 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\BGVT\BGVT_TF.csv
+[2026-06-16 13:35:23] Komponente: RD
+[2026-06-16 13:35:23] Bereinigt: 21 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\BGVT\BGVT_RD.csv
+[2026-06-16 13:35:23] Verarbeite Station: BLWW
+[2026-06-16 13:35:23] Messstellen: 11
+[2026-06-16 13:35:23] Komponente: PM1024
+[2026-06-16 13:35:23] Bereinigt: 13 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\BLWW\BLWW_PM1024.csv
+[2026-06-16 13:35:23] Komponente: NO2
+[2026-06-16 13:35:23] Bereinigt: 49 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\BLWW\BLWW_NO2.csv
+[2026-06-16 13:35:23] Komponente: O3
+[2026-06-16 13:35:23] Bereinigt: 29 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\BLWW\BLWW_O3.csv
+[2026-06-16 13:35:23] Komponente: TT
+[2026-06-16 13:35:23] Bereinigt: 8 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\BLWW\BLWW_TT.csv
+[2026-06-16 13:35:23] Komponente: PPP
+[2026-06-16 13:35:23] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\BLWW\BLWW_PPP.csv
+[2026-06-16 13:35:23] Komponente: DD
+[2026-06-16 13:35:23] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\BLWW\BLWW_DD.csv
+[2026-06-16 13:35:23] Komponente: FF
+[2026-06-16 13:35:23] Bereinigt: 4 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\BLWW\BLWW_FF.csv
+[2026-06-16 13:35:23] Komponente: TF
+[2026-06-16 13:35:23] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\BLWW\BLWW_TF.csv
+[2026-06-16 13:35:23] Komponente: RD
+[2026-06-16 13:35:23] Bereinigt: 24 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\BLWW\BLWW_RD.csv
+[2026-06-16 13:35:23] Komponente: G
+[2026-06-16 13:35:23] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\BLWW\BLWW_G.csv
+[2026-06-16 13:35:23] Komponente: UVBSI
+[2026-06-16 13:35:23] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\BLWW\BLWW_UVBSI.csv
+[2026-06-16 13:35:23] Verarbeite Station: BRNN
+[2026-06-16 13:35:23] Messstellen: 13
+[2026-06-16 13:35:23] Komponente: PM1024
+[2026-06-16 13:35:23] Bereinigt: 17 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\BRNN\BRNN_PM1024.csv
+[2026-06-16 13:35:23] Komponente: NO2
+[2026-06-16 13:35:23] Bereinigt: 26 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\BRNN\BRNN_NO2.csv
+[2026-06-16 13:35:23] Komponente: O3
+[2026-06-16 13:35:23] Bereinigt: 32 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\BRNN\BRNN_O3.csv
+[2026-06-16 13:35:23] Komponente: SO2
+[2026-06-16 13:35:23] Bereinigt: 65 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\BRNN\BRNN_SO2.csv
+[2026-06-16 13:35:23] Komponente: CO2
+[2026-06-16 13:35:23] Bereinigt: 6 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\BRNN\BRNN_CO2.csv
+[2026-06-16 13:35:23] Komponente: TT
+[2026-06-16 13:35:23] Bereinigt: 1 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\BRNN\BRNN_TT.csv
+[2026-06-16 13:35:23] Komponente: PPP
+[2026-06-16 13:35:23] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\BRNN\BRNN_PPP.csv
+[2026-06-16 13:35:23] Komponente: DD
+[2026-06-16 13:35:23] Bereinigt: 18 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\BRNN\BRNN_DD.csv
+[2026-06-16 13:35:23] Komponente: FF
+[2026-06-16 13:35:23] Bereinigt: 2 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\BRNN\BRNN_FF.csv
+[2026-06-16 13:35:23] Komponente: TF
+[2026-06-16 13:35:23] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\BRNN\BRNN_TF.csv
+[2026-06-16 13:35:23] Komponente: RD
+[2026-06-16 13:35:23] Bereinigt: 23 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\BRNN\BRNN_RD.csv
+[2026-06-16 13:35:23] Komponente: G
+[2026-06-16 13:35:23] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\BRNN\BRNN_G.csv
+[2026-06-16 13:35:23] Komponente: UVBSI
+[2026-06-16 13:35:23] Bereinigt: 4 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\BRNN\BRNN_UVBSI.csv
+[2026-06-16 13:35:23] Verarbeite Station: CXSO
+[2026-06-16 13:35:23] Messstellen: 11
+[2026-06-16 13:35:23] Komponente: PM1024
+[2026-06-16 13:35:23] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\CXSO\CXSO_PM1024.csv
+[2026-06-16 13:35:23] Komponente: NO2
+[2026-06-16 13:35:23] Bereinigt: 48 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\CXSO\CXSO_NO2.csv
+[2026-06-16 13:35:23] Komponente: O3
+[2026-06-16 13:35:23] Bereinigt: 41 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\CXSO\CXSO_O3.csv
+[2026-06-16 13:35:23] Komponente: TT
+[2026-06-16 13:35:23] Bereinigt: 15 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\CXSO\CXSO_TT.csv
+[2026-06-16 13:35:23] Komponente: PPP
+[2026-06-16 13:35:23] Bereinigt: 4 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\CXSO\CXSO_PPP.csv
+[2026-06-16 13:35:23] Komponente: DD
+[2026-06-16 13:35:23] Bereinigt: 4 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\CXSO\CXSO_DD.csv
+[2026-06-16 13:35:23] Komponente: FF
+[2026-06-16 13:35:23] Bereinigt: 5 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\CXSO\CXSO_FF.csv
+[2026-06-16 13:35:23] Komponente: TF
+[2026-06-16 13:35:23] Bereinigt: 6 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\CXSO\CXSO_TF.csv
+[2026-06-16 13:35:23] Komponente: RD
+[2026-06-16 13:35:23] Bereinigt: 26 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\CXSO\CXSO_RD.csv
+[2026-06-16 13:35:23] Komponente: G
+[2026-06-16 13:35:23] Bereinigt: 4 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\CXSO\CXSO_G.csv
+[2026-06-16 13:35:23] Komponente: UVBSI
+[2026-06-16 13:35:23] Bereinigt: 3 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\CXSO\CXSO_UVBSI.csv
+[2026-06-16 13:35:23] Verarbeite Station: DUCC
+[2026-06-16 13:35:23] Messstellen: 10
+[2026-06-16 13:35:23] Komponente: PM1024
+[2026-06-16 13:35:23] Bereinigt: 16 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\DUCC\DUCC_PM1024.csv
+[2026-06-16 13:35:23] Komponente: NO2
+[2026-06-16 13:35:23] Bereinigt: 37 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\DUCC\DUCC_NO2.csv
+[2026-06-16 13:35:23] Komponente: TT
+[2026-06-16 13:35:23] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\DUCC\DUCC_TT.csv
+[2026-06-16 13:35:23] Komponente: PPP
+[2026-06-16 13:35:23] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\DUCC\DUCC_PPP.csv
+[2026-06-16 13:35:23] Komponente: DD
+[2026-06-16 13:35:23] Bereinigt: 12 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\DUCC\DUCC_DD.csv
+[2026-06-16 13:35:23] Komponente: FF
+[2026-06-16 13:35:23] Bereinigt: 11 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\DUCC\DUCC_FF.csv
+[2026-06-16 13:35:23] Komponente: TF
+[2026-06-16 13:35:23] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\DUCC\DUCC_TF.csv
+[2026-06-16 13:35:23] Komponente: RD
+[2026-06-16 13:35:23] Bereinigt: 20 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\DUCC\DUCC_RD.csv
+[2026-06-16 13:35:23] Komponente: G
+[2026-06-16 13:35:23] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\DUCC\DUCC_G.csv
+[2026-06-16 13:35:23] Komponente: UVBSI
+[2026-06-16 13:35:23] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\DUCC\DUCC_UVBSI.csv
+[2026-06-16 13:35:23] Verarbeite Station: ENCC
+[2026-06-16 13:35:23] Messstellen: 10
+[2026-06-16 13:35:23] Komponente: PM1024
+[2026-06-16 13:35:23] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\ENCC\ENCC_PM1024.csv
+[2026-06-16 13:35:23] Komponente: NO2
+[2026-06-16 13:35:23] Bereinigt: 39 Werte entfernt
+[2026-06-16 13:35:23] CSV gespeichert: data/stations\ENCC\ENCC_NO2.csv
+[2026-06-16 13:35:23] Komponente: O3
+[2026-06-16 13:35:23] Bereinigt: 44 Werte entfernt
+[2026-06-16 13:35:24] CSV gespeichert: data/stations\ENCC\ENCC_O3.csv
+[2026-06-16 13:35:24] Komponente: TT
+[2026-06-16 13:35:24] Bereinigt: 10 Werte entfernt
+[2026-06-16 13:35:24] CSV gespeichert: data/stations\ENCC\ENCC_TT.csv
+[2026-06-16 13:35:24] Komponente: PPP
+[2026-06-16 13:35:24] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:24] CSV gespeichert: data/stations\ENCC\ENCC_PPP.csv
+[2026-06-16 13:35:24] Komponente: DD
+[2026-06-16 13:35:24] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:24] CSV gespeichert: data/stations\ENCC\ENCC_DD.csv
+[2026-06-16 13:35:24] Komponente: FF
+[2026-06-16 13:35:24] Bereinigt: 1 Werte entfernt
+[2026-06-16 13:35:24] CSV gespeichert: data/stations\ENCC\ENCC_FF.csv
+[2026-06-16 13:35:24] Komponente: TF
+[2026-06-16 13:35:24] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:24] CSV gespeichert: data/stations\ENCC\ENCC_TF.csv
+[2026-06-16 13:35:24] Komponente: RD
+[2026-06-16 13:35:24] Bereinigt: 22 Werte entfernt
+[2026-06-16 13:35:24] CSV gespeichert: data/stations\ENCC\ENCC_RD.csv
+[2026-06-16 13:35:24] Komponente: G
+[2026-06-16 13:35:24] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:24] CSV gespeichert: data/stations\ENCC\ENCC_G.csv
+[2026-06-16 13:35:24] Verarbeite Station: GNCC
+[2026-06-16 13:35:24] Messstellen: 11
+[2026-06-16 13:35:24] Komponente: PM1024
+[2026-06-16 13:35:24] Bereinigt: 11 Werte entfernt
+[2026-06-16 13:35:24] CSV gespeichert: data/stations\GNCC\GNCC_PM1024.csv
+[2026-06-16 13:35:24] Komponente: NO2
+[2026-06-16 13:35:24] Bereinigt: 35 Werte entfernt
+[2026-06-16 13:35:24] CSV gespeichert: data/stations\GNCC\GNCC_NO2.csv
+[2026-06-16 13:35:24] Komponente: O3
+[2026-06-16 13:35:24] Bereinigt: 30 Werte entfernt
+[2026-06-16 13:35:24] CSV gespeichert: data/stations\GNCC\GNCC_O3.csv
+[2026-06-16 13:35:24] Komponente: SO2
+[2026-06-16 13:35:24] Bereinigt: 78 Werte entfernt
+[2026-06-16 13:35:24] CSV gespeichert: data/stations\GNCC\GNCC_SO2.csv
+[2026-06-16 13:35:24] Komponente: TT
+[2026-06-16 13:35:24] Bereinigt: 1 Werte entfernt
+[2026-06-16 13:35:24] CSV gespeichert: data/stations\GNCC\GNCC_TT.csv
+[2026-06-16 13:35:24] Komponente: PPP
+[2026-06-16 13:35:24] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:24] CSV gespeichert: data/stations\GNCC\GNCC_PPP.csv
+[2026-06-16 13:35:24] Komponente: DD
+[2026-06-16 13:35:24] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:24] CSV gespeichert: data/stations\GNCC\GNCC_DD.csv
+[2026-06-16 13:35:24] Komponente: FF
+[2026-06-16 13:35:24] Bereinigt: 13 Werte entfernt
+[2026-06-16 13:35:24] CSV gespeichert: data/stations\GNCC\GNCC_FF.csv
+[2026-06-16 13:35:24] Komponente: TF
+[2026-06-16 13:35:24] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:24] CSV gespeichert: data/stations\GNCC\GNCC_TF.csv
+[2026-06-16 13:35:24] Komponente: RD
+[2026-06-16 13:35:24] Bereinigt: 19 Werte entfernt
+[2026-06-16 13:35:24] CSV gespeichert: data/stations\GNCC\GNCC_RD.csv
+[2026-06-16 13:35:24] Komponente: G
+[2026-06-16 13:35:24] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:24] CSV gespeichert: data/stations\GNCC\GNCC_G.csv
+[2026-06-16 13:35:24] Verarbeite Station: GNVS
+[2026-06-16 13:35:24] Messstellen: 7
+[2026-06-16 13:35:24] Komponente: PM1024
+[2026-06-16 13:35:24] Bereinigt: 16 Werte entfernt
+[2026-06-16 13:35:24] CSV gespeichert: data/stations\GNVS\GNVS_PM1024.csv
+[2026-06-16 13:35:24] Komponente: NO2
+[2026-06-16 13:35:24] Bereinigt: 55 Werte entfernt
+[2026-06-16 13:35:24] CSV gespeichert: data/stations\GNVS\GNVS_NO2.csv
+[2026-06-16 13:35:24] Komponente: CO
+[2026-06-16 13:35:24] Bereinigt: 131 Werte entfernt
+[2026-06-16 13:35:24] CSV gespeichert: data/stations\GNVS\GNVS_CO.csv
+[2026-06-16 13:35:24] Komponente: TT
+[2026-06-16 13:35:24] Bereinigt: 3 Werte entfernt
+[2026-06-16 13:35:24] CSV gespeichert: data/stations\GNVS\GNVS_TT.csv
+[2026-06-16 13:35:24] Komponente: PPP
+[2026-06-16 13:35:24] Bereinigt: 3 Werte entfernt
+[2026-06-16 13:35:24] CSV gespeichert: data/stations\GNVS\GNVS_PPP.csv
+[2026-06-16 13:35:24] Komponente: TF
+[2026-06-16 13:35:24] Bereinigt: 3 Werte entfernt
+[2026-06-16 13:35:24] CSV gespeichert: data/stations\GNVS\GNVS_TF.csv
+[2026-06-16 13:35:24] Komponente: RD
+[2026-06-16 13:35:24] Bereinigt: 18 Werte entfernt
+[2026-06-16 13:35:24] CSV gespeichert: data/stations\GNVS\GNVS_RD.csv
+[2026-06-16 13:35:24] Verarbeite Station: HIVU
+[2026-06-16 13:35:24] Messstellen: 7
+[2026-06-16 13:35:24] Komponente: PM1024
+[2026-06-16 13:35:24] Bereinigt: 28 Werte entfernt
+[2026-06-16 13:35:24] CSV gespeichert: data/stations\HIVU\HIVU_PM1024.csv
+[2026-06-16 13:35:24] Komponente: NO2
+[2026-06-16 13:35:24] Bereinigt: 39 Werte entfernt
+[2026-06-16 13:35:24] CSV gespeichert: data/stations\HIVU\HIVU_NO2.csv
+[2026-06-16 13:35:24] Komponente: CO
+[2026-06-16 13:35:24] Bereinigt: 42 Werte entfernt
+[2026-06-16 13:35:24] CSV gespeichert: data/stations\HIVU\HIVU_CO.csv
+[2026-06-16 13:35:24] Komponente: TT
+[2026-06-16 13:35:24] Bereinigt: 6 Werte entfernt
+[2026-06-16 13:35:24] CSV gespeichert: data/stations\HIVU\HIVU_TT.csv
+[2026-06-16 13:35:24] Komponente: PPP
+[2026-06-16 13:35:24] Bereinigt: 3 Werte entfernt
+[2026-06-16 13:35:24] CSV gespeichert: data/stations\HIVU\HIVU_PPP.csv
+[2026-06-16 13:35:24] Komponente: TF
+[2026-06-16 13:35:24] Bereinigt: 3 Werte entfernt
+[2026-06-16 13:35:24] CSV gespeichert: data/stations\HIVU\HIVU_TF.csv
+[2026-06-16 13:35:24] Komponente: RD
+[2026-06-16 13:35:24] Bereinigt: 20 Werte entfernt
+[2026-06-16 13:35:24] CSV gespeichert: data/stations\HIVU\HIVU_RD.csv
+[2026-06-16 13:35:24] Verarbeite Station: HRSW
+[2026-06-16 13:35:24] Messstellen: 10
+[2026-06-16 13:35:24] Komponente: PM1024
+[2026-06-16 13:35:24] Bereinigt: 16 Werte entfernt
+[2026-06-16 13:35:24] CSV gespeichert: data/stations\HRSW\HRSW_PM1024.csv
+[2026-06-16 13:35:24] Komponente: NO2
+[2026-06-16 13:35:24] Bereinigt: 44 Werte entfernt
+[2026-06-16 13:35:24] CSV gespeichert: data/stations\HRSW\HRSW_NO2.csv
+[2026-06-16 13:35:24] Komponente: O3
+[2026-06-16 13:35:24] Bereinigt: 36 Werte entfernt
+[2026-06-16 13:35:24] CSV gespeichert: data/stations\HRSW\HRSW_O3.csv
+[2026-06-16 13:35:24] Komponente: TT
+[2026-06-16 13:35:24] Bereinigt: 6 Werte entfernt
+[2026-06-16 13:35:24] CSV gespeichert: data/stations\HRSW\HRSW_TT.csv
+[2026-06-16 13:35:24] Komponente: PPP
+[2026-06-16 13:35:24] Bereinigt: 2 Werte entfernt
+[2026-06-16 13:35:24] CSV gespeichert: data/stations\HRSW\HRSW_PPP.csv
+[2026-06-16 13:35:24] Komponente: DD
+[2026-06-16 13:35:24] Bereinigt: 3 Werte entfernt
+[2026-06-16 13:35:24] CSV gespeichert: data/stations\HRSW\HRSW_DD.csv
+[2026-06-16 13:35:24] Komponente: FF
+[2026-06-16 13:35:24] Bereinigt: 16 Werte entfernt
+[2026-06-16 13:35:24] CSV gespeichert: data/stations\HRSW\HRSW_FF.csv
+[2026-06-16 13:35:24] Komponente: TF
+[2026-06-16 13:35:24] Bereinigt: 2 Werte entfernt
+[2026-06-16 13:35:24] CSV gespeichert: data/stations\HRSW\HRSW_TF.csv
+[2026-06-16 13:35:24] Komponente: RD
+[2026-06-16 13:35:24] Bereinigt: 15 Werte entfernt
+[2026-06-16 13:35:24] CSV gespeichert: data/stations\HRSW\HRSW_RD.csv
+[2026-06-16 13:35:24] Komponente: G
+[2026-06-16 13:35:24] Bereinigt: 33 Werte entfernt
+[2026-06-16 13:35:24] CSV gespeichert: data/stations\HRSW\HRSW_G.csv
+[2026-06-16 13:35:25] Verarbeite Station: HRVS
+[2026-06-16 13:35:25] Messstellen: 6
+[2026-06-16 13:35:25] Komponente: PM1024
+[2026-06-16 13:35:25] Bereinigt: 7 Werte entfernt
+[2026-06-16 13:35:25] CSV gespeichert: data/stations\HRVS\HRVS_PM1024.csv
+[2026-06-16 13:35:25] Komponente: NO2
+[2026-06-16 13:35:25] Bereinigt: 41 Werte entfernt
+[2026-06-16 13:35:25] CSV gespeichert: data/stations\HRVS\HRVS_NO2.csv
+[2026-06-16 13:35:25] Komponente: CO
+[2026-06-16 13:35:25] Bereinigt: 20 Werte entfernt
+[2026-06-16 13:35:25] CSV gespeichert: data/stations\HRVS\HRVS_CO.csv
+[2026-06-16 13:35:25] Komponente: TT
+[2026-06-16 13:35:25] Bereinigt: 2 Werte entfernt
+[2026-06-16 13:35:25] CSV gespeichert: data/stations\HRVS\HRVS_TT.csv
+[2026-06-16 13:35:25] Komponente: PPP
+[2026-06-16 13:35:25] Bereinigt: 2 Werte entfernt
+[2026-06-16 13:35:25] CSV gespeichert: data/stations\HRVS\HRVS_PPP.csv
+[2026-06-16 13:35:25] Komponente: TF
+[2026-06-16 13:35:25] Bereinigt: 2 Werte entfernt
+[2026-06-16 13:35:25] CSV gespeichert: data/stations\HRVS\HRVS_TF.csv
+[2026-06-16 13:35:25] Verarbeite Station: JKCC
+[2026-06-16 13:35:25] Messstellen: 10
+[2026-06-16 13:35:25] Komponente: PM1024
+[2026-06-16 13:35:25] Bereinigt: 37 Werte entfernt
+[2026-06-16 13:35:25] CSV gespeichert: data/stations\JKCC\JKCC_PM1024.csv
+[2026-06-16 13:35:25] Komponente: NO2
+[2026-06-16 13:35:25] Bereinigt: 46 Werte entfernt
+[2026-06-16 13:35:25] CSV gespeichert: data/stations\JKCC\JKCC_NO2.csv
+[2026-06-16 13:35:25] Komponente: O3
+[2026-06-16 13:35:25] Bereinigt: 37 Werte entfernt
+[2026-06-16 13:35:25] CSV gespeichert: data/stations\JKCC\JKCC_O3.csv
+[2026-06-16 13:35:25] Komponente: TT
+[2026-06-16 13:35:25] Bereinigt: 8 Werte entfernt
+[2026-06-16 13:35:25] CSV gespeichert: data/stations\JKCC\JKCC_TT.csv
+[2026-06-16 13:35:25] Komponente: PPP
+[2026-06-16 13:35:25] Bereinigt: 3 Werte entfernt
+[2026-06-16 13:35:25] CSV gespeichert: data/stations\JKCC\JKCC_PPP.csv
+[2026-06-16 13:35:25] Komponente: DD
+[2026-06-16 13:35:25] Bereinigt: 16 Werte entfernt
+[2026-06-16 13:35:25] CSV gespeichert: data/stations\JKCC\JKCC_DD.csv
+[2026-06-16 13:35:25] Komponente: FF
+[2026-06-16 13:35:25] Bereinigt: 4 Werte entfernt
+[2026-06-16 13:35:25] CSV gespeichert: data/stations\JKCC\JKCC_FF.csv
+[2026-06-16 13:35:25] Komponente: TF
+[2026-06-16 13:35:25] Bereinigt: 3 Werte entfernt
+[2026-06-16 13:35:25] CSV gespeichert: data/stations\JKCC\JKCC_TF.csv
+[2026-06-16 13:35:25] Komponente: RD
+[2026-06-16 13:35:25] Bereinigt: 26 Werte entfernt
+[2026-06-16 13:35:25] CSV gespeichert: data/stations\JKCC\JKCC_RD.csv
+[2026-06-16 13:35:25] Komponente: G
+[2026-06-16 13:35:25] Bereinigt: 3 Werte entfernt
+[2026-06-16 13:35:25] CSV gespeichert: data/stations\JKCC\JKCC_G.csv
+[2026-06-16 13:35:25] Verarbeite Station: LGOO
+[2026-06-16 13:35:25] Messstellen: 11
+[2026-06-16 13:35:25] Komponente: PM1024
+[2026-06-16 13:35:25] Bereinigt: 4 Werte entfernt
+[2026-06-16 13:35:25] CSV gespeichert: data/stations\LGOO\LGOO_PM1024.csv
+[2026-06-16 13:35:25] Komponente: NO2
+[2026-06-16 13:35:25] Bereinigt: 40 Werte entfernt
+[2026-06-16 13:35:25] CSV gespeichert: data/stations\LGOO\LGOO_NO2.csv
+[2026-06-16 13:35:25] Komponente: O3
+[2026-06-16 13:35:25] Bereinigt: 31 Werte entfernt
+[2026-06-16 13:35:25] CSV gespeichert: data/stations\LGOO\LGOO_O3.csv
+[2026-06-16 13:35:25] Komponente: TT
+[2026-06-16 13:35:25] Bereinigt: 4 Werte entfernt
+[2026-06-16 13:35:25] CSV gespeichert: data/stations\LGOO\LGOO_TT.csv
+[2026-06-16 13:35:25] Komponente: PPP
+[2026-06-16 13:35:25] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:25] CSV gespeichert: data/stations\LGOO\LGOO_PPP.csv
+[2026-06-16 13:35:25] Komponente: DD
+[2026-06-16 13:35:25] Bereinigt: 8 Werte entfernt
+[2026-06-16 13:35:25] CSV gespeichert: data/stations\LGOO\LGOO_DD.csv
+[2026-06-16 13:35:25] Komponente: FF
+[2026-06-16 13:35:25] Bereinigt: 15 Werte entfernt
+[2026-06-16 13:35:25] CSV gespeichert: data/stations\LGOO\LGOO_FF.csv
+[2026-06-16 13:35:25] Komponente: TF
+[2026-06-16 13:35:25] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:25] CSV gespeichert: data/stations\LGOO\LGOO_TF.csv
+[2026-06-16 13:35:25] Komponente: RD
+[2026-06-16 13:35:25] Bereinigt: 21 Werte entfernt
+[2026-06-16 13:35:25] CSV gespeichert: data/stations\LGOO\LGOO_RD.csv
+[2026-06-16 13:35:25] Komponente: G
+[2026-06-16 13:35:25] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:25] CSV gespeichert: data/stations\LGOO\LGOO_G.csv
+[2026-06-16 13:35:25] Komponente: UVBSI
+[2026-06-16 13:35:25] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:25] CSV gespeichert: data/stations\LGOO\LGOO_UVBSI.csv
+[2026-06-16 13:35:25] Verarbeite Station: LNCC
+[2026-06-16 13:35:25] Messstellen: 11
+[2026-06-16 13:35:25] Komponente: PM1024
+[2026-06-16 13:35:25] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:25] CSV gespeichert: data/stations\LNCC\LNCC_PM1024.csv
+[2026-06-16 13:35:25] Komponente: NO2
+[2026-06-16 13:35:25] Bereinigt: 44 Werte entfernt
+[2026-06-16 13:35:25] CSV gespeichert: data/stations\LNCC\LNCC_NO2.csv
+[2026-06-16 13:35:25] Komponente: O3
+[2026-06-16 13:35:25] Bereinigt: 36 Werte entfernt
+[2026-06-16 13:35:25] CSV gespeichert: data/stations\LNCC\LNCC_O3.csv
+[2026-06-16 13:35:25] Komponente: SO2
+[2026-06-16 13:35:25] Bereinigt: 37 Werte entfernt
+[2026-06-16 13:35:25] CSV gespeichert: data/stations\LNCC\LNCC_SO2.csv
+[2026-06-16 13:35:25] Komponente: TT
+[2026-06-16 13:35:25] Bereinigt: 6 Werte entfernt
+[2026-06-16 13:35:25] CSV gespeichert: data/stations\LNCC\LNCC_TT.csv
+[2026-06-16 13:35:25] Komponente: PPP
+[2026-06-16 13:35:25] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:25] CSV gespeichert: data/stations\LNCC\LNCC_PPP.csv
+[2026-06-16 13:35:25] Komponente: DD
+[2026-06-16 13:35:25] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:25] CSV gespeichert: data/stations\LNCC\LNCC_DD.csv
+[2026-06-16 13:35:25] Komponente: FF
+[2026-06-16 13:35:25] Bereinigt: 3 Werte entfernt
+[2026-06-16 13:35:25] CSV gespeichert: data/stations\LNCC\LNCC_FF.csv
+[2026-06-16 13:35:25] Komponente: TF
+[2026-06-16 13:35:25] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:25] CSV gespeichert: data/stations\LNCC\LNCC_TF.csv
+[2026-06-16 13:35:25] Komponente: RD
+[2026-06-16 13:35:25] Bereinigt: 26 Werte entfernt
+[2026-06-16 13:35:25] CSV gespeichert: data/stations\LNCC\LNCC_RD.csv
+[2026-06-16 13:35:25] Komponente: G
+[2026-06-16 13:35:25] Bereinigt: 15 Werte entfernt
+[2026-06-16 13:35:25] CSV gespeichert: data/stations\LNCC\LNCC_G.csv
+[2026-06-16 13:35:25] Verarbeite Station: LWSO
+[2026-06-16 13:35:25] Messstellen: 10
+[2026-06-16 13:35:25] Komponente: PM1024
+[2026-06-16 13:35:25] Bereinigt: 34 Werte entfernt
+[2026-06-16 13:35:25] CSV gespeichert: data/stations\LWSO\LWSO_PM1024.csv
+[2026-06-16 13:35:25] Komponente: NO2
+[2026-06-16 13:35:25] Bereinigt: 66 Werte entfernt
+[2026-06-16 13:35:25] CSV gespeichert: data/stations\LWSO\LWSO_NO2.csv
+[2026-06-16 13:35:25] Komponente: O3
+[2026-06-16 13:35:25] Bereinigt: 55 Werte entfernt
+[2026-06-16 13:35:25] CSV gespeichert: data/stations\LWSO\LWSO_O3.csv
+[2026-06-16 13:35:25] Komponente: TT
+[2026-06-16 13:35:25] Bereinigt: 26 Werte entfernt
+[2026-06-16 13:35:25] CSV gespeichert: data/stations\LWSO\LWSO_TT.csv
+[2026-06-16 13:35:25] Komponente: PPP
+[2026-06-16 13:35:25] Bereinigt: 25 Werte entfernt
+[2026-06-16 13:35:25] CSV gespeichert: data/stations\LWSO\LWSO_PPP.csv
+[2026-06-16 13:35:25] Komponente: DD
+[2026-06-16 13:35:25] Bereinigt: 36 Werte entfernt
+[2026-06-16 13:35:25] CSV gespeichert: data/stations\LWSO\LWSO_DD.csv
+[2026-06-16 13:35:25] Komponente: FF
+[2026-06-16 13:35:25] Bereinigt: 34 Werte entfernt
+[2026-06-16 13:35:25] CSV gespeichert: data/stations\LWSO\LWSO_FF.csv
+[2026-06-16 13:35:25] Komponente: TF
+[2026-06-16 13:35:25] Bereinigt: 26 Werte entfernt
+[2026-06-16 13:35:25] CSV gespeichert: data/stations\LWSO\LWSO_TF.csv
+[2026-06-16 13:35:25] Komponente: RD
+[2026-06-16 13:35:25] Bereinigt: 46 Werte entfernt
+[2026-06-16 13:35:25] CSV gespeichert: data/stations\LWSO\LWSO_RD.csv
+[2026-06-16 13:35:25] Komponente: G
+[2026-06-16 13:35:26] Bereinigt: 25 Werte entfernt
+[2026-06-16 13:35:26] CSV gespeichert: data/stations\LWSO\LWSO_G.csv
+[2026-06-16 13:35:26] Verarbeite Station: NYNO
+[2026-06-16 13:35:26] Messstellen: 12
+[2026-06-16 13:35:26] Komponente: PM1024
+[2026-06-16 13:35:26] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:26] CSV gespeichert: data/stations\NYNO\NYNO_PM1024.csv
+[2026-06-16 13:35:26] Komponente: NO2
+[2026-06-16 13:35:26] Bereinigt: 40 Werte entfernt
+[2026-06-16 13:35:26] CSV gespeichert: data/stations\NYNO\NYNO_NO2.csv
+[2026-06-16 13:35:26] Komponente: O3
+[2026-06-16 13:35:26] Bereinigt: 49 Werte entfernt
+[2026-06-16 13:35:26] CSV gespeichert: data/stations\NYNO\NYNO_O3.csv
+[2026-06-16 13:35:26] Komponente: SO2
+[2026-06-16 13:35:26] Bereinigt: 33 Werte entfernt
+[2026-06-16 13:35:26] CSV gespeichert: data/stations\NYNO\NYNO_SO2.csv
+[2026-06-16 13:35:26] Komponente: TT
+[2026-06-16 13:35:26] Bereinigt: 9 Werte entfernt
+[2026-06-16 13:35:26] CSV gespeichert: data/stations\NYNO\NYNO_TT.csv
+[2026-06-16 13:35:26] Komponente: PPP
+[2026-06-16 13:35:26] Bereinigt: 2 Werte entfernt
+[2026-06-16 13:35:26] CSV gespeichert: data/stations\NYNO\NYNO_PPP.csv
+[2026-06-16 13:35:26] Komponente: DD
+[2026-06-16 13:35:26] Bereinigt: 2 Werte entfernt
+[2026-06-16 13:35:26] CSV gespeichert: data/stations\NYNO\NYNO_DD.csv
+[2026-06-16 13:35:26] Komponente: FF
+[2026-06-16 13:35:26] Bereinigt: 2 Werte entfernt
+[2026-06-16 13:35:26] CSV gespeichert: data/stations\NYNO\NYNO_FF.csv
+[2026-06-16 13:35:26] Komponente: TF
+[2026-06-16 13:35:26] Bereinigt: 3 Werte entfernt
+[2026-06-16 13:35:26] CSV gespeichert: data/stations\NYNO\NYNO_TF.csv
+[2026-06-16 13:35:26] Komponente: RD
+[2026-06-16 13:35:26] Bereinigt: 24 Werte entfernt
+[2026-06-16 13:35:26] CSV gespeichert: data/stations\NYNO\NYNO_RD.csv
+[2026-06-16 13:35:26] Komponente: G
+[2026-06-16 13:35:26] Bereinigt: 2 Werte entfernt
+[2026-06-16 13:35:26] CSV gespeichert: data/stations\NYNO\NYNO_G.csv
+[2026-06-16 13:35:26] Komponente: UVBSI
+[2026-06-16 13:35:26] Bereinigt: 99 Werte entfernt
+[2026-06-16 13:35:26] CSV gespeichert: data/stations\NYNO\NYNO_UVBSI.csv
+[2026-06-16 13:35:26] Verarbeite Station: OGCC
+[2026-06-16 13:35:26] Messstellen: 10
+[2026-06-16 13:35:26] Komponente: PM1024
+[2026-06-16 13:35:26] Bereinigt: 11 Werte entfernt
+[2026-06-16 13:35:26] CSV gespeichert: data/stations\OGCC\OGCC_PM1024.csv
+[2026-06-16 13:35:26] Komponente: NO2
+[2026-06-16 13:35:26] Bereinigt: 65 Werte entfernt
+[2026-06-16 13:35:26] CSV gespeichert: data/stations\OGCC\OGCC_NO2.csv
+[2026-06-16 13:35:26] Komponente: O3
+[2026-06-16 13:35:26] Bereinigt: 30 Werte entfernt
+[2026-06-16 13:35:26] CSV gespeichert: data/stations\OGCC\OGCC_O3.csv
+[2026-06-16 13:35:26] Komponente: TT
+[2026-06-16 13:35:26] Bereinigt: 6 Werte entfernt
+[2026-06-16 13:35:26] CSV gespeichert: data/stations\OGCC\OGCC_TT.csv
+[2026-06-16 13:35:26] Komponente: PPP
+[2026-06-16 13:35:26] Bereinigt: 4 Werte entfernt
+[2026-06-16 13:35:26] CSV gespeichert: data/stations\OGCC\OGCC_PPP.csv
+[2026-06-16 13:35:26] Komponente: DD
+[2026-06-16 13:35:26] Bereinigt: 20 Werte entfernt
+[2026-06-16 13:35:26] CSV gespeichert: data/stations\OGCC\OGCC_DD.csv
+[2026-06-16 13:35:26] Komponente: FF
+[2026-06-16 13:35:26] Bereinigt: 10 Werte entfernt
+[2026-06-16 13:35:26] CSV gespeichert: data/stations\OGCC\OGCC_FF.csv
+[2026-06-16 13:35:26] Komponente: TF
+[2026-06-16 13:35:26] Bereinigt: 4 Werte entfernt
+[2026-06-16 13:35:26] CSV gespeichert: data/stations\OGCC\OGCC_TF.csv
+[2026-06-16 13:35:26] Komponente: RD
+[2026-06-16 13:35:26] Bereinigt: 22 Werte entfernt
+[2026-06-16 13:35:26] CSV gespeichert: data/stations\OGCC\OGCC_RD.csv
+[2026-06-16 13:35:26] Komponente: G
+[2026-06-16 13:35:26] Bereinigt: 4 Werte entfernt
+[2026-06-16 13:35:26] CSV gespeichert: data/stations\OGCC\OGCC_G.csv
+[2026-06-16 13:35:26] Verarbeite Station: OKCC
+[2026-06-16 13:35:26] Messstellen: 12
+[2026-06-16 13:35:26] Komponente: PM1024
+[2026-06-16 13:35:26] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:26] CSV gespeichert: data/stations\OKCC\OKCC_PM1024.csv
+[2026-06-16 13:35:26] Komponente: NO2
+[2026-06-16 13:35:26] Bereinigt: 48 Werte entfernt
+[2026-06-16 13:35:26] CSV gespeichert: data/stations\OKCC\OKCC_NO2.csv
+[2026-06-16 13:35:26] Komponente: O3
+[2026-06-16 13:35:26] Bereinigt: 28 Werte entfernt
+[2026-06-16 13:35:26] CSV gespeichert: data/stations\OKCC\OKCC_O3.csv
+[2026-06-16 13:35:26] Komponente: SO2
+[2026-06-16 13:35:26] Bereinigt: 61 Werte entfernt
+[2026-06-16 13:35:26] CSV gespeichert: data/stations\OKCC\OKCC_SO2.csv
+[2026-06-16 13:35:26] Komponente: TT
+[2026-06-16 13:35:26] Bereinigt: 4 Werte entfernt
+[2026-06-16 13:35:26] CSV gespeichert: data/stations\OKCC\OKCC_TT.csv
+[2026-06-16 13:35:26] Komponente: PPP
+[2026-06-16 13:35:26] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:26] CSV gespeichert: data/stations\OKCC\OKCC_PPP.csv
+[2026-06-16 13:35:26] Komponente: DD
+[2026-06-16 13:35:26] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:26] CSV gespeichert: data/stations\OKCC\OKCC_DD.csv
+[2026-06-16 13:35:26] Komponente: FF
+[2026-06-16 13:35:26] Bereinigt: 5 Werte entfernt
+[2026-06-16 13:35:26] CSV gespeichert: data/stations\OKCC\OKCC_FF.csv
+[2026-06-16 13:35:26] Komponente: TF
+[2026-06-16 13:35:26] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:26] CSV gespeichert: data/stations\OKCC\OKCC_TF.csv
+[2026-06-16 13:35:26] Komponente: RD
+[2026-06-16 13:35:26] Bereinigt: 29 Werte entfernt
+[2026-06-16 13:35:26] CSV gespeichert: data/stations\OKCC\OKCC_RD.csv
+[2026-06-16 13:35:26] Komponente: G
+[2026-06-16 13:35:26] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:26] CSV gespeichert: data/stations\OKCC\OKCC_G.csv
+[2026-06-16 13:35:26] Komponente: UVBSI
+[2026-06-16 13:35:26] Bereinigt: 2 Werte entfernt
+[2026-06-16 13:35:26] CSV gespeichert: data/stations\OKCC\OKCC_UVBSI.csv
+[2026-06-16 13:35:26] Verarbeite Station: OKVT
+[2026-06-16 13:35:26] Messstellen: 6
+[2026-06-16 13:35:26] Komponente: PM1024
+[2026-06-16 13:35:26] Bereinigt: 7 Werte entfernt
+[2026-06-16 13:35:26] CSV gespeichert: data/stations\OKVT\OKVT_PM1024.csv
+[2026-06-16 13:35:26] Komponente: NO2
+[2026-06-16 13:35:26] Bereinigt: 34 Werte entfernt
+[2026-06-16 13:35:26] CSV gespeichert: data/stations\OKVT\OKVT_NO2.csv
+[2026-06-16 13:35:26] Komponente: CO
+[2026-06-16 13:35:26] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:26] CSV gespeichert: data/stations\OKVT\OKVT_CO.csv
+[2026-06-16 13:35:26] Komponente: TT
+[2026-06-16 13:35:26] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:26] CSV gespeichert: data/stations\OKVT\OKVT_TT.csv
+[2026-06-16 13:35:26] Komponente: PPP
+[2026-06-16 13:35:26] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:26] CSV gespeichert: data/stations\OKVT\OKVT_PPP.csv
+[2026-06-16 13:35:26] Komponente: TF
+[2026-06-16 13:35:26] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:26] CSV gespeichert: data/stations\OKVT\OKVT_TF.csv
+[2026-06-16 13:35:26] Verarbeite Station: OLVT
+[2026-06-16 13:35:26] Messstellen: 7
+[2026-06-16 13:35:26] Komponente: PM1024
+[2026-06-16 13:35:26] Bereinigt: 7 Werte entfernt
+[2026-06-16 13:35:26] CSV gespeichert: data/stations\OLVT\OLVT_PM1024.csv
+[2026-06-16 13:35:26] Komponente: NO2
+[2026-06-16 13:35:26] Bereinigt: 36 Werte entfernt
+[2026-06-16 13:35:26] CSV gespeichert: data/stations\OLVT\OLVT_NO2.csv
+[2026-06-16 13:35:26] Komponente: CO
+[2026-06-16 13:35:26] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:26] CSV gespeichert: data/stations\OLVT\OLVT_CO.csv
+[2026-06-16 13:35:26] Komponente: TT
+[2026-06-16 13:35:26] Bereinigt: 14 Werte entfernt
+[2026-06-16 13:35:26] CSV gespeichert: data/stations\OLVT\OLVT_TT.csv
+[2026-06-16 13:35:26] Komponente: PPP
+[2026-06-16 13:35:26] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:26] CSV gespeichert: data/stations\OLVT\OLVT_PPP.csv
+[2026-06-16 13:35:26] Komponente: TF
+[2026-06-16 13:35:26] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:26] CSV gespeichert: data/stations\OLVT\OLVT_TF.csv
+[2026-06-16 13:35:26] Komponente: RD
+[2026-06-16 13:35:26] Bereinigt: 23 Werte entfernt
+[2026-06-16 13:35:26] CSV gespeichert: data/stations\OLVT\OLVT_RD.csv
+[2026-06-16 13:35:26] Verarbeite Station: RNSW
+[2026-06-16 13:35:26] Messstellen: 11
+[2026-06-16 13:35:26] Komponente: PM1024
+[2026-06-16 13:35:26] Bereinigt: 12 Werte entfernt
+[2026-06-16 13:35:26] CSV gespeichert: data/stations\RNSW\RNSW_PM1024.csv
+[2026-06-16 13:35:26] Komponente: NO2
+[2026-06-16 13:35:26] Bereinigt: 38 Werte entfernt
+[2026-06-16 13:35:26] CSV gespeichert: data/stations\RNSW\RNSW_NO2.csv
+[2026-06-16 13:35:26] Komponente: O3
+[2026-06-16 13:35:26] Bereinigt: 32 Werte entfernt
+[2026-06-16 13:35:26] CSV gespeichert: data/stations\RNSW\RNSW_O3.csv
+[2026-06-16 13:35:26] Komponente: TT
+[2026-06-16 13:35:26] Bereinigt: 4 Werte entfernt
+[2026-06-16 13:35:26] CSV gespeichert: data/stations\RNSW\RNSW_TT.csv
+[2026-06-16 13:35:26] Komponente: PPP
+[2026-06-16 13:35:26] Bereinigt: 2 Werte entfernt
+[2026-06-16 13:35:26] CSV gespeichert: data/stations\RNSW\RNSW_PPP.csv
+[2026-06-16 13:35:26] Komponente: DD
+[2026-06-16 13:35:26] Bereinigt: 2 Werte entfernt
+[2026-06-16 13:35:26] CSV gespeichert: data/stations\RNSW\RNSW_DD.csv
+[2026-06-16 13:35:26] Komponente: FF
+[2026-06-16 13:35:27] Bereinigt: 12 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\RNSW\RNSW_FF.csv
+[2026-06-16 13:35:27] Komponente: TF
+[2026-06-16 13:35:27] Bereinigt: 2 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\RNSW\RNSW_TF.csv
+[2026-06-16 13:35:27] Komponente: RD
+[2026-06-16 13:35:27] Bereinigt: 25 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\RNSW\RNSW_RD.csv
+[2026-06-16 13:35:27] Komponente: G
+[2026-06-16 13:35:27] Bereinigt: 3 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\RNSW\RNSW_G.csv
+[2026-06-16 13:35:27] Komponente: UVBSI
+[2026-06-16 13:35:27] Bereinigt: 2 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\RNSW\RNSW_UVBSI.csv
+[2026-06-16 13:35:27] Verarbeite Station: SNNW
+[2026-06-16 13:35:27] Messstellen: 11
+[2026-06-16 13:35:27] Komponente: PM1024
+[2026-06-16 13:35:27] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\SNNW\SNNW_PM1024.csv
+[2026-06-16 13:35:27] Komponente: NO2
+[2026-06-16 13:35:27] Bereinigt: 33 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\SNNW\SNNW_NO2.csv
+[2026-06-16 13:35:27] Komponente: O3
+[2026-06-16 13:35:27] Bereinigt: 26 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\SNNW\SNNW_O3.csv
+[2026-06-16 13:35:27] Komponente: CO2
+[2026-06-16 13:35:27] Bereinigt: 13 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\SNNW\SNNW_CO2.csv
+[2026-06-16 13:35:27] Komponente: TT
+[2026-06-16 13:35:27] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\SNNW\SNNW_TT.csv
+[2026-06-16 13:35:27] Komponente: PPP
+[2026-06-16 13:35:27] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\SNNW\SNNW_PPP.csv
+[2026-06-16 13:35:27] Komponente: DD
+[2026-06-16 13:35:27] Bereinigt: 26 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\SNNW\SNNW_DD.csv
+[2026-06-16 13:35:27] Komponente: FF
+[2026-06-16 13:35:27] Bereinigt: 5 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\SNNW\SNNW_FF.csv
+[2026-06-16 13:35:27] Komponente: TF
+[2026-06-16 13:35:27] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\SNNW\SNNW_TF.csv
+[2026-06-16 13:35:27] Komponente: RD
+[2026-06-16 13:35:27] Bereinigt: 25 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\SNNW\SNNW_RD.csv
+[2026-06-16 13:35:27] Komponente: G
+[2026-06-16 13:35:27] Bereinigt: 7 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\SNNW\SNNW_G.csv
+[2026-06-16 13:35:27] Verarbeite Station: SROO
+[2026-06-16 13:35:27] Messstellen: 12
+[2026-06-16 13:35:27] Komponente: PM1024
+[2026-06-16 13:35:27] Bereinigt: 16 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\SROO\SROO_PM1024.csv
+[2026-06-16 13:35:27] Komponente: NO2
+[2026-06-16 13:35:27] Bereinigt: 38 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\SROO\SROO_NO2.csv
+[2026-06-16 13:35:27] Komponente: O3
+[2026-06-16 13:35:27] Bereinigt: 32 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\SROO\SROO_O3.csv
+[2026-06-16 13:35:27] Komponente: SO2
+[2026-06-16 13:35:27] Bereinigt: 46 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\SROO\SROO_SO2.csv
+[2026-06-16 13:35:27] Komponente: CO
+[2026-06-16 13:35:27] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\SROO\SROO_CO.csv
+[2026-06-16 13:35:27] Komponente: TT
+[2026-06-16 13:35:27] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\SROO\SROO_TT.csv
+[2026-06-16 13:35:27] Komponente: PPP
+[2026-06-16 13:35:27] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\SROO\SROO_PPP.csv
+[2026-06-16 13:35:27] Komponente: DD
+[2026-06-16 13:35:27] Bereinigt: 2 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\SROO\SROO_DD.csv
+[2026-06-16 13:35:27] Komponente: FF
+[2026-06-16 13:35:27] Bereinigt: 8 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\SROO\SROO_FF.csv
+[2026-06-16 13:35:27] Komponente: TF
+[2026-06-16 13:35:27] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\SROO\SROO_TF.csv
+[2026-06-16 13:35:27] Komponente: RD
+[2026-06-16 13:35:27] Bereinigt: 22 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\SROO\SROO_RD.csv
+[2026-06-16 13:35:27] Komponente: UVBSI
+[2026-06-16 13:35:27] Bereinigt: 19 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\SROO\SROO_UVBSI.csv
+[2026-06-16 13:35:27] Verarbeite Station: WASS
+[2026-06-16 13:35:27] Messstellen: 9
+[2026-06-16 13:35:27] Komponente: PM1024
+[2026-06-16 13:35:27] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\WASS\WASS_PM1024.csv
+[2026-06-16 13:35:27] Komponente: NO2
+[2026-06-16 13:35:27] Bereinigt: 44 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\WASS\WASS_NO2.csv
+[2026-06-16 13:35:27] Komponente: O3
+[2026-06-16 13:35:27] Bereinigt: 29 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\WASS\WASS_O3.csv
+[2026-06-16 13:35:27] Komponente: TT
+[2026-06-16 13:35:27] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\WASS\WASS_TT.csv
+[2026-06-16 13:35:27] Komponente: PPP
+[2026-06-16 13:35:27] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\WASS\WASS_PPP.csv
+[2026-06-16 13:35:27] Komponente: DD
+[2026-06-16 13:35:27] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\WASS\WASS_DD.csv
+[2026-06-16 13:35:27] Komponente: FF
+[2026-06-16 13:35:27] Bereinigt: 5 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\WASS\WASS_FF.csv
+[2026-06-16 13:35:27] Komponente: TF
+[2026-06-16 13:35:27] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\WASS\WASS_TF.csv
+[2026-06-16 13:35:27] Komponente: RD
+[2026-06-16 13:35:27] Bereinigt: 22 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\WASS\WASS_RD.csv
+[2026-06-16 13:35:27] Verarbeite Station: WGCC
+[2026-06-16 13:35:27] Messstellen: 11
+[2026-06-16 13:35:27] Komponente: PM1024
+[2026-06-16 13:35:27] Bereinigt: 13 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\WGCC\WGCC_PM1024.csv
+[2026-06-16 13:35:27] Komponente: NO2
+[2026-06-16 13:35:27] Bereinigt: 39 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\WGCC\WGCC_NO2.csv
+[2026-06-16 13:35:27] Komponente: O3
+[2026-06-16 13:35:27] Bereinigt: 34 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\WGCC\WGCC_O3.csv
+[2026-06-16 13:35:27] Komponente: SO2
+[2026-06-16 13:35:27] Bereinigt: 45 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\WGCC\WGCC_SO2.csv
+[2026-06-16 13:35:27] Komponente: TT
+[2026-06-16 13:35:27] Bereinigt: 2 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\WGCC\WGCC_TT.csv
+[2026-06-16 13:35:27] Komponente: PPP
+[2026-06-16 13:35:27] Bereinigt: 2 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\WGCC\WGCC_PPP.csv
+[2026-06-16 13:35:27] Komponente: DD
+[2026-06-16 13:35:27] Bereinigt: 2 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\WGCC\WGCC_DD.csv
+[2026-06-16 13:35:27] Komponente: FF
+[2026-06-16 13:35:27] Bereinigt: 10 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\WGCC\WGCC_FF.csv
+[2026-06-16 13:35:27] Komponente: TF
+[2026-06-16 13:35:27] Bereinigt: 2 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\WGCC\WGCC_TF.csv
+[2026-06-16 13:35:27] Komponente: RD
+[2026-06-16 13:35:27] Bereinigt: 24 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\WGCC\WGCC_RD.csv
+[2026-06-16 13:35:27] Komponente: G
+[2026-06-16 13:35:27] Bereinigt: 2 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\WGCC\WGCC_G.csv
+[2026-06-16 13:35:27] Verarbeite Station: WGVS
+[2026-06-16 13:35:27] Messstellen: 7
+[2026-06-16 13:35:27] Komponente: PM1024
+[2026-06-16 13:35:27] Bereinigt: 11 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\WGVS\WGVS_PM1024.csv
+[2026-06-16 13:35:27] Komponente: NO2
+[2026-06-16 13:35:27] Bereinigt: 35 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\WGVS\WGVS_NO2.csv
+[2026-06-16 13:35:27] Komponente: CO
+[2026-06-16 13:35:27] Bereinigt: 7 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\WGVS\WGVS_CO.csv
+[2026-06-16 13:35:27] Komponente: TT
+[2026-06-16 13:35:27] Bereinigt: 3 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\WGVS\WGVS_TT.csv
+[2026-06-16 13:35:27] Komponente: PPP
+[2026-06-16 13:35:27] Bereinigt: 3 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\WGVS\WGVS_PPP.csv
+[2026-06-16 13:35:27] Komponente: TF
+[2026-06-16 13:35:27] Bereinigt: 3 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\WGVS\WGVS_TF.csv
+[2026-06-16 13:35:27] Komponente: RD
+[2026-06-16 13:35:27] Bereinigt: 23 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\WGVS\WGVS_RD.csv
+[2026-06-16 13:35:27] Verarbeite Station: WNCC
+[2026-06-16 13:35:27] Messstellen: 10
+[2026-06-16 13:35:27] Komponente: PM1024
+[2026-06-16 13:35:27] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\WNCC\WNCC_PM1024.csv
+[2026-06-16 13:35:27] Komponente: NO2
+[2026-06-16 13:35:27] Bereinigt: 44 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\WNCC\WNCC_NO2.csv
+[2026-06-16 13:35:27] Komponente: O3
+[2026-06-16 13:35:27] Bereinigt: 39 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\WNCC\WNCC_O3.csv
+[2026-06-16 13:35:27] Komponente: TT
+[2026-06-16 13:35:27] Bereinigt: 7 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\WNCC\WNCC_TT.csv
+[2026-06-16 13:35:27] Komponente: PPP
+[2026-06-16 13:35:27] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\WNCC\WNCC_PPP.csv
+[2026-06-16 13:35:27] Komponente: DD
+[2026-06-16 13:35:27] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:27] CSV gespeichert: data/stations\WNCC\WNCC_DD.csv
+[2026-06-16 13:35:27] Komponente: FF
+[2026-06-16 13:35:28] Bereinigt: 3 Werte entfernt
+[2026-06-16 13:35:28] CSV gespeichert: data/stations\WNCC\WNCC_FF.csv
+[2026-06-16 13:35:28] Komponente: TF
+[2026-06-16 13:35:28] Bereinigt: 1 Werte entfernt
+[2026-06-16 13:35:28] CSV gespeichert: data/stations\WNCC\WNCC_TF.csv
+[2026-06-16 13:35:28] Komponente: RD
+[2026-06-16 13:35:28] Bereinigt: 27 Werte entfernt
+[2026-06-16 13:35:28] CSV gespeichert: data/stations\WNCC\WNCC_RD.csv
+[2026-06-16 13:35:28] Komponente: G
+[2026-06-16 13:35:28] Bereinigt: 0 Werte entfernt
+[2026-06-16 13:35:28] CSV gespeichert: data/stations\WNCC\WNCC_G.csv
+[2026-06-16 13:35:28] Metadaten gespeichert: data/stations\metadata.csv
+[2026-06-16 13:35:28] Import abgeschlossen
+[2026-06-16 13:37:29] Starte Datenimport
+[2026-06-16 13:37:30] Daten erfolgreich geladen
+[2026-06-16 13:37:30] Stationen gefunden: 28
+[2026-06-16 13:37:30] Verarbeite Station: BGSW
+[2026-06-16 13:37:30] Messstellen: 10
+[2026-06-16 13:37:30] Komponente: PM1024
+[2026-06-16 13:37:30] Komponente: NO2
+[2026-06-16 13:37:30] Komponente: O3
+[2026-06-16 13:37:30] Komponente: TT
+[2026-06-16 13:37:30] Komponente: PPP
+[2026-06-16 13:37:30] Komponente: DD
+[2026-06-16 13:37:30] Komponente: FF
+[2026-06-16 13:37:30] Komponente: TF
+[2026-06-16 13:37:30] Komponente: RD
+[2026-06-16 13:37:30] Komponente: G
+[2026-06-16 13:37:30] Bereinigt: 107 Werte entfernt
+[2026-06-16 13:37:30] CSV gespeichert: data/stations\BGSW.csv
+[2026-06-16 13:37:30] Verarbeite Station: BGVT
+[2026-06-16 13:37:30] Messstellen: 7
+[2026-06-16 13:37:30] Komponente: PM1024
+[2026-06-16 13:37:30] Komponente: NO2
+[2026-06-16 13:37:30] Komponente: CO
+[2026-06-16 13:37:30] Komponente: TT
+[2026-06-16 13:37:30] Komponente: PPP
+[2026-06-16 13:37:30] Komponente: TF
+[2026-06-16 13:37:30] Komponente: RD
+[2026-06-16 13:37:30] Bereinigt: 89 Werte entfernt
+[2026-06-16 13:37:30] CSV gespeichert: data/stations\BGVT.csv
+[2026-06-16 13:37:30] Verarbeite Station: BLWW
+[2026-06-16 13:37:30] Messstellen: 11
+[2026-06-16 13:37:30] Komponente: PM1024
+[2026-06-16 13:37:30] Komponente: NO2
+[2026-06-16 13:37:30] Komponente: O3
+[2026-06-16 13:37:30] Komponente: TT
+[2026-06-16 13:37:30] Komponente: PPP
+[2026-06-16 13:37:30] Komponente: DD
+[2026-06-16 13:37:30] Komponente: FF
+[2026-06-16 13:37:30] Komponente: TF
+[2026-06-16 13:37:30] Komponente: RD
+[2026-06-16 13:37:30] Komponente: G
+[2026-06-16 13:37:30] Komponente: UVBSI
+[2026-06-16 13:37:30] Bereinigt: 127 Werte entfernt
+[2026-06-16 13:37:30] CSV gespeichert: data/stations\BLWW.csv
+[2026-06-16 13:37:30] Verarbeite Station: BRNN
+[2026-06-16 13:37:30] Messstellen: 13
+[2026-06-16 13:37:30] Komponente: PM1024
+[2026-06-16 13:37:30] Komponente: NO2
+[2026-06-16 13:37:30] Komponente: O3
+[2026-06-16 13:37:30] Komponente: SO2
+[2026-06-16 13:37:30] Komponente: CO2
+[2026-06-16 13:37:30] Komponente: TT
+[2026-06-16 13:37:30] Komponente: PPP
+[2026-06-16 13:37:30] Komponente: DD
+[2026-06-16 13:37:30] Komponente: FF
+[2026-06-16 13:37:30] Komponente: TF
+[2026-06-16 13:37:30] Komponente: RD
+[2026-06-16 13:37:30] Komponente: G
+[2026-06-16 13:37:30] Komponente: UVBSI
+[2026-06-16 13:37:30] Bereinigt: 194 Werte entfernt
+[2026-06-16 13:37:30] CSV gespeichert: data/stations\BRNN.csv
+[2026-06-16 13:37:30] Verarbeite Station: CXSO
+[2026-06-16 13:37:30] Messstellen: 11
+[2026-06-16 13:37:30] Komponente: PM1024
+[2026-06-16 13:37:30] Komponente: NO2
+[2026-06-16 13:37:30] Komponente: O3
+[2026-06-16 13:37:30] Komponente: TT
+[2026-06-16 13:37:30] Komponente: PPP
+[2026-06-16 13:37:30] Komponente: DD
+[2026-06-16 13:37:30] Komponente: FF
+[2026-06-16 13:37:30] Komponente: TF
+[2026-06-16 13:37:30] Komponente: RD
+[2026-06-16 13:37:30] Komponente: G
+[2026-06-16 13:37:30] Komponente: UVBSI
+[2026-06-16 13:37:30] Bereinigt: 156 Werte entfernt
+[2026-06-16 13:37:30] CSV gespeichert: data/stations\CXSO.csv
+[2026-06-16 13:37:30] Verarbeite Station: DUCC
+[2026-06-16 13:37:30] Messstellen: 10
+[2026-06-16 13:37:30] Komponente: PM1024
+[2026-06-16 13:37:30] Komponente: NO2
+[2026-06-16 13:37:30] Komponente: TT
+[2026-06-16 13:37:30] Komponente: PPP
+[2026-06-16 13:37:30] Komponente: DD
+[2026-06-16 13:37:30] Komponente: FF
+[2026-06-16 13:37:30] Komponente: TF
+[2026-06-16 13:37:30] Komponente: RD
+[2026-06-16 13:37:30] Komponente: G
+[2026-06-16 13:37:30] Komponente: UVBSI
+[2026-06-16 13:37:30] Bereinigt: 96 Werte entfernt
+[2026-06-16 13:37:30] CSV gespeichert: data/stations\DUCC.csv
+[2026-06-16 13:37:30] Verarbeite Station: ENCC
+[2026-06-16 13:37:30] Messstellen: 10
+[2026-06-16 13:37:30] Komponente: PM1024
+[2026-06-16 13:37:30] Komponente: NO2
+[2026-06-16 13:37:30] Komponente: O3
+[2026-06-16 13:37:30] Komponente: TT
+[2026-06-16 13:37:30] Komponente: PPP
+[2026-06-16 13:37:30] Komponente: DD
+[2026-06-16 13:37:30] Komponente: FF
+[2026-06-16 13:37:30] Komponente: TF
+[2026-06-16 13:37:30] Komponente: RD
+[2026-06-16 13:37:30] Komponente: G
+[2026-06-16 13:37:30] Bereinigt: 116 Werte entfernt
+[2026-06-16 13:37:30] CSV gespeichert: data/stations\ENCC.csv
+[2026-06-16 13:37:30] Verarbeite Station: GNCC
+[2026-06-16 13:37:30] Messstellen: 11
+[2026-06-16 13:37:30] Komponente: PM1024
+[2026-06-16 13:37:30] Komponente: NO2
+[2026-06-16 13:37:30] Komponente: O3
+[2026-06-16 13:37:30] Komponente: SO2
+[2026-06-16 13:37:30] Komponente: TT
+[2026-06-16 13:37:30] Komponente: PPP
+[2026-06-16 13:37:30] Komponente: DD
+[2026-06-16 13:37:30] Komponente: FF
+[2026-06-16 13:37:30] Komponente: TF
+[2026-06-16 13:37:30] Komponente: RD
+[2026-06-16 13:37:30] Komponente: G
+[2026-06-16 13:37:30] Bereinigt: 187 Werte entfernt
+[2026-06-16 13:37:30] CSV gespeichert: data/stations\GNCC.csv
+[2026-06-16 13:37:30] Verarbeite Station: GNVS
+[2026-06-16 13:37:30] Messstellen: 7
+[2026-06-16 13:37:30] Komponente: PM1024
+[2026-06-16 13:37:30] Komponente: NO2
+[2026-06-16 13:37:30] Komponente: CO
+[2026-06-16 13:37:30] Komponente: TT
+[2026-06-16 13:37:30] Komponente: PPP
+[2026-06-16 13:37:30] Komponente: TF
+[2026-06-16 13:37:30] Komponente: RD
+[2026-06-16 13:37:30] Bereinigt: 229 Werte entfernt
+[2026-06-16 13:37:30] CSV gespeichert: data/stations\GNVS.csv
+[2026-06-16 13:37:30] Verarbeite Station: HIVU
+[2026-06-16 13:37:30] Messstellen: 7
+[2026-06-16 13:37:30] Komponente: PM1024
+[2026-06-16 13:37:30] Komponente: NO2
+[2026-06-16 13:37:30] Komponente: CO
+[2026-06-16 13:37:30] Komponente: TT
+[2026-06-16 13:37:30] Komponente: PPP
+[2026-06-16 13:37:30] Komponente: TF
+[2026-06-16 13:37:30] Komponente: RD
+[2026-06-16 13:37:30] Bereinigt: 141 Werte entfernt
+[2026-06-16 13:37:30] CSV gespeichert: data/stations\HIVU.csv
+[2026-06-16 13:37:30] Verarbeite Station: HRSW
+[2026-06-16 13:37:30] Messstellen: 10
+[2026-06-16 13:37:30] Komponente: PM1024
+[2026-06-16 13:37:30] Komponente: NO2
+[2026-06-16 13:37:30] Komponente: O3
+[2026-06-16 13:37:30] Komponente: TT
+[2026-06-16 13:37:30] Komponente: PPP
+[2026-06-16 13:37:30] Komponente: DD
+[2026-06-16 13:37:30] Komponente: FF
+[2026-06-16 13:37:30] Komponente: TF
+[2026-06-16 13:37:30] Komponente: RD
+[2026-06-16 13:37:30] Komponente: G
+[2026-06-16 13:37:30] Bereinigt: 173 Werte entfernt
+[2026-06-16 13:37:30] CSV gespeichert: data/stations\HRSW.csv
+[2026-06-16 13:37:30] Verarbeite Station: HRVS
+[2026-06-16 13:37:30] Messstellen: 6
+[2026-06-16 13:37:30] Komponente: PM1024
+[2026-06-16 13:37:30] Komponente: NO2
+[2026-06-16 13:37:30] Komponente: CO
+[2026-06-16 13:37:30] Komponente: TT
+[2026-06-16 13:37:30] Komponente: PPP
+[2026-06-16 13:37:30] Komponente: TF
+[2026-06-16 13:37:30] Bereinigt: 74 Werte entfernt
+[2026-06-16 13:37:30] CSV gespeichert: data/stations\HRVS.csv
+[2026-06-16 13:37:30] Verarbeite Station: JKCC
+[2026-06-16 13:37:30] Messstellen: 10
+[2026-06-16 13:37:30] Komponente: PM1024
+[2026-06-16 13:37:30] Komponente: NO2
+[2026-06-16 13:37:30] Komponente: O3
+[2026-06-16 13:37:30] Komponente: TT
+[2026-06-16 13:37:30] Komponente: PPP
+[2026-06-16 13:37:30] Komponente: DD
+[2026-06-16 13:37:30] Komponente: FF
+[2026-06-16 13:37:30] Komponente: TF
+[2026-06-16 13:37:30] Komponente: RD
+[2026-06-16 13:37:30] Komponente: G
+[2026-06-16 13:37:31] Bereinigt: 183 Werte entfernt
+[2026-06-16 13:37:31] CSV gespeichert: data/stations\JKCC.csv
+[2026-06-16 13:37:31] Verarbeite Station: LGOO
+[2026-06-16 13:37:31] Messstellen: 11
+[2026-06-16 13:37:31] Komponente: PM1024
+[2026-06-16 13:37:31] Komponente: NO2
+[2026-06-16 13:37:31] Komponente: O3
+[2026-06-16 13:37:31] Komponente: TT
+[2026-06-16 13:37:31] Komponente: PPP
+[2026-06-16 13:37:31] Komponente: DD
+[2026-06-16 13:37:31] Komponente: FF
+[2026-06-16 13:37:31] Komponente: TF
+[2026-06-16 13:37:31] Komponente: RD
+[2026-06-16 13:37:31] Komponente: G
+[2026-06-16 13:37:31] Komponente: UVBSI
+[2026-06-16 13:37:31] Bereinigt: 123 Werte entfernt
+[2026-06-16 13:37:31] CSV gespeichert: data/stations\LGOO.csv
+[2026-06-16 13:37:31] Verarbeite Station: LNCC
+[2026-06-16 13:37:31] Messstellen: 11
+[2026-06-16 13:37:31] Komponente: PM1024
+[2026-06-16 13:37:31] Komponente: NO2
+[2026-06-16 13:37:31] Komponente: O3
+[2026-06-16 13:37:31] Komponente: SO2
+[2026-06-16 13:37:31] Komponente: TT
+[2026-06-16 13:37:31] Komponente: PPP
+[2026-06-16 13:37:31] Komponente: DD
+[2026-06-16 13:37:31] Komponente: FF
+[2026-06-16 13:37:31] Komponente: TF
+[2026-06-16 13:37:31] Komponente: RD
+[2026-06-16 13:37:31] Komponente: G
+[2026-06-16 13:37:31] Bereinigt: 167 Werte entfernt
+[2026-06-16 13:37:31] CSV gespeichert: data/stations\LNCC.csv
+[2026-06-16 13:37:31] Verarbeite Station: LWSO
+[2026-06-16 13:37:31] Messstellen: 10
+[2026-06-16 13:37:31] Komponente: PM1024
+[2026-06-16 13:37:31] Komponente: NO2
+[2026-06-16 13:37:31] Komponente: O3
+[2026-06-16 13:37:31] Komponente: TT
+[2026-06-16 13:37:31] Komponente: PPP
+[2026-06-16 13:37:31] Komponente: DD
+[2026-06-16 13:37:31] Komponente: FF
+[2026-06-16 13:37:31] Komponente: TF
+[2026-06-16 13:37:31] Komponente: RD
+[2026-06-16 13:37:31] Komponente: G
+[2026-06-16 13:37:31] Bereinigt: 373 Werte entfernt
+[2026-06-16 13:37:31] CSV gespeichert: data/stations\LWSO.csv
+[2026-06-16 13:37:31] Verarbeite Station: NYNO
+[2026-06-16 13:37:31] Messstellen: 12
+[2026-06-16 13:37:31] Komponente: PM1024
+[2026-06-16 13:37:31] Komponente: NO2
+[2026-06-16 13:37:31] Komponente: O3
+[2026-06-16 13:37:31] Komponente: SO2
+[2026-06-16 13:37:31] Komponente: TT
+[2026-06-16 13:37:31] Komponente: PPP
+[2026-06-16 13:37:31] Komponente: DD
+[2026-06-16 13:37:31] Komponente: FF
+[2026-06-16 13:37:31] Komponente: TF
+[2026-06-16 13:37:31] Komponente: RD
+[2026-06-16 13:37:31] Komponente: G
+[2026-06-16 13:37:31] Komponente: UVBSI
+[2026-06-16 13:37:31] Bereinigt: 265 Werte entfernt
+[2026-06-16 13:37:31] CSV gespeichert: data/stations\NYNO.csv
+[2026-06-16 13:37:31] Verarbeite Station: OGCC
+[2026-06-16 13:37:31] Messstellen: 10
+[2026-06-16 13:37:31] Komponente: PM1024
+[2026-06-16 13:37:31] Komponente: NO2
+[2026-06-16 13:37:31] Komponente: O3
+[2026-06-16 13:37:31] Komponente: TT
+[2026-06-16 13:37:31] Komponente: PPP
+[2026-06-16 13:37:31] Komponente: DD
+[2026-06-16 13:37:31] Komponente: FF
+[2026-06-16 13:37:31] Komponente: TF
+[2026-06-16 13:37:31] Komponente: RD
+[2026-06-16 13:37:31] Komponente: G
+[2026-06-16 13:37:31] Bereinigt: 176 Werte entfernt
+[2026-06-16 13:37:31] CSV gespeichert: data/stations\OGCC.csv
+[2026-06-16 13:37:31] Verarbeite Station: OKCC
+[2026-06-16 13:37:31] Messstellen: 12
+[2026-06-16 13:37:31] Komponente: PM1024
+[2026-06-16 13:37:31] Komponente: NO2
+[2026-06-16 13:37:31] Komponente: O3
+[2026-06-16 13:37:31] Komponente: SO2
+[2026-06-16 13:37:31] Komponente: TT
+[2026-06-16 13:37:31] Komponente: PPP
+[2026-06-16 13:37:31] Komponente: DD
+[2026-06-16 13:37:31] Komponente: FF
+[2026-06-16 13:37:31] Komponente: TF
+[2026-06-16 13:37:31] Komponente: RD
+[2026-06-16 13:37:31] Komponente: G
+[2026-06-16 13:37:31] Komponente: UVBSI
+[2026-06-16 13:37:31] Bereinigt: 177 Werte entfernt
+[2026-06-16 13:37:31] CSV gespeichert: data/stations\OKCC.csv
+[2026-06-16 13:37:31] Verarbeite Station: OKVT
+[2026-06-16 13:37:31] Messstellen: 6
+[2026-06-16 13:37:31] Komponente: PM1024
+[2026-06-16 13:37:31] Komponente: NO2
+[2026-06-16 13:37:31] Komponente: CO
+[2026-06-16 13:37:31] Komponente: TT
+[2026-06-16 13:37:31] Komponente: PPP
+[2026-06-16 13:37:31] Komponente: TF
+[2026-06-16 13:37:31] Bereinigt: 41 Werte entfernt
+[2026-06-16 13:37:31] CSV gespeichert: data/stations\OKVT.csv
+[2026-06-16 13:37:31] Verarbeite Station: OLVT
+[2026-06-16 13:37:31] Messstellen: 7
+[2026-06-16 13:37:31] Komponente: PM1024
+[2026-06-16 13:37:31] Komponente: NO2
+[2026-06-16 13:37:31] Komponente: CO
+[2026-06-16 13:37:31] Komponente: TT
+[2026-06-16 13:37:31] Komponente: PPP
+[2026-06-16 13:37:31] Komponente: TF
+[2026-06-16 13:37:31] Komponente: RD
+[2026-06-16 13:37:31] Bereinigt: 80 Werte entfernt
+[2026-06-16 13:37:31] CSV gespeichert: data/stations\OLVT.csv
+[2026-06-16 13:37:31] Verarbeite Station: RNSW
+[2026-06-16 13:37:31] Messstellen: 11
+[2026-06-16 13:37:31] Komponente: PM1024
+[2026-06-16 13:37:31] Komponente: NO2
+[2026-06-16 13:37:31] Komponente: O3
+[2026-06-16 13:37:31] Komponente: TT
+[2026-06-16 13:37:31] Komponente: PPP
+[2026-06-16 13:37:31] Komponente: DD
+[2026-06-16 13:37:31] Komponente: FF
+[2026-06-16 13:37:31] Komponente: TF
+[2026-06-16 13:37:31] Komponente: RD
+[2026-06-16 13:37:31] Komponente: G
+[2026-06-16 13:37:31] Komponente: UVBSI
+[2026-06-16 13:37:31] Bereinigt: 134 Werte entfernt
+[2026-06-16 13:37:31] CSV gespeichert: data/stations\RNSW.csv
+[2026-06-16 13:37:31] Verarbeite Station: SNNW
+[2026-06-16 13:37:31] Messstellen: 11
+[2026-06-16 13:37:31] Komponente: PM1024
+[2026-06-16 13:37:31] Komponente: NO2
+[2026-06-16 13:37:31] Komponente: O3
+[2026-06-16 13:37:31] Komponente: CO2
+[2026-06-16 13:37:31] Komponente: TT
+[2026-06-16 13:37:31] Komponente: PPP
+[2026-06-16 13:37:31] Komponente: DD
+[2026-06-16 13:37:31] Komponente: FF
+[2026-06-16 13:37:31] Komponente: TF
+[2026-06-16 13:37:31] Komponente: RD
+[2026-06-16 13:37:31] Komponente: G
+[2026-06-16 13:37:31] Bereinigt: 135 Werte entfernt
+[2026-06-16 13:37:31] CSV gespeichert: data/stations\SNNW.csv
+[2026-06-16 13:37:31] Verarbeite Station: SROO
+[2026-06-16 13:37:31] Messstellen: 12
+[2026-06-16 13:37:31] Komponente: PM1024
+[2026-06-16 13:37:31] Komponente: NO2
+[2026-06-16 13:37:31] Komponente: O3
+[2026-06-16 13:37:31] Komponente: SO2
+[2026-06-16 13:37:31] Komponente: CO
+[2026-06-16 13:37:31] Komponente: TT
+[2026-06-16 13:37:31] Komponente: PPP
+[2026-06-16 13:37:31] Komponente: DD
+[2026-06-16 13:37:31] Komponente: FF
+[2026-06-16 13:37:31] Komponente: TF
+[2026-06-16 13:37:31] Komponente: RD
+[2026-06-16 13:37:31] Komponente: UVBSI
+[2026-06-16 13:37:31] Bereinigt: 183 Werte entfernt
+[2026-06-16 13:37:31] CSV gespeichert: data/stations\SROO.csv
+[2026-06-16 13:37:31] Verarbeite Station: WASS
+[2026-06-16 13:37:31] Messstellen: 9
+[2026-06-16 13:37:31] Komponente: PM1024
+[2026-06-16 13:37:31] Komponente: NO2
+[2026-06-16 13:37:31] Komponente: O3
+[2026-06-16 13:37:31] Komponente: TT
+[2026-06-16 13:37:31] Komponente: PPP
+[2026-06-16 13:37:31] Komponente: DD
+[2026-06-16 13:37:31] Komponente: FF
+[2026-06-16 13:37:31] Komponente: TF
+[2026-06-16 13:37:31] Komponente: RD
+[2026-06-16 13:37:31] Bereinigt: 100 Werte entfernt
+[2026-06-16 13:37:31] CSV gespeichert: data/stations\WASS.csv
+[2026-06-16 13:37:31] Verarbeite Station: WGCC
+[2026-06-16 13:37:31] Messstellen: 11
+[2026-06-16 13:37:31] Komponente: PM1024
+[2026-06-16 13:37:31] Komponente: NO2
+[2026-06-16 13:37:31] Komponente: O3
+[2026-06-16 13:37:31] Komponente: SO2
+[2026-06-16 13:37:31] Komponente: TT
+[2026-06-16 13:37:31] Komponente: PPP
+[2026-06-16 13:37:31] Komponente: DD
+[2026-06-16 13:37:31] Komponente: FF
+[2026-06-16 13:37:31] Komponente: TF
+[2026-06-16 13:37:31] Komponente: RD
+[2026-06-16 13:37:31] Komponente: G
+[2026-06-16 13:37:31] Bereinigt: 175 Werte entfernt
+[2026-06-16 13:37:31] CSV gespeichert: data/stations\WGCC.csv
+[2026-06-16 13:37:31] Verarbeite Station: WGVS
+[2026-06-16 13:37:31] Messstellen: 7
+[2026-06-16 13:37:31] Komponente: PM1024
+[2026-06-16 13:37:31] Komponente: NO2
+[2026-06-16 13:37:31] Komponente: CO
+[2026-06-16 13:37:31] Komponente: TT
+[2026-06-16 13:37:31] Komponente: PPP
+[2026-06-16 13:37:31] Komponente: TF
+[2026-06-16 13:37:31] Komponente: RD
+[2026-06-16 13:37:31] Bereinigt: 85 Werte entfernt
+[2026-06-16 13:37:31] CSV gespeichert: data/stations\WGVS.csv
+[2026-06-16 13:37:31] Verarbeite Station: WNCC
+[2026-06-16 13:37:31] Messstellen: 10
+[2026-06-16 13:37:31] Komponente: PM1024
+[2026-06-16 13:37:31] Komponente: NO2
+[2026-06-16 13:37:31] Komponente: O3
+[2026-06-16 13:37:31] Komponente: TT
+[2026-06-16 13:37:31] Komponente: PPP
+[2026-06-16 13:37:31] Komponente: DD
+[2026-06-16 13:37:31] Komponente: FF
+[2026-06-16 13:37:31] Komponente: TF
+[2026-06-16 13:37:31] Komponente: RD
+[2026-06-16 13:37:31] Komponente: G
+[2026-06-16 13:37:32] Bereinigt: 121 Werte entfernt
+[2026-06-16 13:37:32] CSV gespeichert: data/stations\WNCC.csv
+[2026-06-16 13:37:32] Metadaten gespeichert: data/stations\metadata.csv
+[2026-06-16 13:37:32] Import abgeschlossen
+[2026-06-16 13:40:15] Starte Datenimport
+[2026-06-16 13:40:16] Daten erfolgreich geladen
+[2026-06-16 13:40:16] Stationen gefunden: 28
+[2026-06-16 13:40:16] Verarbeite Station: BGSW
+[2026-06-16 13:40:16] Messstellen: 10
+[2026-06-16 13:40:16] Komponente: PM1024
+[2026-06-16 13:40:16] Komponente: NO2
+[2026-06-16 13:40:16] Komponente: O3
+[2026-06-16 13:40:16] Komponente: TT
+[2026-06-16 13:40:16] Komponente: PPP
+[2026-06-16 13:40:16] Komponente: DD
+[2026-06-16 13:40:16] Komponente: FF
+[2026-06-16 13:40:16] Komponente: TF
+[2026-06-16 13:40:16] Komponente: RD
+[2026-06-16 13:40:16] Komponente: G
+[2026-06-16 13:40:16] Bereinigt: 107 Werte entfernt
+[2026-06-16 13:40:16] CSV gespeichert: data/stations\BGSW.csv
+[2026-06-16 13:40:16] Verarbeite Station: BGVT
+[2026-06-16 13:40:16] Messstellen: 7
+[2026-06-16 13:40:16] Komponente: PM1024
+[2026-06-16 13:40:16] Komponente: NO2
+[2026-06-16 13:40:16] Komponente: CO
+[2026-06-16 13:40:16] Komponente: TT
+[2026-06-16 13:40:16] Komponente: PPP
+[2026-06-16 13:40:16] Komponente: TF
+[2026-06-16 13:40:16] Komponente: RD
+[2026-06-16 13:40:16] Bereinigt: 89 Werte entfernt
+[2026-06-16 13:40:16] CSV gespeichert: data/stations\BGVT.csv
+[2026-06-16 13:40:16] Verarbeite Station: BLWW
+[2026-06-16 13:40:16] Messstellen: 11
+[2026-06-16 13:40:16] Komponente: PM1024
+[2026-06-16 13:40:16] Komponente: NO2
+[2026-06-16 13:40:16] Komponente: O3
+[2026-06-16 13:40:16] Komponente: TT
+[2026-06-16 13:40:16] Komponente: PPP
+[2026-06-16 13:40:16] Komponente: DD
+[2026-06-16 13:40:16] Komponente: FF
+[2026-06-16 13:40:16] Komponente: TF
+[2026-06-16 13:40:16] Komponente: RD
+[2026-06-16 13:40:16] Komponente: G
+[2026-06-16 13:40:16] Komponente: UVBSI
+[2026-06-16 13:40:16] Bereinigt: 127 Werte entfernt
+[2026-06-16 13:40:16] CSV gespeichert: data/stations\BLWW.csv
+[2026-06-16 13:40:16] Verarbeite Station: BRNN
+[2026-06-16 13:40:16] Messstellen: 13
+[2026-06-16 13:40:16] Komponente: PM1024
+[2026-06-16 13:40:16] Komponente: NO2
+[2026-06-16 13:40:16] Komponente: O3
+[2026-06-16 13:40:16] Komponente: SO2
+[2026-06-16 13:40:16] Komponente: CO2
+[2026-06-16 13:40:16] Komponente: TT
+[2026-06-16 13:40:16] Komponente: PPP
+[2026-06-16 13:40:16] Komponente: DD
+[2026-06-16 13:40:16] Komponente: FF
+[2026-06-16 13:40:16] Komponente: TF
+[2026-06-16 13:40:16] Komponente: RD
+[2026-06-16 13:40:16] Komponente: G
+[2026-06-16 13:40:16] Komponente: UVBSI
+[2026-06-16 13:40:16] Bereinigt: 194 Werte entfernt
+[2026-06-16 13:40:16] CSV gespeichert: data/stations\BRNN.csv
+[2026-06-16 13:40:16] Verarbeite Station: CXSO
+[2026-06-16 13:40:16] Messstellen: 11
+[2026-06-16 13:40:16] Komponente: PM1024
+[2026-06-16 13:40:16] Komponente: NO2
+[2026-06-16 13:40:16] Komponente: O3
+[2026-06-16 13:40:16] Komponente: TT
+[2026-06-16 13:40:16] Komponente: PPP
+[2026-06-16 13:40:16] Komponente: DD
+[2026-06-16 13:40:16] Komponente: FF
+[2026-06-16 13:40:16] Komponente: TF
+[2026-06-16 13:40:16] Komponente: RD
+[2026-06-16 13:40:16] Komponente: G
+[2026-06-16 13:40:16] Komponente: UVBSI
+[2026-06-16 13:40:16] Bereinigt: 156 Werte entfernt
+[2026-06-16 13:40:16] CSV gespeichert: data/stations\CXSO.csv
+[2026-06-16 13:40:16] Verarbeite Station: DUCC
+[2026-06-16 13:40:16] Messstellen: 10
+[2026-06-16 13:40:16] Komponente: PM1024
+[2026-06-16 13:40:16] Komponente: NO2
+[2026-06-16 13:40:16] Komponente: TT
+[2026-06-16 13:40:16] Komponente: PPP
+[2026-06-16 13:40:16] Komponente: DD
+[2026-06-16 13:40:16] Komponente: FF
+[2026-06-16 13:40:16] Komponente: TF
+[2026-06-16 13:40:16] Komponente: RD
+[2026-06-16 13:40:16] Komponente: G
+[2026-06-16 13:40:16] Komponente: UVBSI
+[2026-06-16 13:40:16] Bereinigt: 96 Werte entfernt
+[2026-06-16 13:40:16] CSV gespeichert: data/stations\DUCC.csv
+[2026-06-16 13:40:16] Verarbeite Station: ENCC
+[2026-06-16 13:40:16] Messstellen: 10
+[2026-06-16 13:40:16] Komponente: PM1024
+[2026-06-16 13:40:16] Komponente: NO2
+[2026-06-16 13:40:16] Komponente: O3
+[2026-06-16 13:40:16] Komponente: TT
+[2026-06-16 13:40:16] Komponente: PPP
+[2026-06-16 13:40:16] Komponente: DD
+[2026-06-16 13:40:16] Komponente: FF
+[2026-06-16 13:40:16] Komponente: TF
+[2026-06-16 13:40:16] Komponente: RD
+[2026-06-16 13:40:16] Komponente: G
+[2026-06-16 13:40:16] Bereinigt: 116 Werte entfernt
+[2026-06-16 13:40:16] CSV gespeichert: data/stations\ENCC.csv
+[2026-06-16 13:40:16] Verarbeite Station: GNCC
+[2026-06-16 13:40:16] Messstellen: 11
+[2026-06-16 13:40:16] Komponente: PM1024
+[2026-06-16 13:40:16] Komponente: NO2
+[2026-06-16 13:40:16] Komponente: O3
+[2026-06-16 13:40:16] Komponente: SO2
+[2026-06-16 13:40:16] Komponente: TT
+[2026-06-16 13:40:16] Komponente: PPP
+[2026-06-16 13:40:16] Komponente: DD
+[2026-06-16 13:40:16] Komponente: FF
+[2026-06-16 13:40:16] Komponente: TF
+[2026-06-16 13:40:16] Komponente: RD
+[2026-06-16 13:40:16] Komponente: G
+[2026-06-16 13:40:16] Bereinigt: 187 Werte entfernt
+[2026-06-16 13:40:16] CSV gespeichert: data/stations\GNCC.csv
+[2026-06-16 13:40:16] Verarbeite Station: GNVS
+[2026-06-16 13:40:16] Messstellen: 7
+[2026-06-16 13:40:16] Komponente: PM1024
+[2026-06-16 13:40:16] Komponente: NO2
+[2026-06-16 13:40:16] Komponente: CO
+[2026-06-16 13:40:16] Komponente: TT
+[2026-06-16 13:40:16] Komponente: PPP
+[2026-06-16 13:40:16] Komponente: TF
+[2026-06-16 13:40:16] Komponente: RD
+[2026-06-16 13:40:16] Bereinigt: 229 Werte entfernt
+[2026-06-16 13:40:16] CSV gespeichert: data/stations\GNVS.csv
+[2026-06-16 13:40:16] Verarbeite Station: HIVU
+[2026-06-16 13:40:16] Messstellen: 7
+[2026-06-16 13:40:16] Komponente: PM1024
+[2026-06-16 13:40:16] Komponente: NO2
+[2026-06-16 13:40:16] Komponente: CO
+[2026-06-16 13:40:16] Komponente: TT
+[2026-06-16 13:40:16] Komponente: PPP
+[2026-06-16 13:40:16] Komponente: TF
+[2026-06-16 13:40:16] Komponente: RD
+[2026-06-16 13:40:16] Bereinigt: 141 Werte entfernt
+[2026-06-16 13:40:16] CSV gespeichert: data/stations\HIVU.csv
+[2026-06-16 13:40:16] Verarbeite Station: HRSW
+[2026-06-16 13:40:16] Messstellen: 10
+[2026-06-16 13:40:16] Komponente: PM1024
+[2026-06-16 13:40:16] Komponente: NO2
+[2026-06-16 13:40:16] Komponente: O3
+[2026-06-16 13:40:16] Komponente: TT
+[2026-06-16 13:40:16] Komponente: PPP
+[2026-06-16 13:40:16] Komponente: DD
+[2026-06-16 13:40:16] Komponente: FF
+[2026-06-16 13:40:16] Komponente: TF
+[2026-06-16 13:40:16] Komponente: RD
+[2026-06-16 13:40:16] Komponente: G
+[2026-06-16 13:40:16] Bereinigt: 173 Werte entfernt
+[2026-06-16 13:40:16] CSV gespeichert: data/stations\HRSW.csv
+[2026-06-16 13:40:16] Verarbeite Station: HRVS
+[2026-06-16 13:40:16] Messstellen: 6
+[2026-06-16 13:40:16] Komponente: PM1024
+[2026-06-16 13:40:16] Komponente: NO2
+[2026-06-16 13:40:16] Komponente: CO
+[2026-06-16 13:40:16] Komponente: TT
+[2026-06-16 13:40:16] Komponente: PPP
+[2026-06-16 13:40:16] Komponente: TF
+[2026-06-16 13:40:16] Bereinigt: 74 Werte entfernt
+[2026-06-16 13:40:16] CSV gespeichert: data/stations\HRVS.csv
+[2026-06-16 13:40:16] Verarbeite Station: JKCC
+[2026-06-16 13:40:16] Messstellen: 10
+[2026-06-16 13:40:16] Komponente: PM1024
+[2026-06-16 13:40:16] Komponente: NO2
+[2026-06-16 13:40:16] Komponente: O3
+[2026-06-16 13:40:16] Komponente: TT
+[2026-06-16 13:40:16] Komponente: PPP
+[2026-06-16 13:40:16] Komponente: DD
+[2026-06-16 13:40:16] Komponente: FF
+[2026-06-16 13:40:16] Komponente: TF
+[2026-06-16 13:40:16] Komponente: RD
+[2026-06-16 13:40:16] Komponente: G
+[2026-06-16 13:40:16] Bereinigt: 183 Werte entfernt
+[2026-06-16 13:40:17] CSV gespeichert: data/stations\JKCC.csv
+[2026-06-16 13:40:17] Verarbeite Station: LGOO
+[2026-06-16 13:40:17] Messstellen: 11
+[2026-06-16 13:40:17] Komponente: PM1024
+[2026-06-16 13:40:17] Komponente: NO2
+[2026-06-16 13:40:17] Komponente: O3
+[2026-06-16 13:40:17] Komponente: TT
+[2026-06-16 13:40:17] Komponente: PPP
+[2026-06-16 13:40:17] Komponente: DD
+[2026-06-16 13:40:17] Komponente: FF
+[2026-06-16 13:40:17] Komponente: TF
+[2026-06-16 13:40:17] Komponente: RD
+[2026-06-16 13:40:17] Komponente: G
+[2026-06-16 13:40:17] Komponente: UVBSI
+[2026-06-16 13:40:17] Bereinigt: 123 Werte entfernt
+[2026-06-16 13:40:17] CSV gespeichert: data/stations\LGOO.csv
+[2026-06-16 13:40:17] Verarbeite Station: LNCC
+[2026-06-16 13:40:17] Messstellen: 11
+[2026-06-16 13:40:17] Komponente: PM1024
+[2026-06-16 13:40:17] Komponente: NO2
+[2026-06-16 13:40:17] Komponente: O3
+[2026-06-16 13:40:17] Komponente: SO2
+[2026-06-16 13:40:17] Komponente: TT
+[2026-06-16 13:40:17] Komponente: PPP
+[2026-06-16 13:40:17] Komponente: DD
+[2026-06-16 13:40:17] Komponente: FF
+[2026-06-16 13:40:17] Komponente: TF
+[2026-06-16 13:40:17] Komponente: RD
+[2026-06-16 13:40:17] Komponente: G
+[2026-06-16 13:40:17] Bereinigt: 167 Werte entfernt
+[2026-06-16 13:40:17] CSV gespeichert: data/stations\LNCC.csv
+[2026-06-16 13:40:17] Verarbeite Station: LWSO
+[2026-06-16 13:40:17] Messstellen: 10
+[2026-06-16 13:40:17] Komponente: PM1024
+[2026-06-16 13:40:17] Komponente: NO2
+[2026-06-16 13:40:17] Komponente: O3
+[2026-06-16 13:40:17] Komponente: TT
+[2026-06-16 13:40:17] Komponente: PPP
+[2026-06-16 13:40:17] Komponente: DD
+[2026-06-16 13:40:17] Komponente: FF
+[2026-06-16 13:40:17] Komponente: TF
+[2026-06-16 13:40:17] Komponente: RD
+[2026-06-16 13:40:17] Komponente: G
+[2026-06-16 13:40:17] Bereinigt: 373 Werte entfernt
+[2026-06-16 13:40:17] CSV gespeichert: data/stations\LWSO.csv
+[2026-06-16 13:40:17] Verarbeite Station: NYNO
+[2026-06-16 13:40:17] Messstellen: 12
+[2026-06-16 13:40:17] Komponente: PM1024
+[2026-06-16 13:40:17] Komponente: NO2
+[2026-06-16 13:40:17] Komponente: O3
+[2026-06-16 13:40:17] Komponente: SO2
+[2026-06-16 13:40:17] Komponente: TT
+[2026-06-16 13:40:17] Komponente: PPP
+[2026-06-16 13:40:17] Komponente: DD
+[2026-06-16 13:40:17] Komponente: FF
+[2026-06-16 13:40:17] Komponente: TF
+[2026-06-16 13:40:17] Komponente: RD
+[2026-06-16 13:40:17] Komponente: G
+[2026-06-16 13:40:17] Komponente: UVBSI
+[2026-06-16 13:40:17] Bereinigt: 265 Werte entfernt
+[2026-06-16 13:40:17] CSV gespeichert: data/stations\NYNO.csv
+[2026-06-16 13:40:17] Verarbeite Station: OGCC
+[2026-06-16 13:40:17] Messstellen: 10
+[2026-06-16 13:40:17] Komponente: PM1024
+[2026-06-16 13:40:17] Komponente: NO2
+[2026-06-16 13:40:17] Komponente: O3
+[2026-06-16 13:40:17] Komponente: TT
+[2026-06-16 13:40:17] Komponente: PPP
+[2026-06-16 13:40:17] Komponente: DD
+[2026-06-16 13:40:17] Komponente: FF
+[2026-06-16 13:40:17] Komponente: TF
+[2026-06-16 13:40:17] Komponente: RD
+[2026-06-16 13:40:17] Komponente: G
+[2026-06-16 13:40:17] Bereinigt: 176 Werte entfernt
+[2026-06-16 13:40:17] CSV gespeichert: data/stations\OGCC.csv
+[2026-06-16 13:40:17] Verarbeite Station: OKCC
+[2026-06-16 13:40:17] Messstellen: 12
+[2026-06-16 13:40:17] Komponente: PM1024
+[2026-06-16 13:40:17] Komponente: NO2
+[2026-06-16 13:40:17] Komponente: O3
+[2026-06-16 13:40:17] Komponente: SO2
+[2026-06-16 13:40:17] Komponente: TT
+[2026-06-16 13:40:17] Komponente: PPP
+[2026-06-16 13:40:17] Komponente: DD
+[2026-06-16 13:40:17] Komponente: FF
+[2026-06-16 13:40:17] Komponente: TF
+[2026-06-16 13:40:17] Komponente: RD
+[2026-06-16 13:40:17] Komponente: G
+[2026-06-16 13:40:17] Komponente: UVBSI
+[2026-06-16 13:40:17] Bereinigt: 177 Werte entfernt
+[2026-06-16 13:40:17] CSV gespeichert: data/stations\OKCC.csv
+[2026-06-16 13:40:17] Verarbeite Station: OKVT
+[2026-06-16 13:40:17] Messstellen: 6
+[2026-06-16 13:40:17] Komponente: PM1024
+[2026-06-16 13:40:17] Komponente: NO2
+[2026-06-16 13:40:17] Komponente: CO
+[2026-06-16 13:40:17] Komponente: TT
+[2026-06-16 13:40:17] Komponente: PPP
+[2026-06-16 13:40:17] Komponente: TF
+[2026-06-16 13:40:17] Bereinigt: 41 Werte entfernt
+[2026-06-16 13:40:17] CSV gespeichert: data/stations\OKVT.csv
+[2026-06-16 13:40:17] Verarbeite Station: OLVT
+[2026-06-16 13:40:17] Messstellen: 7
+[2026-06-16 13:40:17] Komponente: PM1024
+[2026-06-16 13:40:17] Komponente: NO2
+[2026-06-16 13:40:17] Komponente: CO
+[2026-06-16 13:40:17] Komponente: TT
+[2026-06-16 13:40:17] Komponente: PPP
+[2026-06-16 13:40:17] Komponente: TF
+[2026-06-16 13:40:17] Komponente: RD
+[2026-06-16 13:40:17] Bereinigt: 80 Werte entfernt
+[2026-06-16 13:40:17] CSV gespeichert: data/stations\OLVT.csv
+[2026-06-16 13:40:17] Verarbeite Station: RNSW
+[2026-06-16 13:40:17] Messstellen: 11
+[2026-06-16 13:40:17] Komponente: PM1024
+[2026-06-16 13:40:17] Komponente: NO2
+[2026-06-16 13:40:17] Komponente: O3
+[2026-06-16 13:40:17] Komponente: TT
+[2026-06-16 13:40:17] Komponente: PPP
+[2026-06-16 13:40:17] Komponente: DD
+[2026-06-16 13:40:17] Komponente: FF
+[2026-06-16 13:40:17] Komponente: TF
+[2026-06-16 13:40:17] Komponente: RD
+[2026-06-16 13:40:17] Komponente: G
+[2026-06-16 13:40:17] Komponente: UVBSI
+[2026-06-16 13:40:17] Bereinigt: 134 Werte entfernt
+[2026-06-16 13:40:17] CSV gespeichert: data/stations\RNSW.csv
+[2026-06-16 13:40:17] Verarbeite Station: SNNW
+[2026-06-16 13:40:17] Messstellen: 11
+[2026-06-16 13:40:17] Komponente: PM1024
+[2026-06-16 13:40:17] Komponente: NO2
+[2026-06-16 13:40:17] Komponente: O3
+[2026-06-16 13:40:17] Komponente: CO2
+[2026-06-16 13:40:17] Komponente: TT
+[2026-06-16 13:40:17] Komponente: PPP
+[2026-06-16 13:40:17] Komponente: DD
+[2026-06-16 13:40:17] Komponente: FF
+[2026-06-16 13:40:17] Komponente: TF
+[2026-06-16 13:40:17] Komponente: RD
+[2026-06-16 13:40:17] Komponente: G
+[2026-06-16 13:40:17] Bereinigt: 135 Werte entfernt
+[2026-06-16 13:40:17] CSV gespeichert: data/stations\SNNW.csv
+[2026-06-16 13:40:17] Verarbeite Station: SROO
+[2026-06-16 13:40:17] Messstellen: 12
+[2026-06-16 13:40:17] Komponente: PM1024
+[2026-06-16 13:40:17] Komponente: NO2
+[2026-06-16 13:40:17] Komponente: O3
+[2026-06-16 13:40:17] Komponente: SO2
+[2026-06-16 13:40:17] Komponente: CO
+[2026-06-16 13:40:17] Komponente: TT
+[2026-06-16 13:40:17] Komponente: PPP
+[2026-06-16 13:40:17] Komponente: DD
+[2026-06-16 13:40:17] Komponente: FF
+[2026-06-16 13:40:17] Komponente: TF
+[2026-06-16 13:40:17] Komponente: RD
+[2026-06-16 13:40:17] Komponente: UVBSI
+[2026-06-16 13:40:17] Bereinigt: 183 Werte entfernt
+[2026-06-16 13:40:17] CSV gespeichert: data/stations\SROO.csv
+[2026-06-16 13:40:17] Verarbeite Station: WASS
+[2026-06-16 13:40:17] Messstellen: 9
+[2026-06-16 13:40:17] Komponente: PM1024
+[2026-06-16 13:40:17] Komponente: NO2
+[2026-06-16 13:40:17] Komponente: O3
+[2026-06-16 13:40:17] Komponente: TT
+[2026-06-16 13:40:17] Komponente: PPP
+[2026-06-16 13:40:17] Komponente: DD
+[2026-06-16 13:40:17] Komponente: FF
+[2026-06-16 13:40:17] Komponente: TF
+[2026-06-16 13:40:17] Komponente: RD
+[2026-06-16 13:40:17] Bereinigt: 100 Werte entfernt
+[2026-06-16 13:40:17] CSV gespeichert: data/stations\WASS.csv
+[2026-06-16 13:40:17] Verarbeite Station: WGCC
+[2026-06-16 13:40:17] Messstellen: 11
+[2026-06-16 13:40:17] Komponente: PM1024
+[2026-06-16 13:40:17] Komponente: NO2
+[2026-06-16 13:40:17] Komponente: O3
+[2026-06-16 13:40:17] Komponente: SO2
+[2026-06-16 13:40:17] Komponente: TT
+[2026-06-16 13:40:17] Komponente: PPP
+[2026-06-16 13:40:17] Komponente: DD
+[2026-06-16 13:40:17] Komponente: FF
+[2026-06-16 13:40:17] Komponente: TF
+[2026-06-16 13:40:17] Komponente: RD
+[2026-06-16 13:40:17] Komponente: G
+[2026-06-16 13:40:17] Bereinigt: 175 Werte entfernt
+[2026-06-16 13:40:17] CSV gespeichert: data/stations\WGCC.csv
+[2026-06-16 13:40:17] Verarbeite Station: WGVS
+[2026-06-16 13:40:17] Messstellen: 7
+[2026-06-16 13:40:17] Komponente: PM1024
+[2026-06-16 13:40:17] Komponente: NO2
+[2026-06-16 13:40:17] Komponente: CO
+[2026-06-16 13:40:17] Komponente: TT
+[2026-06-16 13:40:17] Komponente: PPP
+[2026-06-16 13:40:17] Komponente: TF
+[2026-06-16 13:40:17] Komponente: RD
+[2026-06-16 13:40:17] Bereinigt: 85 Werte entfernt
+[2026-06-16 13:40:17] CSV gespeichert: data/stations\WGVS.csv
+[2026-06-16 13:40:17] Verarbeite Station: WNCC
+[2026-06-16 13:40:17] Messstellen: 10
+[2026-06-16 13:40:17] Komponente: PM1024
+[2026-06-16 13:40:17] Komponente: NO2
+[2026-06-16 13:40:17] Komponente: O3
+[2026-06-16 13:40:17] Komponente: TT
+[2026-06-16 13:40:18] Komponente: PPP
+[2026-06-16 13:40:18] Komponente: DD
+[2026-06-16 13:40:18] Komponente: FF
+[2026-06-16 13:40:18] Komponente: TF
+[2026-06-16 13:40:18] Komponente: RD
+[2026-06-16 13:40:18] Komponente: G
+[2026-06-16 13:40:18] Bereinigt: 121 Werte entfernt
+[2026-06-16 13:40:18] CSV gespeichert: data/stations\WNCC.csv
+[2026-06-16 13:40:18] Metadaten gespeichert: data/stations\metadata.csv
+[2026-06-16 13:40:18] Import abgeschlossen
+[2026-06-17 10:04:25] Starte Datenimport
+[2026-06-17 10:04:25] Daten erfolgreich geladen
+[2026-06-17 10:04:25] Stationen gefunden: 28
+[2026-06-17 10:04:25] Verarbeite Station: BGSW
+[2026-06-17 10:04:25] Messstellen: 10
+[2026-06-17 10:04:25] Komponente: PM1024
+[2026-06-17 10:04:25] Komponente: NO2
+[2026-06-17 10:04:25] Komponente: O3
+[2026-06-17 10:04:25] Komponente: TT
+[2026-06-17 10:04:25] Komponente: PPP
+[2026-06-17 10:04:25] Komponente: DD
+[2026-06-17 10:04:25] Komponente: FF
+[2026-06-17 10:04:25] Komponente: TF
+[2026-06-17 10:04:25] Komponente: RD
+[2026-06-17 10:04:25] Komponente: G
+[2026-06-17 10:04:25] Bereinigt: 108 Werte entfernt
+[2026-06-17 10:04:25] CSV gespeichert: data/stations\BGSW.csv
+[2026-06-17 10:04:25] Verarbeite Station: BGVT
+[2026-06-17 10:04:25] Messstellen: 7
+[2026-06-17 10:04:25] Komponente: PM1024
+[2026-06-17 10:04:25] Komponente: NO2
+[2026-06-17 10:04:25] Komponente: CO
+[2026-06-17 10:04:25] Komponente: TT
+[2026-06-17 10:04:25] Komponente: PPP
+[2026-06-17 10:04:25] Komponente: TF
+[2026-06-17 10:04:25] Komponente: RD
+[2026-06-17 10:04:25] Bereinigt: 109 Werte entfernt
+[2026-06-17 10:04:25] CSV gespeichert: data/stations\BGVT.csv
+[2026-06-17 10:04:25] Verarbeite Station: BLWW
+[2026-06-17 10:04:25] Messstellen: 11
+[2026-06-17 10:04:25] Komponente: PM1024
+[2026-06-17 10:04:25] Komponente: NO2
+[2026-06-17 10:04:25] Komponente: O3
+[2026-06-17 10:04:25] Komponente: TT
+[2026-06-17 10:04:25] Komponente: PPP
+[2026-06-17 10:04:25] Komponente: DD
+[2026-06-17 10:04:25] Komponente: FF
+[2026-06-17 10:04:25] Komponente: TF
+[2026-06-17 10:04:25] Komponente: RD
+[2026-06-17 10:04:25] Komponente: G
+[2026-06-17 10:04:25] Komponente: UVBSI
+[2026-06-17 10:04:25] Bereinigt: 127 Werte entfernt
+[2026-06-17 10:04:25] CSV gespeichert: data/stations\BLWW.csv
+[2026-06-17 10:04:25] Verarbeite Station: BRNN
+[2026-06-17 10:04:25] Messstellen: 13
+[2026-06-17 10:04:25] Komponente: PM1024
+[2026-06-17 10:04:25] Komponente: NO2
+[2026-06-17 10:04:25] Komponente: O3
+[2026-06-17 10:04:25] Komponente: SO2
+[2026-06-17 10:04:25] Komponente: CO2
+[2026-06-17 10:04:25] Komponente: TT
+[2026-06-17 10:04:25] Komponente: PPP
+[2026-06-17 10:04:25] Komponente: DD
+[2026-06-17 10:04:25] Komponente: FF
+[2026-06-17 10:04:25] Komponente: TF
+[2026-06-17 10:04:25] Komponente: RD
+[2026-06-17 10:04:25] Komponente: G
+[2026-06-17 10:04:25] Komponente: UVBSI
+[2026-06-17 10:04:25] Bereinigt: 195 Werte entfernt
+[2026-06-17 10:04:25] CSV gespeichert: data/stations\BRNN.csv
+[2026-06-17 10:04:25] Verarbeite Station: CXSO
+[2026-06-17 10:04:25] Messstellen: 11
+[2026-06-17 10:04:25] Komponente: PM1024
+[2026-06-17 10:04:25] Komponente: NO2
+[2026-06-17 10:04:25] Komponente: O3
+[2026-06-17 10:04:25] Komponente: TT
+[2026-06-17 10:04:25] Komponente: PPP
+[2026-06-17 10:04:25] Komponente: DD
+[2026-06-17 10:04:25] Komponente: FF
+[2026-06-17 10:04:25] Komponente: TF
+[2026-06-17 10:04:26] Komponente: RD
+[2026-06-17 10:04:26] Komponente: G
+[2026-06-17 10:04:26] Komponente: UVBSI
+[2026-06-17 10:04:26] Bereinigt: 155 Werte entfernt
+[2026-06-17 10:04:26] CSV gespeichert: data/stations\CXSO.csv
+[2026-06-17 10:04:26] Verarbeite Station: DUCC
+[2026-06-17 10:04:26] Messstellen: 10
+[2026-06-17 10:04:26] Komponente: PM1024
+[2026-06-17 10:04:26] Komponente: NO2
+[2026-06-17 10:04:26] Komponente: TT
+[2026-06-17 10:04:26] Komponente: PPP
+[2026-06-17 10:04:26] Komponente: DD
+[2026-06-17 10:04:26] Komponente: FF
+[2026-06-17 10:04:26] Komponente: TF
+[2026-06-17 10:04:26] Komponente: RD
+[2026-06-17 10:04:26] Komponente: G
+[2026-06-17 10:04:26] Komponente: UVBSI
+[2026-06-17 10:04:26] Bereinigt: 96 Werte entfernt
+[2026-06-17 10:04:26] CSV gespeichert: data/stations\DUCC.csv
+[2026-06-17 10:04:26] Verarbeite Station: ENCC
+[2026-06-17 10:04:26] Messstellen: 10
+[2026-06-17 10:04:26] Komponente: PM1024
+[2026-06-17 10:04:26] Komponente: NO2
+[2026-06-17 10:04:26] Komponente: O3
+[2026-06-17 10:04:26] Komponente: TT
+[2026-06-17 10:04:26] Komponente: PPP
+[2026-06-17 10:04:26] Komponente: DD
+[2026-06-17 10:04:26] Komponente: FF
+[2026-06-17 10:04:26] Komponente: TF
+[2026-06-17 10:04:26] Komponente: RD
+[2026-06-17 10:04:26] Komponente: G
+[2026-06-17 10:04:26] Bereinigt: 116 Werte entfernt
+[2026-06-17 10:04:26] CSV gespeichert: data/stations\ENCC.csv
+[2026-06-17 10:04:26] Verarbeite Station: GNCC
+[2026-06-17 10:04:26] Messstellen: 11
+[2026-06-17 10:04:26] Komponente: PM1024
+[2026-06-17 10:04:26] Komponente: NO2
+[2026-06-17 10:04:26] Komponente: O3
+[2026-06-17 10:04:26] Komponente: SO2
+[2026-06-17 10:04:26] Komponente: TT
+[2026-06-17 10:04:26] Komponente: PPP
+[2026-06-17 10:04:26] Komponente: DD
+[2026-06-17 10:04:26] Komponente: FF
+[2026-06-17 10:04:26] Komponente: TF
+[2026-06-17 10:04:26] Komponente: RD
+[2026-06-17 10:04:26] Komponente: G
+[2026-06-17 10:04:26] Bereinigt: 187 Werte entfernt
+[2026-06-17 10:04:26] CSV gespeichert: data/stations\GNCC.csv
+[2026-06-17 10:04:26] Verarbeite Station: GNVS
+[2026-06-17 10:04:26] Messstellen: 7
+[2026-06-17 10:04:26] Komponente: PM1024
+[2026-06-17 10:04:26] Komponente: NO2
+[2026-06-17 10:04:26] Komponente: CO
+[2026-06-17 10:04:26] Komponente: TT
+[2026-06-17 10:04:26] Komponente: PPP
+[2026-06-17 10:04:26] Komponente: TF
+[2026-06-17 10:04:26] Komponente: RD
+[2026-06-17 10:04:26] Bereinigt: 228 Werte entfernt
+[2026-06-17 10:04:26] CSV gespeichert: data/stations\GNVS.csv
+[2026-06-17 10:04:26] Verarbeite Station: HIVU
+[2026-06-17 10:04:26] Messstellen: 7
+[2026-06-17 10:04:26] Komponente: PM1024
+[2026-06-17 10:04:26] Komponente: NO2
+[2026-06-17 10:04:26] Komponente: CO
+[2026-06-17 10:04:26] Komponente: TT
+[2026-06-17 10:04:26] Komponente: PPP
+[2026-06-17 10:04:26] Komponente: TF
+[2026-06-17 10:04:26] Komponente: RD
+[2026-06-17 10:04:26] Bereinigt: 139 Werte entfernt
+[2026-06-17 10:04:26] CSV gespeichert: data/stations\HIVU.csv
+[2026-06-17 10:04:26] Verarbeite Station: HRSW
+[2026-06-17 10:04:26] Messstellen: 10
+[2026-06-17 10:04:26] Komponente: PM1024
+[2026-06-17 10:04:26] Komponente: NO2
+[2026-06-17 10:04:26] Komponente: O3
+[2026-06-17 10:04:26] Komponente: TT
+[2026-06-17 10:04:26] Komponente: PPP
+[2026-06-17 10:04:26] Komponente: DD
+[2026-06-17 10:04:26] Komponente: FF
+[2026-06-17 10:04:26] Komponente: TF
+[2026-06-17 10:04:26] Komponente: RD
+[2026-06-17 10:04:26] Komponente: G
+[2026-06-17 10:04:26] Bereinigt: 171 Werte entfernt
+[2026-06-17 10:04:26] CSV gespeichert: data/stations\HRSW.csv
+[2026-06-17 10:04:26] Verarbeite Station: HRVS
+[2026-06-17 10:04:26] Messstellen: 6
+[2026-06-17 10:04:26] Komponente: PM1024
+[2026-06-17 10:04:26] Komponente: NO2
+[2026-06-17 10:04:26] Komponente: CO
+[2026-06-17 10:04:26] Komponente: TT
+[2026-06-17 10:04:26] Komponente: PPP
+[2026-06-17 10:04:26] Komponente: TF
+[2026-06-17 10:04:26] Bereinigt: 74 Werte entfernt
+[2026-06-17 10:04:26] CSV gespeichert: data/stations\HRVS.csv
+[2026-06-17 10:04:26] Verarbeite Station: JKCC
+[2026-06-17 10:04:26] Messstellen: 10
+[2026-06-17 10:04:26] Komponente: PM1024
+[2026-06-17 10:04:26] Komponente: NO2
+[2026-06-17 10:04:26] Komponente: O3
+[2026-06-17 10:04:26] Komponente: TT
+[2026-06-17 10:04:26] Komponente: PPP
+[2026-06-17 10:04:26] Komponente: DD
+[2026-06-17 10:04:26] Komponente: FF
+[2026-06-17 10:04:26] Komponente: TF
+[2026-06-17 10:04:26] Komponente: RD
+[2026-06-17 10:04:26] Komponente: G
+[2026-06-17 10:04:26] Bereinigt: 365 Werte entfernt
+[2026-06-17 10:04:26] CSV gespeichert: data/stations\JKCC.csv
+[2026-06-17 10:04:26] Verarbeite Station: LGOO
+[2026-06-17 10:04:26] Messstellen: 11
+[2026-06-17 10:04:26] Komponente: PM1024
+[2026-06-17 10:04:26] Komponente: NO2
+[2026-06-17 10:04:26] Komponente: O3
+[2026-06-17 10:04:26] Komponente: TT
+[2026-06-17 10:04:26] Komponente: PPP
+[2026-06-17 10:04:26] Komponente: DD
+[2026-06-17 10:04:26] Komponente: FF
+[2026-06-17 10:04:26] Komponente: TF
+[2026-06-17 10:04:26] Komponente: RD
+[2026-06-17 10:04:26] Komponente: G
+[2026-06-17 10:04:26] Komponente: UVBSI
+[2026-06-17 10:04:26] Bereinigt: 130 Werte entfernt
+[2026-06-17 10:04:26] CSV gespeichert: data/stations\LGOO.csv
+[2026-06-17 10:04:26] Verarbeite Station: LNCC
+[2026-06-17 10:04:26] Messstellen: 11
+[2026-06-17 10:04:26] Komponente: PM1024
+[2026-06-17 10:04:26] Komponente: NO2
+[2026-06-17 10:04:26] Komponente: O3
+[2026-06-17 10:04:26] Komponente: SO2
+[2026-06-17 10:04:26] Komponente: TT
+[2026-06-17 10:04:26] Komponente: PPP
+[2026-06-17 10:04:26] Komponente: DD
+[2026-06-17 10:04:26] Komponente: FF
+[2026-06-17 10:04:26] Komponente: TF
+[2026-06-17 10:04:26] Komponente: RD
+[2026-06-17 10:04:26] Komponente: G
+[2026-06-17 10:04:26] Bereinigt: 166 Werte entfernt
+[2026-06-17 10:04:26] CSV gespeichert: data/stations\LNCC.csv
+[2026-06-17 10:04:26] Verarbeite Station: LWSO
+[2026-06-17 10:04:26] Messstellen: 10
+[2026-06-17 10:04:26] Komponente: PM1024
+[2026-06-17 10:04:26] Komponente: NO2
+[2026-06-17 10:04:26] Komponente: O3
+[2026-06-17 10:04:26] Komponente: TT
+[2026-06-17 10:04:26] Komponente: PPP
+[2026-06-17 10:04:26] Komponente: DD
+[2026-06-17 10:04:26] Komponente: FF
+[2026-06-17 10:04:26] Komponente: TF
+[2026-06-17 10:04:26] Komponente: RD
+[2026-06-17 10:04:26] Komponente: G
+[2026-06-17 10:04:26] Bereinigt: 569 Werte entfernt
+[2026-06-17 10:04:26] CSV gespeichert: data/stations\LWSO.csv
+[2026-06-17 10:04:26] Verarbeite Station: NYNO
+[2026-06-17 10:04:26] Messstellen: 12
+[2026-06-17 10:04:26] Komponente: PM1024
+[2026-06-17 10:04:26] Komponente: NO2
+[2026-06-17 10:04:26] Komponente: O3
+[2026-06-17 10:04:26] Komponente: SO2
+[2026-06-17 10:04:26] Komponente: TT
+[2026-06-17 10:04:26] Komponente: PPP
+[2026-06-17 10:04:26] Komponente: DD
+[2026-06-17 10:04:26] Komponente: FF
+[2026-06-17 10:04:26] Komponente: TF
+[2026-06-17 10:04:26] Komponente: RD
+[2026-06-17 10:04:26] Komponente: G
+[2026-06-17 10:04:26] Komponente: UVBSI
+[2026-06-17 10:04:26] Bereinigt: 268 Werte entfernt
+[2026-06-17 10:04:26] CSV gespeichert: data/stations\NYNO.csv
+[2026-06-17 10:04:26] Verarbeite Station: OGCC
+[2026-06-17 10:04:26] Messstellen: 10
+[2026-06-17 10:04:26] Komponente: PM1024
+[2026-06-17 10:04:26] Komponente: NO2
+[2026-06-17 10:04:26] Komponente: O3
+[2026-06-17 10:04:26] Komponente: TT
+[2026-06-17 10:04:26] Komponente: PPP
+[2026-06-17 10:04:26] Komponente: DD
+[2026-06-17 10:04:26] Komponente: FF
+[2026-06-17 10:04:26] Komponente: TF
+[2026-06-17 10:04:26] Komponente: RD
+[2026-06-17 10:04:26] Komponente: G
+[2026-06-17 10:04:26] Bereinigt: 175 Werte entfernt
+[2026-06-17 10:04:26] CSV gespeichert: data/stations\OGCC.csv
+[2026-06-17 10:04:26] Verarbeite Station: OKCC
+[2026-06-17 10:04:26] Messstellen: 12
+[2026-06-17 10:04:26] Komponente: PM1024
+[2026-06-17 10:04:26] Komponente: NO2
+[2026-06-17 10:04:26] Komponente: O3
+[2026-06-17 10:04:26] Komponente: SO2
+[2026-06-17 10:04:26] Komponente: TT
+[2026-06-17 10:04:26] Komponente: PPP
+[2026-06-17 10:04:26] Komponente: DD
+[2026-06-17 10:04:26] Komponente: FF
+[2026-06-17 10:04:26] Komponente: TF
+[2026-06-17 10:04:26] Komponente: RD
+[2026-06-17 10:04:26] Komponente: G
+[2026-06-17 10:04:27] Komponente: UVBSI
+[2026-06-17 10:04:27] Bereinigt: 184 Werte entfernt
+[2026-06-17 10:04:27] CSV gespeichert: data/stations\OKCC.csv
+[2026-06-17 10:04:27] Verarbeite Station: OKVT
+[2026-06-17 10:04:27] Messstellen: 6
+[2026-06-17 10:04:27] Komponente: PM1024
+[2026-06-17 10:04:27] Komponente: NO2
+[2026-06-17 10:04:27] Komponente: CO
+[2026-06-17 10:04:27] Komponente: TT
+[2026-06-17 10:04:27] Komponente: PPP
+[2026-06-17 10:04:27] Komponente: TF
+[2026-06-17 10:04:27] Bereinigt: 41 Werte entfernt
+[2026-06-17 10:04:27] CSV gespeichert: data/stations\OKVT.csv
+[2026-06-17 10:04:27] Verarbeite Station: OLVT
+[2026-06-17 10:04:27] Messstellen: 7
+[2026-06-17 10:04:27] Komponente: PM1024
+[2026-06-17 10:04:27] Komponente: NO2
+[2026-06-17 10:04:27] Komponente: CO
+[2026-06-17 10:04:27] Komponente: TT
+[2026-06-17 10:04:27] Komponente: PPP
+[2026-06-17 10:04:27] Komponente: TF
+[2026-06-17 10:04:27] Komponente: RD
+[2026-06-17 10:04:27] Bereinigt: 80 Werte entfernt
+[2026-06-17 10:04:27] CSV gespeichert: data/stations\OLVT.csv
+[2026-06-17 10:04:27] Verarbeite Station: RNSW
+[2026-06-17 10:04:27] Messstellen: 11
+[2026-06-17 10:04:27] Komponente: PM1024
+[2026-06-17 10:04:27] Komponente: NO2
+[2026-06-17 10:04:27] Komponente: O3
+[2026-06-17 10:04:27] Komponente: TT
+[2026-06-17 10:04:27] Komponente: PPP
+[2026-06-17 10:04:27] Komponente: DD
+[2026-06-17 10:04:27] Komponente: FF
+[2026-06-17 10:04:27] Komponente: TF
+[2026-06-17 10:04:27] Komponente: RD
+[2026-06-17 10:04:27] Komponente: G
+[2026-06-17 10:04:27] Komponente: UVBSI
+[2026-06-17 10:04:27] Bereinigt: 132 Werte entfernt
+[2026-06-17 10:04:27] CSV gespeichert: data/stations\RNSW.csv
+[2026-06-17 10:04:27] Verarbeite Station: SNNW
+[2026-06-17 10:04:27] Messstellen: 11
+[2026-06-17 10:04:27] Komponente: PM1024
+[2026-06-17 10:04:27] Komponente: NO2
+[2026-06-17 10:04:27] Komponente: O3
+[2026-06-17 10:04:27] Komponente: CO2
+[2026-06-17 10:04:27] Komponente: TT
+[2026-06-17 10:04:27] Komponente: PPP
+[2026-06-17 10:04:27] Komponente: DD
+[2026-06-17 10:04:27] Komponente: FF
+[2026-06-17 10:04:27] Komponente: TF
+[2026-06-17 10:04:27] Komponente: RD
+[2026-06-17 10:04:27] Komponente: G
+[2026-06-17 10:04:27] Bereinigt: 137 Werte entfernt
+[2026-06-17 10:04:27] CSV gespeichert: data/stations\SNNW.csv
+[2026-06-17 10:04:27] Verarbeite Station: SROO
+[2026-06-17 10:04:27] Messstellen: 12
+[2026-06-17 10:04:27] Komponente: PM1024
+[2026-06-17 10:04:27] Komponente: NO2
+[2026-06-17 10:04:27] Komponente: O3
+[2026-06-17 10:04:27] Komponente: SO2
+[2026-06-17 10:04:27] Komponente: CO
+[2026-06-17 10:04:27] Komponente: TT
+[2026-06-17 10:04:27] Komponente: PPP
+[2026-06-17 10:04:27] Komponente: DD
+[2026-06-17 10:04:27] Komponente: FF
+[2026-06-17 10:04:27] Komponente: TF
+[2026-06-17 10:04:27] Komponente: RD
+[2026-06-17 10:04:27] Komponente: UVBSI
+[2026-06-17 10:04:27] Bereinigt: 184 Werte entfernt
+[2026-06-17 10:04:27] CSV gespeichert: data/stations\SROO.csv
+[2026-06-17 10:04:27] Verarbeite Station: WASS
+[2026-06-17 10:04:27] Messstellen: 9
+[2026-06-17 10:04:27] Komponente: PM1024
+[2026-06-17 10:04:27] Komponente: NO2
+[2026-06-17 10:04:27] Komponente: O3
+[2026-06-17 10:04:27] Komponente: TT
+[2026-06-17 10:04:27] Komponente: PPP
+[2026-06-17 10:04:27] Komponente: DD
+[2026-06-17 10:04:27] Komponente: FF
+[2026-06-17 10:04:27] Komponente: TF
+[2026-06-17 10:04:27] Komponente: RD
+[2026-06-17 10:04:27] Bereinigt: 100 Werte entfernt
+[2026-06-17 10:04:27] CSV gespeichert: data/stations\WASS.csv
+[2026-06-17 10:04:27] Verarbeite Station: WGCC
+[2026-06-17 10:04:27] Messstellen: 11
+[2026-06-17 10:04:27] Komponente: PM1024
+[2026-06-17 10:04:27] Komponente: NO2
+[2026-06-17 10:04:27] Komponente: O3
+[2026-06-17 10:04:27] Komponente: SO2
+[2026-06-17 10:04:27] Komponente: TT
+[2026-06-17 10:04:27] Komponente: PPP
+[2026-06-17 10:04:27] Komponente: DD
+[2026-06-17 10:04:27] Komponente: FF
+[2026-06-17 10:04:27] Komponente: TF
+[2026-06-17 10:04:27] Komponente: RD
+[2026-06-17 10:04:27] Komponente: G
+[2026-06-17 10:04:27] Bereinigt: 164 Werte entfernt
+[2026-06-17 10:04:27] CSV gespeichert: data/stations\WGCC.csv
+[2026-06-17 10:04:27] Verarbeite Station: WGVS
+[2026-06-17 10:04:27] Messstellen: 7
+[2026-06-17 10:04:27] Komponente: PM1024
+[2026-06-17 10:04:27] Komponente: NO2
+[2026-06-17 10:04:27] Komponente: CO
+[2026-06-17 10:04:27] Komponente: TT
+[2026-06-17 10:04:27] Komponente: PPP
+[2026-06-17 10:04:27] Komponente: TF
+[2026-06-17 10:04:27] Komponente: RD
+[2026-06-17 10:04:27] Bereinigt: 85 Werte entfernt
+[2026-06-17 10:04:27] CSV gespeichert: data/stations\WGVS.csv
+[2026-06-17 10:04:27] Verarbeite Station: WNCC
+[2026-06-17 10:04:27] Messstellen: 10
+[2026-06-17 10:04:27] Komponente: PM1024
+[2026-06-17 10:04:27] Komponente: NO2
+[2026-06-17 10:04:27] Komponente: O3
+[2026-06-17 10:04:27] Komponente: TT
+[2026-06-17 10:04:27] Komponente: PPP
+[2026-06-17 10:04:27] Komponente: DD
+[2026-06-17 10:04:27] Komponente: FF
+[2026-06-17 10:04:27] Komponente: TF
+[2026-06-17 10:04:27] Komponente: RD
+[2026-06-17 10:04:27] Komponente: G
+[2026-06-17 10:04:27] Bereinigt: 116 Werte entfernt
+[2026-06-17 10:04:27] CSV gespeichert: data/stations\WNCC.csv
+[2026-06-17 10:04:27] Metadaten gespeichert: data/stations\metadata.csv
+[2026-06-17 10:04:27] Import abgeschlossen

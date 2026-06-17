@@ -3,8 +3,8 @@ import pandas as pd
 import streamlit as st
 import matplotlib.pyplot as plt
 
-from sklearn.linear_model import (
-    LinearRegression
+from modules.api.weather_mapping import (
+    weather_mapping
 )
 
 
@@ -14,7 +14,7 @@ from sklearn.linear_model import (
 
 st.set_page_config(
 
-    page_title="CityVision Vorhersagen",
+    page_title="CityVision Datenanalyse",
 
     layout="wide"
 
@@ -25,171 +25,12 @@ st.set_page_config(
 # Titel
 # =====================================================
 
-st.title("Vorhersagen")
+st.title("Datenanalyse")
 
 st.subheader(
-    "Alle Messwerte der Station "
-    "Braunschweig Stadt"
+    "Ausreißeranalyse "
+    "Stadt Braunschweig"
 )
-
-
-# =====================================================
-# Messwertnamen
-# =====================================================
-
-measurement_mapping = {
-
-    "TT": {
-
-        "name": "Temperatur",
-
-        "unit": "°C",
-
-        "category": "Wetter"
-
-    },
-
-    "RF": {
-
-        "name": "Relative Luftfeuchte",
-
-        "unit": "%",
-
-        "category": "Wetter"
-
-    },
-
-    "PP": {
-
-        "name": "Luftdruck",
-
-        "unit": "hPa",
-
-        "category": "Wetter"
-
-    },
-
-    "FF": {
-
-        "name": "Windgeschwindigkeit",
-
-        "unit": "m/s",
-
-        "category": "Wetter"
-
-    },
-
-    "DD": {
-
-        "name": "Windrichtung",
-
-        "unit": "°",
-
-        "category": "Wetter"
-
-    },
-
-    "RR": {
-
-        "name": "Niederschlag",
-
-        "unit": "mm",
-
-        "category": "Wetter"
-
-    },
-
-    "O3": {
-
-        "name": "Ozon",
-
-        "unit": "µg/m³",
-
-        "category": "Luft"
-
-    },
-
-    "NO": {
-
-        "name": "Stickstoffmonoxid",
-
-        "unit": "µg/m³",
-
-        "category": "Luft"
-
-    },
-
-    "NO2": {
-
-        "name": "Stickstoffdioxid",
-
-        "unit": "µg/m³",
-
-        "category": "Luft"
-
-    },
-
-    "SO2": {
-
-        "name": "Schwefeldioxid",
-
-        "unit": "µg/m³",
-
-        "category": "Luft"
-
-    },
-
-    "CO": {
-
-        "name": "Kohlenmonoxid",
-
-        "unit": "mg/m³",
-
-        "category": "Luft"
-
-    },
-
-    "PM1024": {
-
-        "name": "Feinstaub PM10",
-
-        "unit": "µg/m³",
-
-        "category": "Luft"
-
-    },
-
-    "PM2524": {
-
-        "name": "Feinstaub PM2.5",
-
-        "unit": "µg/m³",
-
-        "category": "Luft"
-
-    },
-
-    "GS": {
-
-        "name": "Globalstrahlung",
-
-        "unit": "W/m²",
-
-        "category": "Strahlung"
-
-    },
-
-    "UV": {
-
-        "name": "UV-Index",
-
-        "unit": "",
-
-        "category": "Strahlung"
-
-    }
-
-}
 
 
 # =====================================================
@@ -310,22 +151,19 @@ component_names = []
 
 for component in components:
 
-    component_info = measurement_mapping.get(
+    mapping = weather_mapping.get(
 
         component,
 
         {
-            "name": component,
-            "unit": "",
-            "category": "Unbekannt"
+            "name": component
         }
 
     )
 
-
     component_names.append(
 
-        f"{component_info['name']} "
+        f"{mapping['name']} "
         f"({component})"
 
     )
@@ -335,39 +173,34 @@ for component in components:
 
 
 # =====================================================
-# Alle Messwerte anzeigen
+# Jede Komponente einzeln
 # =====================================================
 
 for component in components:
 
     # =============================================
-    # Informationen
+    # Mapping
     # =============================================
 
-    component_info = measurement_mapping.get(
+    mapping = weather_mapping.get(
 
         component,
 
         {
             "name": component,
-            "unit": "",
-            "category": "Unbekannt"
+            "beschreibung": "",
+            "einheit": "",
+            "kategorie": ""
         }
 
     )
 
 
-    component_name = component_info[
-        "name"
-    ]
+    component_name = mapping["name"]
 
-    component_unit = component_info[
-        "unit"
-    ]
+    component_unit = mapping["einheit"]
 
-    component_category = component_info[
-        "category"
-    ]
+    component_category = mapping["kategorie"]
 
 
     # =============================================
@@ -379,7 +212,7 @@ for component in components:
         df["Komponente"]
         == component
 
-    ]
+    ].copy()
 
 
     # =============================================
@@ -392,71 +225,64 @@ for component in components:
 
 
     # =============================================
-    # Features
+    # Statistik
     # =============================================
 
-    X = component_df[[
-
-        "Zeitindex"
-
-    ]]
-
-
-    y = component_df[
+    mean = component_df[
         "Messwert"
+    ].mean()
+
+
+    std = component_df[
+        "Messwert"
+    ].std()
+
+
+    # =============================================
+    # Ausreißer
+    # =============================================
+
+    lower = mean - 3 * std
+
+    upper = mean + 3 * std
+
+
+    outliers = component_df[
+
+        (
+            component_df["Messwert"]
+            < lower
+        )
+
+        |
+
+        (
+            component_df["Messwert"]
+            > upper
+        )
+
+    ]
+
+
+    normal_values = component_df[
+
+        (
+            component_df["Messwert"]
+            >= lower
+        )
+
+        &
+
+        (
+            component_df["Messwert"]
+            <= upper
+        )
+
     ]
 
 
     # =============================================
-    # Modell
-    # =============================================
-
-    model = LinearRegression()
-
-    model.fit(X, y)
-
-
-    # =============================================
-    # Vorhersage
-    # =============================================
-
-    predictions = model.predict(X)
-
-
-    # =============================================
-    # Zukunft
-    # =============================================
-
-    future_index = pd.DataFrame({
-
-        "Zeitindex":
-
-            range(
-
-                int(
-                    component_df[
-                        "Zeitindex"
-                    ].max()
-                ) + 1,
-
-                int(
-                    component_df[
-                        "Zeitindex"
-                    ].max()
-                ) + 11
-
-            )
-
-    })
-
-
-    future_predictions = model.predict(
-        future_index
-    )
-
-
-    # =============================================
-    # Expander
+    # Abschnitt
     # =============================================
 
     with st.expander(
@@ -479,6 +305,15 @@ for component in components:
 
             Einheit:
             {component_unit}
+
+            Mittelwert:
+            {round(mean, 2)}
+
+            Standardabweichung:
+            {round(std, 2)}
+
+            Ausreißer:
+            {len(outliers)}
             """
 
         )
@@ -488,7 +323,7 @@ for component in components:
         # Statistik
         # =========================================
 
-        col1, col2, col3 = st.columns(3)
+        col1, col2, col3, col4 = st.columns(4)
 
 
         col1.metric(
@@ -496,7 +331,9 @@ for component in components:
             "Minimum",
 
             round(
-                y.min(),
+                component_df[
+                    "Messwert"
+                ].min(),
                 2
             )
 
@@ -508,7 +345,9 @@ for component in components:
             "Maximum",
 
             round(
-                y.max(),
+                component_df[
+                    "Messwert"
+                ].max(),
                 2
             )
 
@@ -520,15 +359,24 @@ for component in components:
             "Mittelwert",
 
             round(
-                y.mean(),
+                mean,
                 2
             )
 
         )
 
 
+        col4.metric(
+
+            "Ausreißer",
+
+            len(outliers)
+
+        )
+
+
         # =========================================
-        # Diagramm
+        # Grafik
         # =========================================
 
         fig, ax = plt.subplots(
@@ -537,62 +385,92 @@ for component in components:
 
 
         # =========================================
-        # Originalwerte
+        # Normale Werte
         # =========================================
 
-        ax.plot(
+        ax.scatter(
 
-            component_df[
+            normal_values[
                 "Zeitindex"
             ],
 
-            y,
+            normal_values[
+                "Messwert"
+            ],
 
-            linewidth=2,
+            s=12,
 
-            label="Messwerte"
+            label="Normale Werte"
 
         )
 
 
         # =========================================
-        # Regression
+        # Ausreißer
         # =========================================
 
-        ax.plot(
+        if not outliers.empty:
 
-            component_df[
-                "Zeitindex"
-            ],
+            ax.scatter(
 
-            predictions,
+                outliers[
+                    "Zeitindex"
+                ],
+
+                outliers[
+                    "Messwert"
+                ],
+
+                s=40,
+
+                label="Ausreißer"
+
+            )
+
+
+        # =========================================
+        # Mittelwert
+        # =========================================
+
+        ax.axhline(
+
+            mean,
 
             linestyle="dashed",
 
             linewidth=2,
 
-            label="Regression"
+            label="Mittelwert"
 
         )
 
 
         # =========================================
-        # Zukunft
+        # Grenzen
         # =========================================
 
-        ax.plot(
+        ax.axhline(
 
-            future_index[
-                "Zeitindex"
-            ],
-
-            future_predictions,
+            upper,
 
             linestyle="dotted",
 
-            linewidth=3,
+            linewidth=2,
 
-            label="Vorhersage"
+            label="Obere Grenze"
+
+        )
+
+
+        ax.axhline(
+
+            lower,
+
+            linestyle="dotted",
+
+            linewidth=2,
+
+            label="Untere Grenze"
 
         )
 
@@ -603,8 +481,8 @@ for component in components:
 
         ax.set_title(
 
-            f"{component_name} "
-            f"Vorhersage"
+            f"Ausreißeranalyse "
+            f"{component_name}"
 
         )
 
@@ -630,31 +508,25 @@ for component in components:
 
 
         # =========================================
-        # Vorhersagen
+        # Ausreißer anzeigen
         # =========================================
 
-        prediction_df = pd.DataFrame({
-
-            "Zeitindex":
-
-                future_index[
-                    "Zeitindex"
-                ],
-
-            "Vorhersage":
-
-                future_predictions
-
-        })
-
-
         st.subheader(
-            "Zukünftige Werte"
+            "Gefundene Ausreißer"
         )
 
-        st.dataframe(
-            prediction_df
-        )
+
+        if outliers.empty:
+
+            st.success(
+                "Keine Ausreißer gefunden"
+            )
+
+        else:
+
+            st.dataframe(
+                outliers
+            )
 
 
         # =========================================

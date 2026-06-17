@@ -2,6 +2,7 @@ import os
 import json
 import pandas as pd
 import requests
+
 from datetime import datetime
 
 
@@ -21,13 +22,19 @@ LOG_FILE = "data/import.log"
 # =====================================================
 
 os.makedirs(
+
     OUTPUT_DIR,
+
     exist_ok=True
+
 )
 
 os.makedirs(
+
     "data",
+
     exist_ok=True
+
 )
 
 
@@ -46,9 +53,13 @@ def log(message):
     print(text)
 
     with open(
+
         LOG_FILE,
+
         "a",
+
         encoding="utf-8"
+
     ) as file:
 
         file.write(text + "\n")
@@ -62,48 +73,23 @@ def clean_value(value):
 
     try:
 
-        # =============================================
-        # In String umwandeln
-        # =============================================
-
         value = str(value)
-
-
-        # =============================================
-        # Sonderzeichen entfernen
-        # =============================================
 
         value = value.replace(",", ".")
         value = value.replace("<", "")
         value = value.replace(">", "")
         value = value.replace(" ", "")
 
-
-        # =============================================
-        # Leere Werte
-        # =============================================
-
         if value == "":
             return None
 
-
-        # =============================================
-        # Umwandlung
-        # =============================================
-
         value = float(value)
-
-
-        # =============================================
-        # Unrealistische Werte filtern
-        # =============================================
 
         if value < -999:
             return None
 
         if value > 999999:
             return None
-
 
         return value
 
@@ -113,26 +99,41 @@ def clean_value(value):
 
 
 # =====================================================
-# Ausreißer erkennen
+# Ausreißer entfernen
 # =====================================================
 
 def remove_outliers(df):
 
     if len(df) < 5:
+
         return df
+
 
     mean = df["Messwert"].mean()
 
     std = df["Messwert"].std()
 
+
+    if pd.isna(std) or std == 0:
+
+        return df
+
+
     lower = mean - 3 * std
+
     upper = mean + 3 * std
 
+
     df = df[
+
         (df["Messwert"] >= lower)
+
         &
+
         (df["Messwert"] <= upper)
+
     ]
+
 
     return df
 
@@ -143,12 +144,18 @@ def remove_outliers(df):
 
 log("Starte Datenimport")
 
+
 response = requests.get(
+
     URL,
+
     timeout=60
+
 )
 
+
 data = response.json()
+
 
 log("Daten erfolgreich geladen")
 
@@ -165,13 +172,16 @@ if "messwerte" not in data:
 
 
 log(
+
     f"Stationen gefunden: "
+
     f"{len(data['messwerte'])}"
+
 )
 
 
 # =====================================================
-# Metadaten sammeln
+# Metadaten
 # =====================================================
 
 metadata_rows = []
@@ -190,59 +200,28 @@ for station in data["messwerte"]:
         # =============================================
 
         station_code = station.get(
+
             "kennung",
+
             "UNKNOWN"
+
         )
+
 
         log(
+
             f"Verarbeite Station: "
+
             f"{station_code}"
+
         )
 
 
         # =============================================
-        # Stationsordner
+        # Alle Daten sammeln
         # =============================================
 
-        station_dir = os.path.join(
-            OUTPUT_DIR,
-            station_code
-        )
-
-        os.makedirs(
-            station_dir,
-            exist_ok=True
-        )
-
-
-        # =============================================
-        # Rohdaten speichern
-        # =============================================
-
-        json_path = os.path.join(
-
-            station_dir,
-
-            f"{station_code}.json"
-
-        )
-
-        with open(
-
-            json_path,
-            "w",
-            encoding="utf-8"
-
-        ) as file:
-
-            json.dump(
-
-                station,
-                file,
-                ensure_ascii=False,
-                indent=4
-
-            )
+        station_rows = []
 
 
         # =============================================
@@ -250,49 +229,66 @@ for station in data["messwerte"]:
         # =============================================
 
         messstellen = station.get(
+
             "messstellen",
+
             []
+
         )
 
+
         log(
+
             f"Messstellen: "
+
             f"{len(messstellen)}"
+
         )
 
 
         # =============================================
-        # Komponenten
+        # Komponenten verarbeiten
         # =============================================
 
         for messstelle in messstellen:
 
             component = messstelle.get(
+
                 "kennung",
+
                 "UNKNOWN"
+
             )
+
 
             values = messstelle.get(
+
                 "verlauf_stundenwerte",
+
                 []
+
             )
+
 
             log(
+
                 f"Komponente: "
+
                 f"{component}"
+
             )
 
 
             # =========================================
-            # Zeilen erzeugen
+            # Werte erzeugen
             # =========================================
-
-            rows = []
 
             for index, value in enumerate(values):
 
                 clean = clean_value(value)
 
-                rows.append({
+
+                station_rows.append({
 
                     "Zeitindex":
                         index,
@@ -309,131 +305,211 @@ for station in data["messwerte"]:
                 })
 
 
-            # =========================================
-            # DataFrame
-            # =========================================
+        # =============================================
+        # DataFrame
+        # =============================================
 
-            df = pd.DataFrame(rows)
-
-
-            # =========================================
-            # Bereinigung
-            # =========================================
-
-            before_count = len(df)
-
-            # Nullwerte entfernen
-            df = df.dropna(
-                subset=["Messwert"]
-            )
-
-            # Doppelte entfernen
-            df = df.drop_duplicates()
-
-            # Ausreißer entfernen
-            df = remove_outliers(df)
-
-            after_count = len(df)
+        df = pd.DataFrame(
+            station_rows
+        )
 
 
-            # =========================================
-            # Statistik
-            # =========================================
+        # =============================================
+        # Prüfen
+        # =============================================
 
-            removed = (
-                before_count - after_count
-            )
+        if df.empty:
 
             log(
-                f"Bereinigt: "
-                f"{removed} Werte entfernt"
+                f"Keine Daten "
+                f"für {station_code}"
+            )
+
+            continue
+
+
+        # =============================================
+        # Statistik vor Bereinigung
+        # =============================================
+
+        before_count = len(df)
+
+
+        # =============================================
+        # Fehlende Werte entfernen
+        # =============================================
+
+        df = df.dropna(
+            subset=["Messwert"]
+        )
+
+
+        # =============================================
+        # Doppelte entfernen
+        # =============================================
+
+        df = df.drop_duplicates()
+
+
+        # =============================================
+        # Datentypen korrigieren
+        # =============================================
+
+        df["Messwert"] = pd.to_numeric(
+
+            df["Messwert"],
+
+            errors="coerce"
+
+        )
+
+
+        # =============================================
+        # Ausreißer entfernen
+        # =============================================
+
+        cleaned_groups = []
+
+
+        grouped = df.groupby(
+            "Komponente"
+        )
+
+
+        for component, component_df in grouped:
+
+            component_df = remove_outliers(
+                component_df
+            )
+
+            cleaned_groups.append(
+                component_df
             )
 
 
-            # =========================================
-            # Prüfen ob Daten vorhanden
-            # =========================================
+        df = pd.concat(
+            cleaned_groups
+        )
 
-            if df.empty:
 
-                log(
-                    f"Keine gültigen Daten "
-                    f"für {component}"
+        # =============================================
+        # Sortieren
+        # =============================================
+
+        df = df.sort_values(
+
+            by=[
+
+                "Komponente",
+
+                "Zeitindex"
+
+            ]
+
+        )
+
+
+        # =============================================
+        # Statistik nach Bereinigung
+        # =============================================
+
+        after_count = len(df)
+
+
+        removed = (
+            before_count - after_count
+        )
+
+
+        log(
+
+            f"Bereinigt: "
+
+            f"{removed} Werte entfernt"
+
+        )
+
+
+        # =============================================
+        # CSV speichern
+        # =============================================
+
+        csv_path = os.path.join(
+
+            OUTPUT_DIR,
+
+            f"{station_code}.csv"
+
+        )
+
+
+        df.to_csv(
+
+            csv_path,
+
+            index=False,
+
+            encoding="utf-8"
+
+        )
+
+
+        log(
+
+            f"CSV gespeichert: "
+
+            f"{csv_path}"
+
+        )
+
+
+        # =============================================
+        # Metadaten
+        # =============================================
+
+        metadata_rows.append({
+
+            "Station":
+                station_code,
+
+            "Datensätze":
+                len(df),
+
+            "Komponenten":
+                df["Komponente"]
+                .nunique(),
+
+            "Minimum":
+                round(
+                    df["Messwert"].min(),
+                    2
+                ),
+
+            "Maximum":
+                round(
+                    df["Messwert"].max(),
+                    2
+                ),
+
+            "Mittelwert":
+                round(
+                    df["Messwert"].mean(),
+                    2
                 )
 
-                continue
-
-
-            # =========================================
-            # CSV speichern
-            # =========================================
-
-            csv_path = os.path.join(
-
-                station_dir,
-
-                f"{station_code}_{component}.csv"
-
-            )
-
-            df.to_csv(
-
-                csv_path,
-
-                index=False,
-
-                encoding="utf-8"
-
-            )
-
-            log(
-                f"CSV gespeichert: "
-                f"{csv_path}"
-            )
-
-
-            # =========================================
-            # Metadaten
-            # =========================================
-
-            metadata_rows.append({
-
-                "Station":
-                    station_code,
-
-                "Komponente":
-                    component,
-
-                "Datensätze":
-                    len(df),
-
-                "Minimum":
-                    round(
-                        df["Messwert"].min(),
-                        2
-                    ),
-
-                "Maximum":
-                    round(
-                        df["Messwert"].max(),
-                        2
-                    ),
-
-                "Mittelwert":
-                    round(
-                        df["Messwert"].mean(),
-                        2
-                    )
-
-            })
+        })
 
 
     except Exception as error:
 
         log(
+
             f"FEHLER bei Station "
+
             f"{station_code}: "
+
             f"{error}"
+
         )
 
 
@@ -445,10 +521,15 @@ metadata_df = pd.DataFrame(
     metadata_rows
 )
 
+
 metadata_path = os.path.join(
+
     OUTPUT_DIR,
+
     "metadata.csv"
+
 )
+
 
 metadata_df.to_csv(
 
@@ -460,14 +541,18 @@ metadata_df.to_csv(
 
 )
 
+
 log(
+
     f"Metadaten gespeichert: "
+
     f"{metadata_path}"
+
 )
 
 
 # =====================================================
-# Letztes Update speichern
+# Letztes Update
 # =====================================================
 
 with open(
@@ -475,14 +560,17 @@ with open(
     "data/latest_update.txt",
 
     "w",
+
     encoding="utf-8"
 
 ) as file:
 
     file.write(
+
         datetime.now().strftime(
             "%Y-%m-%d %H:%M:%S"
         )
+
     )
 
 
