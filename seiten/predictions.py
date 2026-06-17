@@ -69,6 +69,16 @@ measurement_mapping = {
 
     },
 
+    "PPP": {
+
+        "name": "Luftdruck",
+
+        "unit": "hPa",
+
+        "category": "Wetter"
+
+    },
+
     "FF": {
 
         "name": "Windgeschwindigkeit",
@@ -179,6 +189,16 @@ measurement_mapping = {
 
     },
 
+    "G": {
+
+        "name": "Globalstrahlung",
+
+        "unit": "W/m²",
+
+        "category": "Strahlung"
+
+    },
+
     "UV": {
 
         "name": "UV-Index",
@@ -186,6 +206,26 @@ measurement_mapping = {
         "unit": "",
 
         "category": "Strahlung"
+
+    },
+
+    "RD": {
+
+        "name": "Windrichtung",
+
+        "unit": "Grad",
+
+        "category": "wind"
+
+    },
+
+    "TF": {
+
+        "name": "Taupunkttemperatur",
+
+        "unit": "°C",
+
+        "category": "Wetter"
 
     }
 
@@ -300,11 +340,6 @@ components = sorted(
 # Übersicht
 # =====================================================
 
-st.subheader(
-    "Verfügbare Messwerte"
-)
-
-
 component_names = []
 
 
@@ -330,8 +365,6 @@ for component in components:
 
     )
 
-
-# st.write(component_names)
 
 
 # =====================================================
@@ -456,215 +489,201 @@ for component in components:
 
 
     # =============================================
-    # Expander
+    # Abstand
     # =============================================
 
-    with st.expander(
+    st.markdown("---")
+
+
+    # =============================================
+    # Titel
+    # =============================================
+
+    st.subheader(
 
         f"{component_name} "
         f"({component})"
 
-    ):
+    )
 
 
-        # =========================================
-        # Informationen
-        # =========================================
+    # =============================================
+    # Informationen
+    # =============================================
 
-        st.info(
+    st.info(
 
-            f"""
-            Kategorie:
-            {component_category}
+        f"""
+        Kategorie:
+        {component_category}
 
-            Einheit:
-            {component_unit}
-            """
+        Einheit:
+        {component_unit}
+        """
 
+    )
+
+
+    # =============================================
+    # Statistik
+    # =============================================
+
+    col1, col2, col3 = st.columns(3)
+
+
+    col1.metric(
+
+        "Minimum",
+
+        round(
+            y.min(),
+            2
         )
 
-
-        # =========================================
-        # Statistik
-        # =========================================
-
-        col1, col2, col3 = st.columns(3)
+    )
 
 
-        col1.metric(
+    col2.metric(
 
-            "Minimum",
+        "Maximum",
 
-            round(
-                y.min(),
-                2
-            )
-
+        round(
+            y.max(),
+            2
         )
 
+    )
 
-        col2.metric(
 
-            "Maximum",
+    col3.metric(
 
-            round(
-                y.max(),
-                2
-            )
+        "Mittelwert",
 
+        round(
+            y.mean(),
+            2
         )
 
-
-        col3.metric(
-
-            "Mittelwert",
-
-            round(
-                y.mean(),
-                2
-            )
-
-        )
+    )
 
 
-        # =========================================
-        # Diagramm
-        # =========================================
+    # =============================================
+    # Diagramm
+    # =============================================
 
-        fig, ax = plt.subplots(
-            figsize=(14, 5)
-        )
-
-
-        # =========================================
-        # Originalwerte
-        # =========================================
-
-        ax.plot(
-
-            component_df[
-                "Zeitindex"
-            ],
-
-            y,
-
-            linewidth=2,
-
-            label="Messwerte"
-
-        )
+    fig, ax = plt.subplots(
+        figsize=(14, 5)
+    )
 
 
-        # =========================================
-        # Regression
-        # =========================================
+    # =============================================
+    # Originalwerte
+    # =============================================
 
-        ax.plot(
+    ax.plot(
 
-            component_df[
-                "Zeitindex"
-            ],
+        component_df[
+            "Zeitindex"
+        ],
 
-            predictions,
+        y,
 
-            linestyle="dashed",
+        linewidth=2,
 
-            linewidth=2,
+        label="Messwerte"
 
-            label="Regression"
-
-        )
+    )
 
 
-        # =========================================
-        # Zukunft
-        # =========================================
+    # =============================================
+    # Regression
+    # =============================================
 
-        ax.plot(
+    ax.plot(
+
+        component_df[
+            "Zeitindex"
+        ],
+
+        predictions,
+
+        linestyle="dashed",
+
+        linewidth=2,
+
+        label="Regression"
+
+    )
+
+
+    # =============================================
+    # Zukunft
+    # =============================================
+
+    ax.plot(
+
+        future_index[
+            "Zeitindex"
+        ],
+
+        future_predictions,
+
+        linestyle="dotted",
+
+        linewidth=3,
+
+        label="Vorhersage"
+
+    )
+
+
+    # =============================================
+    # Titel
+    # =============================================
+
+    ax.set_title(
+
+        f"{component_name} "
+        f"Vorhersage"
+
+    )
+
+
+    ax.set_xlabel(
+        "Zeitindex"
+    )
+
+    ax.set_ylabel(
+        component_unit
+    )
+
+    ax.grid(True)
+
+    ax.legend()
+
+
+    # =============================================
+    # Anzeigen
+    # =============================================
+
+    st.pyplot(fig)
+
+
+    # =============================================
+    # Vorhersagen
+    # =============================================
+
+    prediction_df = pd.DataFrame({
+
+        "Zeitindex":
 
             future_index[
                 "Zeitindex"
             ],
 
-            future_predictions,
+        "Vorhersage":
 
-            linestyle="dotted",
+            future_predictions
 
-            linewidth=3,
+    })
 
-            label="Vorhersage"
-
-        )
-
-
-        # =========================================
-        # Titel
-        # =========================================
-
-        ax.set_title(
-
-            f"{component_name} "
-            f"Vorhersage"
-
-        )
-
-
-        ax.set_xlabel(
-            "Zeitindex"
-        )
-
-        ax.set_ylabel(
-            component_unit
-        )
-
-        ax.grid(True)
-
-        ax.legend()
-
-
-        # =========================================
-        # Anzeigen
-        # =========================================
-
-        st.pyplot(fig)
-
-
-        # =========================================
-        # Vorhersagen
-        # =========================================
-
-        prediction_df = pd.DataFrame({
-
-            "Zeitindex":
-
-                future_index[
-                    "Zeitindex"
-                ],
-
-            "Vorhersage":
-
-                future_predictions
-
-        })
-
-
-        st.subheader(
-            "Zukünftige Werte"
-        )
-
-        st.dataframe(
-            prediction_df
-        )
-
-
-        # =========================================
-        # Rohdaten
-        # =========================================
-
-        with st.expander(
-            "Rohdaten"
-        ):
-
-            st.dataframe(
-                component_df
-            )

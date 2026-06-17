@@ -6,14 +6,14 @@ st.sidebar.title("CityVision")
 
 menu = st.sidebar.selectbox(
     "Navigation",
-    ["Startseite", "Datenanalyse", "Ausreißer", "Vorhersagen"]
+    ["Startseite", "Datenanalyse", "Lineare Regression", "Random Forest"]
 )
 
 if menu == "Startseite":
     import seiten.start
 elif menu == "Datenanalyse":
     import seiten.data_analysis
-elif menu == "Ausreißer":
-    import seiten.outliers
-elif menu == "Vorhersagen":
+elif menu == "Lineare Regression":
     import seiten.predictions
+elif menu == "Random Forest":
+    import seiten.random_forest

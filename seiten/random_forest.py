@@ -3,6 +3,16 @@ import pandas as pd
 import streamlit as st
 import matplotlib.pyplot as plt
 
+from sklearn.ensemble import (
+    RandomForestRegressor
+)
+
+from sklearn.metrics import (
+    mean_absolute_error,
+    mean_squared_error,
+    r2_score
+)
+
 from modules.api.weather_mapping import (
     weather_mapping
 )
@@ -14,7 +24,7 @@ from modules.api.weather_mapping import (
 
 st.set_page_config(
 
-    page_title="CityVision",
+    page_title="CityVision Random Forest",
 
     layout="wide"
 
@@ -25,11 +35,10 @@ st.set_page_config(
 # Titel
 # =====================================================
 
-st.title("Datenanalyse")
+st.title("Random Forest Regression")
 
 st.subheader(
-    "Analyse aller Messwerte "
-    "Braunschweig Stadt"
+    "Vorhersagen für Braunschweig Stadt"
 )
 
 
@@ -138,164 +147,8 @@ components = sorted(
 
 
 # =====================================================
-# Stationsinfo
+# Alle Messwerte
 # =====================================================
-
-st.info(
-
-    """
-    Station:
-    Braunschweig Stadt
-
-    Kürzel:
-    BGSW
-    """
-
-)
-
-
-# =====================================================
-# Übersicht
-# =====================================================
-
-st.subheader(
-    "Messpunktübersicht"
-)
-
-
-overview_rows = []
-
-
-for component in components:
-
-    component_df = df[
-
-        df["Komponente"]
-        == component
-
-    ]
-
-
-    mapping = weather_mapping.get(
-
-        component,
-
-        {
-            "name": component,
-            "einheit": "",
-            "kategorie": "Unbekannt"
-        }
-
-    )
-
-
-    missing_values = int(
-        component_df["Messwert"]
-        .isna()
-        .sum()
-    )
-
-
-    clean_df = component_df.dropna(
-        subset=["Messwert"]
-    )
-
-
-    if clean_df.empty:
-
-        continue
-
-
-    mean = clean_df[
-        "Messwert"
-    ].mean()
-
-
-    std = clean_df[
-        "Messwert"
-    ].std()
-
-
-    outlier_count = 0
-
-
-    if (
-        pd.notna(std)
-        and std > 0
-    ):
-
-        outliers = clean_df[
-
-            (
-                clean_df["Messwert"]
-                < mean - 3 * std
-            )
-
-            |
-
-            (
-                clean_df["Messwert"]
-                > mean + 3 * std
-            )
-
-        ]
-
-        outlier_count = len(
-            outliers
-        )
-
-
-    overview_rows.append({
-
-        "Messwert":
-            mapping["name"],
-
-        "Code":
-            component,
-
-        "Kategorie":
-            mapping["kategorie"],
-
-        "Einheit":
-            mapping["einheit"],
-
-        "Datensätze":
-            len(clean_df),
-
-        "Fehlende Werte":
-            missing_values,
-
-        "Ausreißer":
-            outlier_count,
-
-        "Mittelwert":
-            round(mean, 2)
-
-    })
-
-
-# =====================================================
-# Übersicht DataFrame
-# =====================================================
-
-overview_df = pd.DataFrame(
-    overview_rows
-)
-
-
-st.dataframe(
-    overview_df
-)
-
-
-# =====================================================
-# Alle Messpunkte
-# =====================================================
-
-st.subheader(
-    "Alle Messwerte"
-)
-
 
 for component in components:
 
@@ -309,19 +162,29 @@ for component in components:
 
         {
             "name": component,
-            "beschreibung": "",
             "einheit": "",
-            "kategorie": ""
+            "kategorie": "Unbekannt",
+            "beschreibung": ""
         }
 
     )
 
 
-    component_name = mapping["name"]
+    component_name = mapping[
+        "name"
+    ]
 
-    component_unit = mapping["einheit"]
+    component_unit = mapping[
+        "einheit"
+    ]
 
-    component_category = mapping["kategorie"]
+    component_category = mapping[
+        "kategorie"
+    ]
+
+    component_description = mapping[
+        "beschreibung"
+    ]
 
 
     # =============================================
@@ -336,67 +199,108 @@ for component in components:
     ].copy()
 
 
-    component_df = component_df.dropna(
-        subset=["Messwert"]
-    )
+    # =============================================
+    # Prüfen
+    # =============================================
 
-
-    if component_df.empty:
+    if len(component_df) < 10:
 
         continue
 
 
     # =============================================
-    # Statistik
+    # Features
     # =============================================
 
-    mean = component_df[
+    X = component_df[[
+
+        "Zeitindex"
+
+    ]]
+
+
+    y = component_df[
         "Messwert"
-    ].mean()
-
-
-    std = component_df[
-        "Messwert"
-    ].std()
-
-
-    lower = mean - 3 * std
-
-    upper = mean + 3 * std
-
-
-    outliers = component_df[
-
-        (
-            component_df["Messwert"]
-            < lower
-        )
-
-        |
-
-        (
-            component_df["Messwert"]
-            > upper
-        )
-
     ]
 
 
-    normal_values = component_df[
+    # =============================================
+    # Modell
+    # =============================================
 
-        (
-            component_df["Messwert"]
-            >= lower
-        )
+    model = RandomForestRegressor(
 
-        &
+        n_estimators=100,
 
-        (
-            component_df["Messwert"]
-            <= upper
-        )
+        random_state=42
 
-    ]
+    )
+
+
+    # =============================================
+    # Training
+    # =============================================
+
+    model.fit(X, y)
+
+
+    # =============================================
+    # Vorhersage
+    # =============================================
+
+    predictions = model.predict(X)
+
+
+    # =============================================
+    # Zukunft
+    # =============================================
+
+    future_index = pd.DataFrame({
+
+        "Zeitindex":
+
+            range(
+
+                int(
+                    component_df[
+                        "Zeitindex"
+                    ].max()
+                ) + 1,
+
+                int(
+                    component_df[
+                        "Zeitindex"
+                    ].max()
+                ) + 11
+
+            )
+
+    })
+
+
+    future_predictions = model.predict(
+        future_index
+    )
+
+
+    # =============================================
+    # Fehler
+    # =============================================
+
+    mae = mean_absolute_error(
+        y,
+        predictions
+    )
+
+    mse = mean_squared_error(
+        y,
+        predictions
+    )
+
+    r2 = r2_score(
+        y,
+        predictions
+    )
 
 
     # =============================================
@@ -422,28 +326,17 @@ for component in components:
     # Informationen
     # =============================================
 
-    st.caption(
-
-        f"Kategorie: "
-        f"{component_category}"
-
-    )
-
-
     st.info(
 
         f"""
+        Kategorie:
+        {component_category}
+
         Einheit:
         {component_unit}
 
-        Mittelwert:
-        {round(mean, 2)}
-
-        Standardabweichung:
-        {round(std, 2)}
-
-        Ausreißer:
-        {len(outliers)}
+        Beschreibung:
+        {component_description}
         """
 
     )
@@ -461,9 +354,7 @@ for component in components:
         "Minimum",
 
         round(
-            component_df[
-                "Messwert"
-            ].min(),
+            y.min(),
             2
         )
 
@@ -475,9 +366,7 @@ for component in components:
         "Maximum",
 
         round(
-            component_df[
-                "Messwert"
-            ].max(),
+            y.max(),
             2
         )
 
@@ -489,7 +378,7 @@ for component in components:
         "Mittelwert",
 
         round(
-            mean,
+            y.mean(),
             2
         )
 
@@ -498,15 +387,35 @@ for component in components:
 
     col4.metric(
 
-        "Ausreißer",
+        "R² Score",
 
-        len(outliers)
+        round(
+            r2,
+            3
+        )
 
     )
 
 
     # =============================================
-    # Grafik
+    # Fehlerwerte
+    # =============================================
+
+    st.write(
+
+        f"""
+        MAE:
+        {round(mae, 3)}
+
+        MSE:
+        {round(mse, 3)}
+        """
+
+    )
+
+
+    # =============================================
+    # Diagramm
     # =============================================
 
     fig, ax = plt.subplots(
@@ -515,92 +424,62 @@ for component in components:
 
 
     # =============================================
-    # Normale Werte
+    # Originalwerte
     # =============================================
 
-    ax.scatter(
+    ax.plot(
 
-        normal_values[
+        component_df[
             "Zeitindex"
         ],
 
-        normal_values[
-            "Messwert"
-        ],
+        y,
 
-        s=12,
+        linewidth=2,
 
-        label="Normale Werte"
+        label="Messwerte"
 
     )
 
 
     # =============================================
-    # Ausreißer
+    # Random Forest
     # =============================================
 
-    if not outliers.empty:
+    ax.plot(
 
-        ax.scatter(
+        component_df[
+            "Zeitindex"
+        ],
 
-            outliers[
-                "Zeitindex"
-            ],
-
-            outliers[
-                "Messwert"
-            ],
-
-            s=40,
-
-            label="Ausreißer"
-
-        )
-
-
-    # =============================================
-    # Mittelwert
-    # =============================================
-
-    ax.axhline(
-
-        mean,
+        predictions,
 
         linestyle="dashed",
 
         linewidth=2,
 
-        label="Mittelwert"
+        label="Random Forest"
 
     )
 
 
     # =============================================
-    # Grenzen
+    # Zukunft
     # =============================================
 
-    ax.axhline(
+    ax.plot(
 
-        upper,
+        future_index[
+            "Zeitindex"
+        ],
 
-        linestyle="dotted",
-
-        linewidth=2,
-
-        label="Obere Grenze"
-
-    )
-
-
-    ax.axhline(
-
-        lower,
+        future_predictions,
 
         linestyle="dotted",
 
-        linewidth=2,
+        linewidth=3,
 
-        label="Untere Grenze"
+        label="Vorhersage"
 
     )
 
@@ -611,7 +490,8 @@ for component in components:
 
     ax.set_title(
 
-        f"{component_name}"
+        f"{component_name} "
+        f"Random Forest Vorhersage"
 
     )
 
@@ -636,19 +516,3 @@ for component in components:
     st.pyplot(fig)
 
 
-    # =============================================
-    # Ausreißer
-    # =============================================
-
-
-
-
-    if not outliers.empty:
-
-        st.subheader(
-            "Gefundene Ausreißer"
-        )
-
-        st.dataframe(
-            outliers
-        )

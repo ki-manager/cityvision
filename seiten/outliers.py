@@ -29,7 +29,7 @@ st.title("Datenanalyse")
 
 st.subheader(
     "Ausreißeranalyse "
-    "Stadt Braunschweig"
+    "Braunschweig Stadt"
 )
 
 
@@ -169,11 +169,11 @@ for component in components:
     )
 
 
-# st.write(component_names)
+st.write(component_names)
 
 
 # =====================================================
-# Jede Komponente einzeln
+# Alle Komponenten anzeigen
 # =====================================================
 
 for component in components:
@@ -282,261 +282,273 @@ for component in components:
 
 
     # =============================================
-    # Abschnitt
+    # Abstand
     # =============================================
 
-    with st.expander(
+    st.markdown("---")
+
+
+    # =============================================
+    # Überschrift
+    # =============================================
+
+    st.subheader(
 
         f"{component_name} "
         f"({component})"
 
-    ):
+    )
 
 
-        # =========================================
-        # Informationen
-        # =========================================
+    # =============================================
+    # Informationen
+    # =============================================
 
-        st.info(
+    st.caption(
 
-            f"""
-            Kategorie:
-            {component_category}
+        f"Kategorie: "
+        f"{component_category}"
 
-            Einheit:
-            {component_unit}
+    )
 
-            Mittelwert:
-            {round(mean, 2)}
 
-            Standardabweichung:
-            {round(std, 2)}
+    st.info(
 
-            Ausreißer:
-            {len(outliers)}
-            """
+        f"""
+        Einheit:
+        {component_unit}
 
+        Mittelwert:
+        {round(mean, 2)}
+
+        Standardabweichung:
+        {round(std, 2)}
+
+        Ausreißer:
+        {len(outliers)}
+        """
+
+    )
+
+
+    # =============================================
+    # Statistik
+    # =============================================
+
+    col1, col2, col3, col4 = st.columns(4)
+
+
+    col1.metric(
+
+        "Minimum",
+
+        round(
+            component_df[
+                "Messwert"
+            ].min(),
+            2
         )
 
-
-        # =========================================
-        # Statistik
-        # =========================================
-
-        col1, col2, col3, col4 = st.columns(4)
+    )
 
 
-        col1.metric(
+    col2.metric(
 
-            "Minimum",
+        "Maximum",
 
-            round(
-                component_df[
-                    "Messwert"
-                ].min(),
-                2
-            )
-
+        round(
+            component_df[
+                "Messwert"
+            ].max(),
+            2
         )
 
+    )
 
-        col2.metric(
 
-            "Maximum",
+    col3.metric(
 
-            round(
-                component_df[
-                    "Messwert"
-                ].max(),
-                2
-            )
+        "Mittelwert",
 
+        round(
+            mean,
+            2
         )
 
-
-        col3.metric(
-
-            "Mittelwert",
-
-            round(
-                mean,
-                2
-            )
-
-        )
+    )
 
 
-        col4.metric(
+    col4.metric(
 
-            "Ausreißer",
+        "Ausreißer",
 
-            len(outliers)
+        len(outliers)
 
-        )
-
-
-        # =========================================
-        # Grafik
-        # =========================================
-
-        fig, ax = plt.subplots(
-            figsize=(14, 5)
-        )
+    )
 
 
-        # =========================================
-        # Normale Werte
-        # =========================================
+    # =============================================
+    # Grafik
+    # =============================================
+
+    fig, ax = plt.subplots(
+        figsize=(14, 5)
+    )
+
+
+    # =============================================
+    # Normale Werte
+    # =============================================
+
+    ax.scatter(
+
+        normal_values[
+            "Zeitindex"
+        ],
+
+        normal_values[
+            "Messwert"
+        ],
+
+        s=12,
+
+        label="Normale Werte"
+
+    )
+
+
+    # =============================================
+    # Ausreißer
+    # =============================================
+
+    if not outliers.empty:
 
         ax.scatter(
 
-            normal_values[
+            outliers[
                 "Zeitindex"
             ],
 
-            normal_values[
+            outliers[
                 "Messwert"
             ],
 
-            s=12,
+            s=40,
 
-            label="Normale Werte"
-
-        )
-
-
-        # =========================================
-        # Ausreißer
-        # =========================================
-
-        if not outliers.empty:
-
-            ax.scatter(
-
-                outliers[
-                    "Zeitindex"
-                ],
-
-                outliers[
-                    "Messwert"
-                ],
-
-                s=40,
-
-                label="Ausreißer"
-
-            )
-
-
-        # =========================================
-        # Mittelwert
-        # =========================================
-
-        ax.axhline(
-
-            mean,
-
-            linestyle="dashed",
-
-            linewidth=2,
-
-            label="Mittelwert"
+            label="Ausreißer"
 
         )
 
 
-        # =========================================
-        # Grenzen
-        # =========================================
+    # =============================================
+    # Mittelwert
+    # =============================================
 
-        ax.axhline(
+    ax.axhline(
 
-            upper,
+        mean,
 
-            linestyle="dotted",
+        linestyle="dashed",
 
-            linewidth=2,
+        linewidth=2,
 
-            label="Obere Grenze"
+        label="Mittelwert"
 
+    )
+
+
+    # =============================================
+    # Grenzen
+    # =============================================
+
+    ax.axhline(
+
+        upper,
+
+        linestyle="dotted",
+
+        linewidth=2,
+
+        label="Obere Grenze"
+
+    )
+
+
+    ax.axhline(
+
+        lower,
+
+        linestyle="dotted",
+
+        linewidth=2,
+
+        label="Untere Grenze"
+
+    )
+
+
+    # =============================================
+    # Titel
+    # =============================================
+
+    ax.set_title(
+
+        f"Ausreißeranalyse "
+        f"{component_name}"
+
+    )
+
+
+    ax.set_xlabel(
+        "Zeitindex"
+    )
+
+    ax.set_ylabel(
+        component_unit
+    )
+
+    ax.grid(True)
+
+    ax.legend()
+
+
+    # =============================================
+    # Anzeigen
+    # =============================================
+
+    st.pyplot(fig)
+
+
+    # =============================================
+    # Ausreißer anzeigen
+    # =============================================
+
+    st.subheader(
+        "Gefundene Ausreißer"
+    )
+
+
+    if outliers.empty:
+
+        st.success(
+            "Keine Ausreißer gefunden"
+        )
+
+    else:
+
+        st.dataframe(
+            outliers
         )
 
 
-        ax.axhline(
+    # =============================================
+    # Rohdaten
+    # =============================================
 
-            lower,
+    st.subheader(
+        "Rohdaten"
+    )
 
-            linestyle="dotted",
-
-            linewidth=2,
-
-            label="Untere Grenze"
-
-        )
-
-
-        # =========================================
-        # Titel
-        # =========================================
-
-        ax.set_title(
-
-            f"Ausreißeranalyse "
-            f"{component_name}"
-
-        )
-
-
-        ax.set_xlabel(
-            "Zeitindex"
-        )
-
-        ax.set_ylabel(
-            component_unit
-        )
-
-        ax.grid(True)
-
-        ax.legend()
-
-
-        # =========================================
-        # Anzeigen
-        # =========================================
-
-        st.pyplot(fig)
-
-
-        # =========================================
-        # Ausreißer anzeigen
-        # =========================================
-
-        st.subheader(
-            "Gefundene Ausreißer"
-        )
-
-
-        if outliers.empty:
-
-            st.success(
-                "Keine Ausreißer gefunden"
-            )
-
-        else:
-
-            st.dataframe(
-                outliers
-            )
-
-
-        # =========================================
-        # Rohdaten
-        # =========================================
-
-        with st.expander(
-            "Rohdaten"
-        ):
-
-            st.dataframe(
-                component_df
-            )
+    st.dataframe(
+        component_df
+    )
