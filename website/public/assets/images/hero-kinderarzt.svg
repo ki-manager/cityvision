@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 420" role="img" aria-label="Freundliche Illustration einer Kinderarztpraxis mit Sonne, Wolken und Herz">
+  <!-- Himmel -->
+  <rect width="560" height="420" rx="28" fill="#EAF7FA"/>
+  <!-- Sonne -->
+  <circle cx="470" cy="70" r="38" fill="#F6C85F"/>
+  <circle cx="470" cy="70" r="52" fill="#F6C85F" opacity="0.25"/>
+  <!-- Wolken -->
+  <g fill="#FFFFFF">
+    <ellipse cx="110" cy="80" rx="52" ry="26"/>
+    <ellipse cx="150" cy="66" rx="40" ry="24"/>
+    <ellipse cx="420" cy="180" rx="44" ry="20"/>
+    <ellipse cx="390" cy="192" rx="34" ry="16"/>
+  </g>
+  <!-- Praxisgebäude -->
+  <g>
+    <rect x="120" y="170" width="320" height="190" rx="16" fill="#FFFFFF" stroke="#167D8D" stroke-width="4"/>
+    <path d="M100 170 L280 90 L460 170 Z" fill="#167D8D"/>
+    <rect x="150" y="215" width="60" height="60" rx="8" fill="#EAF7FA" stroke="#31B7B7" stroke-width="3"/>
+    <rect x="350" y="215" width="60" height="60" rx="8" fill="#EAF7FA" stroke="#31B7B7" stroke-width="3"/>
+    <rect x="245" y="270" width="70" height="90" rx="8" fill="#31B7B7"/>
+    <circle cx="304" cy="315" r="5" fill="#FFFFFF"/>
+    <rect x="150" y="310" width="60" height="50" rx="8" fill="#7BC47F"/>
+  </g>
+  <!-- Herz über der Tür -->
+  <path d="M280 150 C270 132 244 134 244 154 C244 172 280 190 280 190 C280 190 316 172 316 154 C316 134 290 132 280 150 Z" fill="#F6C85F" transform="translate(0,-42) scale(0.9)" opacity="0.95"/>
+  <!-- Kind mit Ball -->
+  <g>
+    <circle cx="120" cy="330" r="26" fill="#F6C85F"/>
+    <circle cx="113" cy="325" r="3" fill="#344054"/>
+    <circle cx="127" cy="325" r="3" fill="#344054"/>
+    <path d="M112 338 Q120 344 128 338" stroke="#344054" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <rect x="106" y="354" width="28" height="46" rx="14" fill="#31B7B7"/>
+    <circle cx="90" cy="352" r="14" fill="#7BC47F"/>
+  </g>
+  <!-- Teddy -->
+  <g transform="translate(410,300)">
+    <circle cx="0" cy="40" r="42" fill="#F6C85F"/>
+    <circle cx="0" cy="0" r="30" fill="#F6C85F"/>
+    <circle cx="-26" cy="-22" r="11" fill="#F6C85F"/>
+    <circle cx="26" cy="-22" r="11" fill="#F6C85F"/>
+    <circle cx="-10" cy="-6" r="3.5" fill="#344054"/>
+    <circle cx="10" cy="-6" r="3.5" fill="#344054"/>
+    <ellipse cx="0" cy="8" rx="10" ry="8" fill="#FFFFFF"/>
+    <circle cx="0" cy="6" r="3" fill="#344054"/>
+  </g>
+  <!-- Boden -->
+  <path d="M0 360 Q280 320 560 360 L560 420 L0 420 Z" fill="#7BC47F" opacity="0.45"/>
+  <path d="M0 380 Q280 345 560 380 L560 420 L0 420 Z" fill="#7BC47F" opacity="0.6"/>
+</svg>

@@ -1,0 +1,48 @@
+# =====================================================================
+# Kinderarztpraxis Königslutter – Root-.htaccess (Webroot = Projekt)
+# Diese Variante funktioniert, wenn das Projektverzeichnis selbst der
+# Document Root ist (goneo-Standard). Alle Requests werden nach
+# public/index.php geroutet; sensible Dateien werden gesperrt.
+# =====================================================================
+
+Options -Indexes
+ServerSignature Off
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # --- HTTPS erzwingen (301, keine Schleife bei SSL-Proxy) ---
+    RewriteCond %{HTTPS} !=on
+    RewriteCond %{HTTP:X-Forwarded-Proto} !https
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # --- www / non-www: kanonische Domain ( APP_URL = www ) ---
+    RewriteCond %{HTTP_HOST} !^www\. [NC]
+    RewriteCond %{HTTP_HOST} !^$
+    RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # --- Bestehende Dateien/Verzeichnisse direkt ausliefern (public/) ---
+    RewriteCond %{REQUEST_URI} ^/?$
+    RewriteRule ^$ public/index.php [L]
+
+    # Statische Assets aus public/ ausliefern
+    RewriteCond %{REQUEST_URI} ^/?(assets|uploads)/
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.*)$ public/$1 [L]
+
+    # robots.txt / sitemap.xml / favicon liegen in public/
+    RewriteRule ^(robots\.txt|sitemap\.xml|favicon\.ico|favicon\.svg|apple-touch-icon\.png)$ public/$1 [L]
+
+    # Alle anderen Requests an den Front-Controller
+    RewriteRule ^(.*)$ public/index.php [L]
+</IfModule>
+
+# --- Zugriff auf sensible Dateien/Verzeichnisse sperren ---
+<FilesMatch "^(\.env|\.env\..*|composer\.(json|lock)|.*\.sql|.*\.log|.*\.lock|.*\.md|.*\.example)$">
+    Require all denied
+</FilesMatch>
+
+<IfModule mod_authz_core.c>
+    # config/, database/, storage/, app/, vendor/ per Rewrite schützen:
+    RedirectMatch 404 ^/?(app|config|database|storage|vendor|docs|scripts)(/|$)
+</IfModule>

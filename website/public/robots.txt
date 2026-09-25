@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /admin
+Disallow: /install
+Disallow: /storage
+Disallow: /config
+
+Sitemap: https://www.kinderarzt-koenigslutter.de/sitemap.xml

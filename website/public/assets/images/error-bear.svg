@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 200" role="img" aria-label="Trauriger Teddybär, der sich verlaufen hat">
+  <circle cx="120" cy="120" r="72" fill="#F6C85F"/>
+  <circle cx="72" cy="46" r="24" fill="#F6C85F"/>
+  <circle cx="168" cy="46" r="24" fill="#F6C85F"/>
+  <circle cx="72" cy="46" r="12" fill="#E9B23C"/>
+  <circle cx="168" cy="46" r="12" fill="#E9B23C"/>
+  <circle cx="100" cy="108" r="6" fill="#344054"/>
+  <circle cx="140" cy="108" r="6" fill="#344054"/>
+  <ellipse cx="120" cy="128" rx="10" ry="8" fill="#FFFFFF"/>
+  <circle cx="120" cy="126" r="3.5" fill="#344054"/>
+  <path d="M104 148 Q120 156 136 148" stroke="#344054" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <circle cx="86" cy="140" r="7" fill="#F9A8A8" opacity="0.7"/>
+  <circle cx="154" cy="140" r="7" fill="#F9A8A8" opacity="0.7"/>
+  <ellipse cx="120" cy="176" rx="40" ry="22" fill="#EAF7FA" opacity="0.001"/>
+  <text x="120" y="196" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" fill="#51607A">Ups!</text>
+</svg>
