@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Kinderarztpraxis Königslutter am Elm">
+  <rect width="1200" height="630" fill="#EAF7FA"/>
+  <circle cx="1060" cy="110" r="90" fill="#F6C85F"/>
+  <ellipse cx="220" cy="120" rx="140" ry="60" fill="#FFFFFF"/>
+  <ellipse cx="330" cy="100" rx="100" ry="55" fill="#FFFFFF"/>
+  <rect x="120" y="240" width="960" height="280" rx="32" fill="#FFFFFF"/>
+  <text x="160" y="330" font-family="system-ui, sans-serif" font-size="56" font-weight="800" fill="#0A424C">Kinderarztpraxis</text>
+  <text x="160" y="400" font-family="system-ui, sans-serif" font-size="56" font-weight="800" fill="#167D8D">Königslutter am Elm</text>
+  <text x="160" y="470" font-family="system-ui, sans-serif" font-size="32" fill="#51607A">Gesund groß werden. · 05353 5511</text>
+  <path d="M1200 520 Q600 460 0 520 L0 630 L1200 630 Z" fill="#7BC47F" opacity="0.5"/>
+</svg>

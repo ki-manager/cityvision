@@ -1,0 +1,16 @@
+{
+    "name": "kinderarzt/koenigslutter-website",
+    "description": "Website der Kinderarztpraxis Königslutter am Elm (goneo Shared Hosting, PHP 8.2+)",
+    "type": "project",
+    "license": "proprietary",
+    "require": {
+        "php": ">=8.2",
+        "phpmailer/phpmailer": "^6.9"
+    },
+    "config": {
+        "optimize-autoloader": true
+    },
+    "scripts": {
+        "post-install-cmd": "echo 'vendor/ wird für FTP-Deployment mit hochgeladen.'"
+    }
+}
